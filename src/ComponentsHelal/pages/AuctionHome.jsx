@@ -1,10 +1,11 @@
 import React from 'react';
+import SliderBanner from './AuctionHome/SliderBanner/SliderBanner';
 
 const AuctionHome = () => {
     return (
-        <div>
-            <h2>Auction Home</h2>
-        </div>
+        <>
+            <SliderBanner />
+        </>
     )
 }
 
