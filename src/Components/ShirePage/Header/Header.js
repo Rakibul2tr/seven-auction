@@ -2,9 +2,11 @@ import React from 'react';
 import { Container, Form, FormControl, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logoImg from '../../../images/site_logo.png';
+import Login from '../../LoginPage/Login/Login';
 import './Header.css'
 
 const Header = () => {
+    const [modalShow, setModalShow] = React.useState(false);
     return (
         <Container>
            <Row className='Nav_row'>
@@ -36,10 +38,16 @@ const Header = () => {
                         <button>Sell With Us</button>
                     </Link>
                     <Link to='/'>
-                       <button>Login</button>
+                       <button onClick={() => setModalShow(true)}>Login</button>
                     </Link>
                     <Link to='/'>Support</Link>
-                    <Link to='/'>En</Link>
+                    <Link to='/'>
+                        <select>
+                            <option>En</option>
+                            <option>Dn</option>
+                            <option>Bn</option>
+                        </select>
+                    </Link>
                 </div>
             </div>
             {/* mobil device navbar */}
@@ -57,6 +65,14 @@ const Header = () => {
                     <Link to='/'>En</Link>
                 </div>
             </div>
+           </Row>
+           <Row>
+               
+               <Login 
+               show={modalShow}
+               onHide={() => setModalShow(false)}
+              />
+              
            </Row>
         </Container>
     );

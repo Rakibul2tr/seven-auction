@@ -1,0 +1,37 @@
+.footer_row {
+  background: #623c57;
+  padding: 30px 0;
+}
+
+.footer_logo {
+  width: 133px;
+  margin: auto;
+}
+
+.footer_heading {
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer_heading h2 {
+  font-size: 22px;
+}
+.footer_menu {
+  margin-left: 10px;
+}
+.footer_menu li {
+  list-style: none;
+}
+.footer_menu li a,
+p > a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+  text-transform: capitalize;
+  opacity: 0.8;
+  font-weight: 400;
+}
+.footer_menu li a:hover,
+p > a:hover {
+  color: #fff;
+  opacity: 0.5;
+}

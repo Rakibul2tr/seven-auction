@@ -1,0 +1,104 @@
+.login_register_row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.login_register_row button {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+}
+.active {
+  background: #623d57;
+  color: #fff;
+}
+.email_addrass,
+.pasword,
+.first_name,
+.last_name,
+.phone {
+  display: flex;
+  align-items: center;
+  border: 1px solid #8c7185;
+  padding: 7px;
+  border-radius: 20px;
+}
+
+.email_addrass input,
+.pasword input,
+.first_name input,
+.last_name input,
+.phone input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.email_addrass i,
+.pasword i,
+.first_name i,
+.last_name i,
+.phone i {
+  color: #8c7185;
+  position: relative;
+  left: -5px;
+}
+.login_p {
+  text-align: end;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.login_p a {
+  text-align: end;
+  color: #8c7185;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.register_p {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+}
+.register_p a {
+  text-decoration: none;
+  color: #623d57;
+  font-weight: 600;
+}
+.register_p a:hover {
+  color: #623d57;
+}
+.submit_btn {
+  text-align: center;
+  background: #623d57;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+}
+.register_form label,
+.login_form label {
+  margin: 5px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.register_form,
+.login_form {
+  padding-bottom: 50px;
+  border-bottom: 2px solid #623d57;
+}
+
+.close_btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #444;
+  opacity: 0.5;
+  z-index: -1;
+}

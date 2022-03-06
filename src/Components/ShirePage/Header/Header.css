@@ -40,9 +40,14 @@
 .search_fild input::-webkit-input-placeholder { 
     color: #fff;
   }
+  input[type=search]{
+      color: #fff;
+      
+  }
 .serch_icon i {
     color: #fff;
     line-height: 36px;
+    cursor: pointer;
 }
 
 .serch_icon {
@@ -62,11 +67,11 @@
 .menu_right a button {
     background: #7E5472;
     border-radius: 20px;
-    width: 90px;
+    width: 95px;
     height: 30px;
     border: 1px solid #7E5472;
     color: #fff;
-    line-height: 28px;
+    line-height: 26px;
     text-align: center;
     transition: .3s;
 }
@@ -79,9 +84,15 @@
 .menu_right a i{
     font-size: 20px;
 }
+.menu_right a select{
+    background: none;
+    border: none;
+    color: #fff;
+}
 
-
-
+.menu_right a select option{
+    color: #000;
+}
 
 
 .mobil_device{
