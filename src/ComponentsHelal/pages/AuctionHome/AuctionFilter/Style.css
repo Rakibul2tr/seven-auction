@@ -1,0 +1,137 @@
+.auction-search-form input {
+    border: 2px solid #623d57;
+    border-radius: 20px;
+    padding: 8px 17px;
+    width: 100%;
+}
+
+.auction-search-form {
+    position: relative;
+}
+
+.auction-placeholer {
+    position: absolute;
+    top: 0;
+    right: 18px;
+    font-size: 28px;
+    color: #ddd;
+}
+
+.auction-filter-btns button {
+    color: #623d57;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.auction-filter-btns button:hover {
+    color: #623d57;
+}
+
+.auction-cars .nav-tabs .nav-link {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 18px;
+    font-weight: 700;
+    color: #b6b4b4;
+}
+
+.auction-cars .nav-tabs {
+    border: none;
+    margin-bottom: 40px !important;
+}
+
+.auction-cars .nav-tabs .nav-link.active {
+    border-color: #dee2e6;
+    background: #623d57;
+    color: #fff;
+}
+
+.car-img {
+    height: 260px;
+    background-color: #623d57;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.car-time-and-price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.car-time {
+    padding: 7px 12px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #fff;
+    font-weight: 600;
+    color: #623d57;
+}
+
+.car-price {
+    padding: 7px 12px;
+    background-color: #623d57;
+    font-weight: 600;
+    color: #ffffffb5;
+}
+
+.car-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.car-location img {
+    width: 20px;
+    border-radius: 20px;
+}
+
+p.car-desc {
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 12px 0;
+}
+
+.car-brand {
+    margin-right: 25px;
+}
+
+
+.car-bid {
+    background: #dddddd94;
+    border-radius: 20px;
+    padding: 7px 16px;
+}
+
+.car-shareMark button {
+    color: #623d57;
+    font-size: 20px;
+}
+
+.auction-car-item {
+    margin-bottom: 50px;
+}
+
+.car-title-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.car-title-link:hover {
+    color: #000;
+}
+
+.car-loadmore-btn .btn {
+    background-color: #623d57;
+}
+
+.car-loadmore-btn .btn:hover {
+    background-color: #623d57;
+}
+
+.btn-primary:disabled {
+    background-color: #623d57 !important;
+}

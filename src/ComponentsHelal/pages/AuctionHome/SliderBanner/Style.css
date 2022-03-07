@@ -25,6 +25,7 @@
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .banner-slider-content a {
@@ -38,4 +39,8 @@
     text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+.banner-slider-content a:hover {
+    color: #fff;
 }
