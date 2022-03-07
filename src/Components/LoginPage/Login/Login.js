@@ -19,13 +19,13 @@ const Login = (props) => {
         <div className="login_register_row">
           <button
             onClick={() => setloginChange("login")}
-            className={loginChange === "login" ? "active" : null}
+            className={loginChange === "login" ? "Loginactive" : null}
           >
             Login
           </button>
           <button
             onClick={() => setloginChange("register")}
-            className={loginChange === "register" ? "active" : null}
+            className={loginChange === "register" ? "Loginactive" : null}
           >
             Register
           </button>
