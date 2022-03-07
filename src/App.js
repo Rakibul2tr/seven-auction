@@ -1,52 +1,19 @@
-<<<<<<< HEAD
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./Components/ShirePage/Footer/Footer";
 import Header from "./Components/ShirePage/Header/Header";
 import UserAcount from "./Components/UserAcount/UserAcount";
+import AuctionHome from "./ComponentsHelal/AuctionHome";
+import ContactUs from "./ComponentsHelal/pages/ContactUs.jsx"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/acount"
-          element={
-            <>
-              <Header />
-              <UserAcount />
-              <Footer />
-            </>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<><Header/><AuctionHome/><Footer/></>}></Route>
+      <Route path="/account" element={<><Header/><UserAcount/><Footer/></>}></Route>
+      <Route path="/contact" element={<><Header/> <ContactUs/> <Footer/></>}></Route>
+    </Routes>
   );
-=======
-import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
-import AuctionHome from './ComponentsHelal/pages/AuctionHome';
-import ContactUs from './ComponentsHelal/pages/ContactUs';
-
-function App() {
-	return (
-		<>
-			<Routes>
-				<Route path="/" element={<AuctionHome />} />
-				<Route path="/contact" element={<ContactUs />} />
-			</Routes>
-		</>
-	);
->>>>>>> 8b0a19ee7bf3dae221543e6410099cb8df42500b
 }
 
 export default App;
