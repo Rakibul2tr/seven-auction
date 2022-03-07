@@ -1,0 +1,58 @@
+.contact-type-btn {
+    margin: 0 5px 0 0;
+    height: 40px;
+    position: relative;
+}
+
+.contact-type-btn label,
+.contact-type-btn input {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.contact-type-btn input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+}
+
+.contact-type-btn input[type="radio"]:checked+label {
+    background: #623d57;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.contact-type-btn label {
+    border: 1px solid #ddd;
+    font-weight: 500;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.contact-type-btn label {
+    cursor: pointer;
+    z-index: 90;
+    line-height: 1.8em;
+}
+
+.contact-form textarea {
+    width: 100%;
+    border: 2px solid #623d57;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.contact-form .contact-submit-btn {
+    background: #623d57;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.contact-form .contact-submit-btn:hover {
+    color: #fff;
+}
