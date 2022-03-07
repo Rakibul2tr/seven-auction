@@ -1,0 +1,46 @@
+.banner-slider {
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: rgb(0 0 0 / 80%) 0px -50px 79px 39px inset;
+}
+
+.banner-slider-sec .swiper-button-next:after, .banner-slider-sec .swiper-button-prev:after {
+    font-size: 30px;
+}
+
+.banner-slider-content {
+    background-color: #ffffff63;
+    padding: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 5px;
+    width: 350px;
+}
+
+.banner-slider-content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.banner-slider-content a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: block;
+    border: 2px solid #fff;
+    padding: 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.banner-slider-content a:hover {
+    color: #fff;
+}

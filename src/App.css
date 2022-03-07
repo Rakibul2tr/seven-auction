@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 a{
     text-decoration: none;
+=======
+:root {
+  --swiper-navigation-color: #fff;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+>>>>>>> 8b0a19ee7bf3dae221543e6410099cb8df42500b
 }
