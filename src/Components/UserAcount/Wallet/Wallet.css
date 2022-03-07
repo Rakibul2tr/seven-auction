@@ -1,0 +1,110 @@
+.my_wallet,
+.my_transaction {
+  padding: 10px;
+}
+.my_wallet h4,
+.my_transaction h4 {
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+}
+.my_wallet h4::before,
+.my_transaction h4::before {
+  position: absolute;
+  content: "";
+  left: 1%;
+  bottom: -4px;
+  width: 7%;
+  height: 2px;
+  background: #623c57;
+}
+.wallet-balenc {
+  padding: 30px;
+  background: #623c57;
+  width: 90% !important;
+  border-radius: 40px;
+  margin-left: 15px;
+}
+.balenc_title h4 {
+  text-transform: capitalize;
+  color: #fff;
+  margin-left: 20px;
+}
+.balanc_amount {
+  width: 250px;
+  padding: 10px;
+  background: #7e5472;
+  text-align: center;
+  border-radius: 30px;
+  margin: 20px;
+}
+.balanc_amount span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+.widrow_and_add_btn {
+  width: 40%;
+  margin-left: 20px;
+}
+.widrow_and_add_btn button {
+  width: 35%;
+  margin: 7px;
+  border-radius: 20px;
+  background: none;
+  border: 1px solid #fff;
+  padding: 3px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.my_transaction h4::before {
+  left: 2%;
+  bottom: -4px;
+  width: 12%;
+}
+
+.transaction_item {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  padding: 10px;
+}
+
+.transaction_item_number {
+  width: 25%;
+  background: #fff;
+  text-align: center;
+  padding: 8px 0;
+  margin-right: 5px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.transaction_item_number span {
+  color: #02ca63;
+  font-size: 13px;
+  font-weight: 700;
+}
+.transaction_text_and_time {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  background: #fff;
+  padding: 8px 0;
+  margin-left: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.transaction_text p {
+  margin: 0;
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.6;
+}
+.transaction_time {
+  margin-right: 15px;
+  font-size: 11px;
+  opacity: 0.5;
+}
