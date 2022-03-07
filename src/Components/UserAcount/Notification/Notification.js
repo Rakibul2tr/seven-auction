@@ -5,7 +5,7 @@ import "./Notification.css";
 const Notification = () => {
   return (
     <Container style={{ background: "#F6F8FA" }}>
-      <Row className="py-4">
+      <Row className="pb-4">
         <div className="my_account">
           <h4>Notification</h4>
         </div>
