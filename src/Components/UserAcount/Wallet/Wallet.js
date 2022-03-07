@@ -4,7 +4,7 @@ import "./Wallet.css";
 const Wallet = () => {
   return (
     <Container style={{ background: "#F6F8FA" }}>
-      <Row className="py-4">
+      <Row className="pb-4">
         <div className="my_wallet">
           <h4>Wallet</h4>
         </div>

@@ -9,7 +9,7 @@ const UserAcount = () => {
   const [currentMenu, setcurrentMenu] = useState("acount");
   return (
     <Container style={{ background: "#F6F8FA" }}>
-      <Row className="py-4">
+      <Row className="py-5">
         <div className="col-md-3">
           <AcountMenu
             setcurrentMenu={setcurrentMenu}
