@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import AccountUpdate from "./AccountUpdate/AccountUpdate";
 import AcountMenu from "./AcountMenu/AcountMenu";
+import MyBid from "./MyBid/MyBid";
 import Notification from "./Notification/Notification";
 import Wallet from "./Wallet/Wallet";
 
@@ -20,6 +21,7 @@ const UserAcount = () => {
           {currentMenu === "acount" ? <AccountUpdate /> : null}
           {currentMenu === "notification" ? <Notification /> : null}
           {currentMenu === "wallet" ? <Wallet /> : null}
+          {currentMenu === "bid" ? <MyBid /> : null}
         </div>
       </Row>
     </Container>
