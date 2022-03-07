@@ -1,0 +1,84 @@
+.my_account {
+  padding: 10px;
+}
+.my_account h4,
+.password_change h4 {
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+}
+.my_account h4::before,
+.password_change h4::before {
+  position: absolute;
+  content: "";
+  left: 2%;
+  bottom: -4px;
+  width: 12%;
+  height: 2px;
+  background: #623c57;
+}
+.password_change {
+  padding: 20px 10px;
+}
+.password_change h4::before {
+  width: 17%;
+  left: 3%;
+}
+.account_form .email_addrass,
+.account_form .pasword,
+.account_form .first_name,
+.account_form .last_name,
+.account_form .phone,
+.account_form .current_password {
+  display: flex;
+  align-items: center;
+  border: 1px solid #8c7185;
+  padding: 7px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.account_form .email_addrass input,
+.account_form .pasword input,
+.account_form .first_name input,
+.account_form .last_name input,
+.account_form .phone input,
+.account_form .current_password input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.account_form .email_addrass i,
+.account_form .first_name i,
+.account_form .last_name i,
+.account_form .phone i,
+.account_form .current_password i {
+  color: #8c7185;
+  position: relative;
+  left: -5px;
+  opacity: 0.8;
+}
+
+.account_form label {
+  margin: 5px 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.update_btn {
+  text-align: center;
+  margin-top: 25px;
+}
+.update_btn button {
+  border: none;
+  width: 180px;
+  padding: 8px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background: #623c57;
+  color: #fff;
+  transition: 0.3s;
+}
+.update_btn button:hover {
+  background: #8d6482;
+}
