@@ -8,6 +8,7 @@ import './Header.css'
 const Header = () => {
     const [modalShow, setModalShow] = React.useState(false);
     return (
+      <div className='header_bg'>
         <Container>
            <Row className='Nav_row'>
             <div className="col-md-7">
@@ -75,6 +76,7 @@ const Header = () => {
               
            </Row>
         </Container>
+      </div>
     );
 };
 

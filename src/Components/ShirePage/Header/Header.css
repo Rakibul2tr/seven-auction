@@ -1,12 +1,14 @@
-
-.Nav_row {
+.header_bg{
     background: #623C57;
-    padding: 10px 0;
-    align-items: center;
     border-bottom: 1px solid #8E6B84;
     position: relative;
 }
-.Nav_row::after{
+.Nav_row {
+    padding: 10px 0;
+    align-items: center;
+    position: relative;
+}
+.header_bg::after{
     position: absolute;
     content: '';
     bottom: 0px;

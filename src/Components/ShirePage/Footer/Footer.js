@@ -6,6 +6,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
+    <div className="footer_bg">
     <Container>
       <Row className="footer_row">
         <div className="col-md-3">
@@ -74,6 +75,7 @@ const Footer = () => {
         </div>
       </Row>
     </Container>
+    </div>
   );
 };
 
