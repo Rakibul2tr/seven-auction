@@ -98,3 +98,7 @@ p.car-descrip {
     width: 18px;
     border-radius: 20px;
 }
+
+.won_bg::after{
+    background: #B2375D;
+}

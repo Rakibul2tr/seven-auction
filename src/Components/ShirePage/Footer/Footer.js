@@ -65,10 +65,10 @@ const Footer = () => {
             </div>
             <div className="footer_menu">
               <li>
-                <Link to="/">privacy and policy</Link>
+                <Link to="/privacy">privacy and policy</Link>
               </li>
               <li>
-                <Link to="/">terms and condition</Link>
+                <Link to="/terms">terms and condition</Link>
               </li>
               <li>
                 <Link to="/contact">contact us</Link>

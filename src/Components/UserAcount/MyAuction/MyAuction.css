@@ -1,0 +1,109 @@
+
+.my_auction {
+    padding: 10px;
+  }
+  .my_auction h4,
+  .password_change h4 {
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+  }
+  .my_auction h4::before{
+    position: absolute;
+    content: "";
+    left: 2%;
+    bottom: -4px;
+    width: 12%;
+    height: 2px;
+    background: #623c57;
+  }
+.auction_car_aria {
+    padding: 25px;
+}
+.My_auction_menu{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.My_auction_menu button{
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    background: #623C57;
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.My_auction_menu button:nth-child(2){
+    border-left:1px solid #7E5472 !important;
+    border-right:1px solid #7E5472 !important;
+}
+.My_auction_menu button:nth-child(1){
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.My_auction_menu button:nth-child(3){
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.bidMenuactive{
+    background: #7E5472 !important;
+
+}
+.auction_car-img_bg {
+    height: 180px;
+    background-color: #623d57;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+    position: relative;
+}
+
+.car-title_bid{
+    font-size: 18px;
+    font-weight: 700;
+}
+.car-bid_btn {
+    background: #dddddd94;
+    border-radius: 20px;
+    padding: 2px 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.car-bid_btn:hover{
+    background-color:#b892ac;
+    color: #fff;
+}
+.car-share_Mark button {
+    color: #623d57;
+    font-size: 16px;
+}
+.car-share_Mark button:hover{
+    color: #623d57;
+    opacity: .8;
+}
+p.car-descrip {
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 2px;
+}
+.car-brand_smal {
+    margin-right: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.car-location_smal{
+    font-size: 14px;
+    font-weight: 600;
+}
+.car-location_smal img {
+    width: 18px;
+    border-radius: 20px;
+}
+

@@ -1,0 +1,23 @@
+.Terms_hedding h4 {
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+}
+.Terms_hedding h4::before {
+    position: absolute;
+    content: "";
+    left: 2%;
+    bottom: -4px;
+    width: 16%;
+    height: 2px;
+    background: #623c57;
+}
+.terms_text h6{
+    font-size: 17px;
+    font-weight: 700;
+}
+.terms_text p {
+    font-size: 14px;
+    line-height: 25px;
+    opacity: .8;
+}
