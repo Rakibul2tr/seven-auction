@@ -56,3 +56,7 @@
 .contact-form .contact-submit-btn:hover {
     color: #fff;
 }
+
+.contact-social a:hover {
+    color: #fff;
+}

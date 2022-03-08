@@ -1,0 +1,43 @@
+img {
+    max-width: 100%;
+}
+
+h2.single-car-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.car-detail h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.car-detail p {
+    font-size: 17px;
+    color: #9f8e8e;
+    line-height: 1.7;
+}
+
+.car-overview-boxe i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #623d57;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.car-overview-boxe span {
+    font-size: 17px;
+    font-weight: 500;
+    color: #969595;
+    padding-left: 10px;
+}
+
+.car-overview-boxe {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc5e;
+}

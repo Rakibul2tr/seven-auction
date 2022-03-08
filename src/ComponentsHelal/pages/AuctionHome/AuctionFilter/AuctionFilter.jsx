@@ -251,7 +251,7 @@ const AuctionFilter = () => {
                                                             <Button variant='link'><i className="fa-solid fa-bookmark"></i></Button>
                                                         </div>
                                                     </div>
-                                                    <Link to="/#" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
+                                                    <Link to="/singlecar" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
                                                     <p className="car-desc text-muted">{car.desc}</p>
                                                     <div className="car-brandLocation d-flex align-items-center">
                                                         <div className="car-brand text-muted">
@@ -296,7 +296,7 @@ const AuctionFilter = () => {
                                                             <Button variant='link'><i className="fa-solid fa-bookmark"></i></Button>
                                                         </div>
                                                     </div>
-                                                    <Link to="/#" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
+                                                    <Link to="/singlecar" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
                                                     <p className="car-desc text-muted">{car.desc}</p>
                                                     <div className="car-brandLocation d-flex align-items-center">
                                                         <div className="car-brand text-muted">

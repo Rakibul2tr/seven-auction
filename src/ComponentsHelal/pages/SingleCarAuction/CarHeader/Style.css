@@ -1,0 +1,35 @@
+.header-info-box h5 {
+    font-weight: 700;
+}
+
+.header-info-box span {
+    font-weight: 500;
+}
+
+.header-info-box {
+    margin-right: 55px;
+}
+
+.car-header .single-car-markshare {
+    background: #dddddda3;
+    color: #623d57;
+    font-size: 16px;
+}
+
+.car-header .single-bid-btn {
+    background-color: #623d57;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 9px 50px;
+    border-radius: 50px;
+}
+
+.car-header .single-bid-btn:hover {
+    color: #fff;
+}
+
+.car-header {
+    border-bottom: 2px solid #623d57;
+    padding: 20px;
+}
