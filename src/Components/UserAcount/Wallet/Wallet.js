@@ -2,6 +2,25 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import "./Wallet.css";
 const Wallet = () => {
+
+  const transaction=[
+    {
+      number:'+24567546 S.R',
+      balanc:'222,5467',
+      time:3
+    },
+    {
+      number:'-14567546 S.R',
+      balanc:'822,5467',
+      time:4
+    },
+    {
+      number:'+54567546 S.R',
+      balanc:'522,5467',
+      time:5
+    },
+  ]
+
   return (
     <Container style={{ background: "#F6F8FA" }}>
       <Row className="pb-4">
@@ -28,47 +47,22 @@ const Wallet = () => {
 
         <div className="transaction_body pb-4">
           {/* transaction item start */}
-          <div className="transaction_item">
+          {
+            transaction.map(item=>(<div className="transaction_item" key={item.time}>
             <div className="transaction_item_number">
-              <span>+24567546 S.R</span>
+              <span>{item.number}</span>
             </div>
             <div className="transaction_text_and_time">
               <div className="transaction_text">
-                <p>222,5467 added your balance</p>
+                <p>{item.balanc} added your balance</p>
               </div>
               <div className="transaction_time">
-                <span>3 min augo</span>
+                <span>{item.time} min augo</span>
               </div>
             </div>
-          </div>
-          {/* transaction item start */}
-          <div className="transaction_item">
-            <div className="transaction_item_number">
-              <span>-24567546 S.R</span>
-            </div>
-            <div className="transaction_text_and_time">
-              <div className="transaction_text">
-                <p>222,5467 added your balance</p>
-              </div>
-              <div className="transaction_time">
-                <span>3 min augo</span>
-              </div>
-            </div>
-          </div>
-          {/* transaction item start */}
-          <div className="transaction_item">
-            <div className="transaction_item_number">
-              <span>+24567546 S.R</span>
-            </div>
-            <div className="transaction_text_and_time">
-              <div className="transaction_text">
-                <p>222,5467 added your balance</p>
-              </div>
-              <div className="transaction_time">
-                <span>3 min augo</span>
-              </div>
-            </div>
-          </div>
+          </div>))
+          }
+
         </div>
       </Row>
     </Container>

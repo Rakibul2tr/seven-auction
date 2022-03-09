@@ -1,5 +1,6 @@
 import {  Routes, Route } from "react-router-dom";
 import "./App.css";
+import DashboardMain from "./Components/AdminDashbord/DashboardMain";
 import NotFound from "./Components/NotFoundpage/NotFound";
 import Privacy from "./Components/PrivecyPage/Privacy";
 import Footer from "./Components/ShirePage/Footer/Footer";
@@ -17,6 +18,7 @@ function App() {
       <Route exact path="/contact" element={<><Header/> <ContactUs/> <Footer/></>}></Route>
       <Route exact path="/privacy" element={<><Header/> <Privacy/> <Footer/></>}></Route>
       <Route exact path="/terms" element={<><Header/> <Terms/> <Footer/></>}></Route>
+      <Route exact path="/dashboard" element={<> <DashboardMain/> </>}></Route>
       <Route exact path="*" element={<><Header/> <NotFound/> <Footer/></>}></Route>
     </Routes>
   );
