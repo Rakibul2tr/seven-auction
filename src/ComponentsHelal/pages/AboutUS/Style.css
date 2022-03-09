@@ -1,0 +1,19 @@
+.about-title {
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+}
+
+.about-title:after {
+    position: absolute;
+    left: 8px;
+    bottom: -8px;
+    content: "";
+    width: 46px;
+    height: 4px;
+    background: #623d57;
+}
+
+.about-social a {
+    background-color: #623d57 !important;
+}

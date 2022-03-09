@@ -1,0 +1,44 @@
+.faq-title {
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+}
+
+.faq-title:after {
+    position: absolute;
+    left: 10px;
+    bottom: -8px;
+    content: "";
+    width: 25px;
+    height: 4px;
+    background: #623d57;
+}
+
+.faq-qoute-bloc h3 {
+    font-size: 18px;
+    color: #623d57;
+}
+
+.faq-qoute-bloc blockquote {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 12px;
+    border-left: 4px solid #623d57;
+}
+
+.seven-auction-faqs .accordion-button {
+    color: #623d57;
+    font-weight: 700;
+}
+
+.seven-auction-faqs .accordion-button:focus {
+    box-shadow: none;
+}
+
+.seven-auction-faqs .accordion-button:not(.collapsed) {
+    color: #ffff;
+    background-color: #623d57;
+}
+
+.seven-auction-faqs .accordion-button:not(.collapsed)::after {
+    background-image: none;
+}
