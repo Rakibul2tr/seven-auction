@@ -1,0 +1,48 @@
+.admin_menu_body {
+    background: #623c57;
+    padding-top: 20px;
+    height: 100vh;
+  }
+  .admin_logo {
+    width: 65%;
+    margin: auto;
+ }
+  .admin_menu_link {
+    
+    padding: 5px 25px;
+  }
+  
+  .admin_menu_link li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  
+    padding: 5px;
+    border-radius: 50px;
+    line-height: 26px;
+    cursor: pointer;
+    margin: 20px 0;
+  }
+  .liActive {
+    background: #7e5472;
+  }
+  .icon {
+    width: 27px;
+    margin-left: 10px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.8;
+  }
+  .admin_menu_link li .icon img {
+    width: 15px;
+    height: 15px;
+    margin-top: -3px;
+  }
+  .admin_menu_link li span {
+    margin-left: 30px;
+    color: #fff;
+    text-transform: capitalize;
+    opacity: 0.8;
+  }
+  
