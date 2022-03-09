@@ -31,11 +31,9 @@ function App() {
       <Route exact path="/privacy" element={<><Header/> <Privacy/> <Footer/></>}></Route>
 
       <Route exact path="/terms" element={<><Header/> <Terms/> <Footer/></>}></Route>
-<<<<<<< HEAD
-      
-=======
+
       <Route exact path="/dashboard" element={<> <DashboardMain/> </>}></Route>
->>>>>>> rakibul
+
       <Route exact path="*" element={<><Header/> <NotFound/> <Footer/></>}></Route>
     </Routes>
   );
