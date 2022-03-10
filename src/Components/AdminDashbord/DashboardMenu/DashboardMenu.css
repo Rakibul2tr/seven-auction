@@ -1,7 +1,8 @@
 .admin_menu_body {
     background: #623c57;
     padding-top: 20px;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
   }
   .admin_logo {
     width: 65%;
@@ -16,7 +17,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-  
+    
     padding: 5px;
     border-radius: 50px;
     line-height: 26px;
@@ -25,14 +26,15 @@
   }
   .liActive {
     background: #7e5472;
+    opacity: none;
   }
-  .icon {
+  .admin_menu_link li .icon {
     width: 27px;
     margin-left: 10px;
     background: #fff;
     border-radius: 50%;
     text-align: center;
-    opacity: 0.8;
+    
   }
   .admin_menu_link li .icon img {
     width: 15px;
