@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "../../../assets/images/icon/site_logo.png"
-import icon1 from "../../../images/user.png";
-import icon2 from "../../../images/bell.png";
-import icon3 from "../../../images/walete.png";
-import icon4 from "../../../images/bid.png";
-import icon6 from "../../../images/mark.png";
+import icon1 from "../../../assets/images/icon/staus (1).png";
+import icon2 from "../../../assets/images/icon/upload.png";
+import icon3 from "../../../assets/images/icon/headPhon.png";
+import icon4 from "../../../assets/images/icon/bid.png";
+import icon6 from "../../../assets/images/icon/withdrow.png";
 import './DashboardMenu.css'
 
 const DashboardMenu = (props) => {

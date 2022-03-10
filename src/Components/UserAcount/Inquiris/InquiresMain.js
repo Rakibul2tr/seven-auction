@@ -62,7 +62,7 @@ const InquiresMain = () => {
           <h4>teckets</h4>
         </div>
         <div className="auction_body">
-            <div className="inquires_nav d-flex justify-content-between">
+            <div className="inquires_nav d-flex justify-content-between align-items-center">
                 <div className="inquires_menu py-3 ">
                     <button 
                     onClick={() => setmenuChange("all")}

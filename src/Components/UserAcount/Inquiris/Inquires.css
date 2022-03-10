@@ -37,7 +37,22 @@
     border-radius: 25px;
     border: 1px solid #E4E5E8;
 }
-
+.new_tecket {
+    position: relative;
+    right: -35px;
+}
+.new_tecket button {
+    border: none;
+    background: #623C57;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-transform: capitalize;
+    width: 180px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 0;
+}
 .inqiresactive{
     background: #7E5472 !important;
     color: #fff !important;

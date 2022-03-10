@@ -1,37 +1,38 @@
-.tickets {
+.auction-request {
     padding: 10px;
   }
-  .tickets h4 {
+  .auction-request h4 {
     text-transform: capitalize;
     font-weight: 700;
     position: relative;
   }
-  .tickets h4::before {
+  .auction-request h4::before {
     position: absolute;
     content: "";
     left: 1%;
     bottom: -4px;
-    width: 9%;
+    width: 22%;
     height: 2px;
     background: #623c57;
   }
-  .top_ticket {
+  .top_auction_request {
     display: flex;
 }
-.ticket_item {
+.auction_request_item {
     width: 24%;
     padding: 5px 10px;
     border-left: 3px solid #623C57;
     background: #fff;
     margin-right: 25px;
 }
-.ticket_item p{
+.auction_request_item p {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
+    opacity: .7;
 }
-.ticket_item h6 {
+.auction_request_item h6 {
     font-size: 15px;
     padding: 5px;
     font-weight: 700;
@@ -49,12 +50,12 @@
     color: #E53E71;
 }
 
-.ticket_menu {
+.request_menu {
     width: 75%;
     display: flex;
     align-items: center;
 }
-.ticket_menu button {
+.request_menu button {
     width: 16%;
     border: none;
     padding: 5px 0;
