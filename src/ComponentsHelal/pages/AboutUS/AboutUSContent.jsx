@@ -12,13 +12,13 @@ const AboutUSContent = () => {
                     <h2 class="about-title mb-4">About us</h2>
 
                     <Row>
-                        <Col md={6}>
+                        <Col md={6} className="mb-4">
                             <div className="about-left">
-                                <h3>What is seven auction?</h3>
+                                <h3 className='fs-5 fw-bolder mb-3'>What is seven auction?</h3>
                                 <p>The description of the Auction Lot is, dolor sit amet consectetur adipisicing elit. Eos, minima sunt. Ex corporis magnam deleniti earum molestiae itaque ullam quisquam ipsam in velit! Voluptas nemo voluptatum similique blanditiis esse doloribus id voluptate, dolorum, nihil, impedit aliquid. Minima similique reprehenderit molestiae porro quo, amet atque veritatis, earum magni, architecto accusantium laboriosam.</p>
 
-                                <div className="about-info-boxes">
-                                    <div className="about-info-boxe">
+                                <div className="about-info-boxes mt-5">
+                                    <div className="about-info-boxe d-flex align-items-center">
                                         <div className="about-info-icon">
                                             <i class="fa-solid fa-phone"></i>
                                         </div>
@@ -26,7 +26,7 @@ const AboutUSContent = () => {
                                             <span>+900 345 2392</span>
                                         </div>
                                     </div>
-                                    <div className="about-info-boxe">
+                                    <div className="about-info-boxe d-flex align-items-center">
                                         <div className="about-info-icon">
                                             <i class="fa-solid fa-envelope"></i>
                                         </div>
@@ -34,7 +34,7 @@ const AboutUSContent = () => {
                                             <span>info@sevenauction.com</span>
                                         </div>
                                     </div>
-                                    <div className="about-info-boxe">
+                                    <div className="about-info-boxe d-flex align-items-center">
                                         <div className="about-info-icon">
                                             <i class="fa-solid fa-location-dot"></i>
                                         </div>
