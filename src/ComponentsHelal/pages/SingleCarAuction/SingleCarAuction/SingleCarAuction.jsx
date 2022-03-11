@@ -4,27 +4,27 @@ import CarHeader from '../CarHeader/CarHeader';
 
 import "./Style.css";
 
-import carFeaturedImg from "../../../../assets/images/car/car-5.png";
+import carFeaturedImg from "../../../../assets/images/car/car-3.png";
 
 // gallery images 
-import carGlimg1 from "../../../../assets/images/car/car-5.png";
-import carGlimg2 from "../../../../assets/images/car/car-6.png";
-import carGlimg3 from "../../../../assets/images/car/car-9.png";
-import carGlimg4 from "../../../../assets/images/car/car-6.png";
+import carGlimg1 from "../../../../assets/images/car/car-1.png";
+import carGlimg2 from "../../../../assets/images/car/car-2.png";
+import carGlimg4 from "../../../../assets/images/car/car-4.png";
 import carGlimg5 from "../../../../assets/images/car/car-5.png";
 import carGlimg6 from "../../../../assets/images/car/car-6.png";
 import carGlimg7 from "../../../../assets/images/car/car-7.png";
 import carGlimg8 from "../../../../assets/images/car/car-8.png";
+import carGlimg9 from "../../../../assets/images/car/car-9.png";
 
 const galleryImages = [
     { _id: 1, glSrc: carGlimg1 },
     { _id: 2, glSrc: carGlimg2 },
-    { _id: 3, glSrc: carGlimg3 },
-    { _id: 4, glSrc: carGlimg4 },
-    { _id: 5, glSrc: carGlimg5 },
-    { _id: 6, glSrc: carGlimg6 },
-    { _id: 7, glSrc: carGlimg7 },
-    { _id: 8, glSrc: carGlimg8 },
+    { _id: 3, glSrc: carGlimg4 },
+    { _id: 4, glSrc: carGlimg5 },
+    { _id: 5, glSrc: carGlimg6 },
+    { _id: 6, glSrc: carGlimg7 },
+    { _id: 7, glSrc: carGlimg8 },
+    { _id: 8, glSrc: carGlimg9 },
 ];
 
 const SingleCarAuction = () => {

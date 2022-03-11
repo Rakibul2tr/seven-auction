@@ -1,6 +1,7 @@
 import {  Routes, Route } from "react-router-dom";
 import "./App.css";
 import DashboardMain from "./Components/AdminDashbord/DashboardMain";
+import AdminLogin from "./Components/LoginPage/AdminLogin/AdminLogin";
 import NotFound from "./Components/NotFoundpage/NotFound";
 import Privacy from "./Components/PrivecyPage/Privacy";
 import Footer from "./Components/ShirePage/Footer/Footer";
@@ -33,6 +34,8 @@ function App() {
       <Route exact path="/terms" element={<><Header/> <Terms/> <Footer/></>}></Route>
 
       <Route exact path="/dashboard" element={<> <DashboardMain/> </>}></Route>
+
+      <Route exact path="/admin" element={<> <AdminLogin/> </>}></Route>
 
       <Route exact path="*" element={<><Header/> <NotFound/> <Footer/></>}></Route>
     </Routes>

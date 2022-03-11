@@ -41,7 +41,7 @@ const Header = () => {
                     <Link to='/'>
                        <button onClick={() => setModalShow(true)}>Login</button>
                     </Link>
-                    <Link to='/'>Support</Link>
+                    <Link to='/contact'>Support</Link>
                     <Link to='/'>
                         <select>
                             <option>En</option>
