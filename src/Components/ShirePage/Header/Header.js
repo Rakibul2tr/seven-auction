@@ -35,7 +35,7 @@ const Header = () => {
             <div className="col-md-5">
                 <div className="menu_right">
                     <Link to='/'>Auction</Link>
-                    <Link to='/'>
+                    <Link to='/sell'>
                         <button>Sell With Us</button>
                     </Link>
                     <Link to='/'>

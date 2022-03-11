@@ -37,6 +37,9 @@ const Footer = () => {
               <li>
                 <Link to="/dashboard">Admin Dashboard</Link>
               </li>
+              <li>
+                <Link to="/admin">Admin login</Link>
+              </li>
             </div>
           </div>
         </div>
@@ -47,7 +50,7 @@ const Footer = () => {
             </div>
             <div className="footer_menu">
               <li>
-                <Link to="/">sell with us</Link>
+                <Link to="/sell">sell with us</Link>
               </li>
               <li>
                 <Link to="/about">about us</Link>

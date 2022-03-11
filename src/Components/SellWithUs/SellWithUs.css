@@ -1,0 +1,56 @@
+.sell_secion {
+    width: 60%;
+    margin: auto;
+    min-height: 500px;
+    margin-top: 40px;
+}
+
+.sell_hidding h4 {
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+
+  }
+  .sell_hidding h4::before {
+    position: absolute;
+    content: "";
+    left: 29%;
+    bottom: -4px;
+    width: 42%;
+    height: 4px;
+    background: #623c57;
+    text-align: center;
+  }
+  .sell_text p {
+    padding: 35px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.sell_btn {
+    text-align: center;
+}
+.sell_btn button {
+    width: 150px;
+    padding: 6px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    background: #623C57;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.teck_min {
+    text-align: center;
+    margin-top: 10px;
+}
+.teck_min span {
+    font-size: 15px;
+    opacity: .7;
+    text-transform: capitalize;
+}
+.teck_min span i{
+    margin-right: 5px;
+}

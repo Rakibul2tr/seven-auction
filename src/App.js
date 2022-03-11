@@ -4,6 +4,7 @@ import DashboardMain from "./Components/AdminDashbord/DashboardMain";
 import AdminLogin from "./Components/LoginPage/AdminLogin/AdminLogin";
 import NotFound from "./Components/NotFoundpage/NotFound";
 import Privacy from "./Components/PrivecyPage/Privacy";
+import SellWithUs from "./Components/SellWithUs/SellWithUs";
 import Footer from "./Components/ShirePage/Footer/Footer";
 import Header from "./Components/ShirePage/Header/Header";
 import Terms from "./Components/TermsCondition/Terms";
@@ -32,6 +33,8 @@ function App() {
       <Route exact path="/privacy" element={<><Header/> <Privacy/> <Footer/></>}></Route>
 
       <Route exact path="/terms" element={<><Header/> <Terms/> <Footer/></>}></Route>
+
+      <Route exact path="/sell" element={<><Header/> <SellWithUs/> <Footer/></>}></Route>
 
       <Route exact path="/dashboard" element={<> <DashboardMain/> </>}></Route>
 
