@@ -19,6 +19,9 @@
 .footer_heading h2 {
   font-size: 22px;
 }
+.email_info{
+  text-transform: lowercase;
+}
 .footer_menu {
   margin-left: 10px;
 }
@@ -33,9 +36,33 @@ p > a {
   text-transform: capitalize;
   opacity: 0.8;
   font-weight: 400;
+  transition: .3s;
 }
 .footer_menu li a:hover,
 p > a:hover {
   color: #fff;
   opacity: 0.5;
+}
+
+
+.footer_bottom{
+  background: #7E5472;
+}
+.footer_bottom p {
+  color: #fff;
+  margin-left: 30px !important;
+  text-transform: capitalize;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 0;
+}
+.social_icon a {
+  padding: 0 10px;
+  color: #fff;
+}
+
+.social_icon {
+  text-align: center;
+  line-height: 40px;
+  margin-left: 100px;
 }

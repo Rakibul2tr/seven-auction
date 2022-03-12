@@ -31,7 +31,7 @@ const AcountMenu = (props) => {
             <div className="icon">
               <img className="img-fluid" src={icon2} alt="notification icon" />
             </div>
-            <span>notification</span>
+            <span>notifications <small className="notification_live">5</small></span>
           </li>
           {/* list item three =====================*/}
           <li
@@ -51,7 +51,7 @@ const AcountMenu = (props) => {
             <div className="icon">
               <img className="img-fluid" src={icon4} alt="bid icon" />
             </div>
-            <span>my bid</span>
+            <span>my bids</span>
           </li>
           {/* list item 5 ===========================*/}
           <li
@@ -61,7 +61,7 @@ const AcountMenu = (props) => {
             <div className="icon">
               <img className="img-fluid" src={icon4} alt="auction icon" />
             </div>
-            <span>my auction</span>
+            <span>my auctions</span>
           </li>
           {/* list item 6 ============================*/}
           <li
@@ -81,7 +81,7 @@ const AcountMenu = (props) => {
             <div className="icon">
               <img className="img-fluid" src={icon7} alt="inquireas icon" />
             </div>
-            <span>inquireas</span>
+            <span>inquiries</span>
           </li>
         </div>
       </div>

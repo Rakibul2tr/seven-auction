@@ -14,25 +14,20 @@
   left: 2%;
   bottom: -4px;
   width: 12%;
-  height: 2px;
+  height: 2.5px;
   background: #623c57;
 }
 .password_change {
   padding: 20px 10px;
 }
 .password_change h4::before {
-  width: 17%;
+  width: 19%;
   left: 3%;
 }
-.account_form .email_addrass,
-.account_form .pasword,
-.account_form .first_name,
-.account_form .last_name,
-.account_form .phone,
-.account_form .current_password {
+.account_form .email_addrass, .account_form .pasword, .account_form .first_name, .account_form .last_name, .account_form .phone, .account_form .current_password {
   display: flex;
   align-items: center;
-  border: 1px solid #8c7185;
+  border: 1px solid #E8E9EA;
   padding: 7px;
   border-radius: 20px;
   background: #fff;

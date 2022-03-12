@@ -7,9 +7,9 @@
     position: absolute;
     content: "";
     left: 2%;
-    bottom: -4px;
-    width: 16%;
-    height: 2px;
+    bottom: -10px;
+    width: 20%;
+    height: 2.5px;
     background: #623c57;
 }
 .terms_text h6{

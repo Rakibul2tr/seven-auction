@@ -7,7 +7,7 @@ const AccountUpdate = () => {
     <Container>
       <Row className="pb-5">
         <div className="my_account">
-          <h4>my account</h4>
+          <h4>my details</h4>
         </div>
         <form action="" className="account_form">
           <div className="row px-5 py-2">

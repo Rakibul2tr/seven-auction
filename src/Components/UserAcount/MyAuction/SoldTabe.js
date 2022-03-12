@@ -12,7 +12,7 @@ const SoldTabe = (props) => {
                       <div className="auction-car-item">
                           <div className="auction_car-img_bg" style={{ backgroundImage: `url(${car.imageSrc})` }}>
                               <div className="car-time-and-price d-flex">
-                                  <div className="car-time">{car.timecount}</div>
+                                  <div className="car-time"><i className="fa-solid fa-clock"></i>{car.timecount}</div>
                                   <div className="car-price">{car.price}</div>
                               </div>
                           </div>

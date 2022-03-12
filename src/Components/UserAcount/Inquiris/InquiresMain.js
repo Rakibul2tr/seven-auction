@@ -31,13 +31,13 @@ const InquiresMain = () => {
         {
             ticket: "78459",
             desc: "Lorem Ipsum is simply dummy text of sdfaf sdfds the",
-            status:"rejact",
+            status:"rejected",
             img:ticketImg,
         },
         {
             ticket: "523598",
             desc: "Lorem Ipsum is simply dummy text of sdfaf sdfds the",
-            status:"rejact",
+            status:"rejected",
             img:ticketImg,
         },
         {

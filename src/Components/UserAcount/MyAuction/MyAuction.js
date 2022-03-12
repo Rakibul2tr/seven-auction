@@ -41,7 +41,7 @@ const MyAuction = () => {
     <Container style={{ background: "#F6F8FA" }}>
        <Row className="pb-4">
         <div className="my_auction">
-          <h4>My Auction</h4>
+          <h4>My Auctions</h4>
         </div>
         <div className="auction_body">
             <div className="My_auction_menu py-3">

@@ -11,9 +11,9 @@ const Privacy = () => {
                         <h4>privacy and policy</h4>
                     </div>
                     <div className="privacy_text px-5 py-3">
-                        <h6>User Policy</h6>
+                        <h6>User privacy</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci, repudiandae facilis ab hic sit ullam itaque, praesentium tempore a fugiat sunt doloribus similique ex quia sint! Atque, corrupti perferendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci, repudiandae facilis ab hic sit ullam itaque, praesentium tempore a fugiat sunt doloribus similique ex quia sint! Atque, corrupti perferendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci, repudiandae facilis ab hic sit ullam itaque, praesentium tempore a fugiat sunt doloribus similique ex quia sint! Atque, corrupti perferendis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci, repudiandae facilis ab hic sit ullam itaque, praesentium tempore a fugiat sunt doloribus similique ex quia sint! Atque, corrupti perferendis!</p>
-                        <h6>Billing and Pyments</h6>
+                        <h6>Billing and Payments</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci, repudiandae facilis ab hic sit ullam itaque, praesentium tempore a fugiat sunt doloribus similique ex quia sint! Atque, corrupti perferendis!Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </Row>

@@ -80,6 +80,7 @@
     font-weight: 700;
     color: #623c57;
     font-size: 16px;
+    
 }
 .massege_div p {
     font-size: 14px;
@@ -88,8 +89,12 @@
 }
 .status_div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+.status_div span,.massege_div h6{
+    font-weight: 600;
+    opacity: .8;
 }
 
 .status_div button {

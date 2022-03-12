@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./Wallet.css";
 const Wallet = () => {
 
+  
   const transaction=[
     {
+      add:'+24567546 S.R',
       number:'+24567546 S.R',
       balanc:'222,5467',
-      time:3
+      time:3,
+      
     },
     {
+      withdrow:'-14567546 S.R',
       number:'-14567546 S.R',
       balanc:'822,5467',
       time:4
     },
     {
+      withdrow:'-54567546 S.R',
+      number:'-54567546 S.R',
+      balanc:'522,5467',
+      time:5
+    },
+    {
+      add:'+54567546 S.R',
       number:'+54567546 S.R',
       balanc:'522,5467',
       time:5
@@ -42,7 +53,7 @@ const Wallet = () => {
         </div>
 
         <div className="my_transaction pt-5">
-          <h4>transaction</h4>
+          <h4>transactions</h4>
         </div>
 
         <div className="transaction_body pb-4">
@@ -50,7 +61,7 @@ const Wallet = () => {
           {
             transaction.map(item=>(<div className="transaction_item" key={item.time}>
             <div className="transaction_item_number">
-              <span>{item.number}</span>
+              <span className={item.add && 'ColorGreen'}>{item.number}</span>
             </div>
             <div className="transaction_text_and_time">
               <div className="transaction_text">

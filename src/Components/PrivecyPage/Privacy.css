@@ -2,14 +2,15 @@
     text-transform: capitalize;
     font-weight: 700;
     position: relative;
+    margin-left: 10px;
 }
 .privacy_hedding h4::before {
     position: absolute;
     content: "";
     left: 2%;
-    bottom: -4px;
-    width: 15%;
-    height: 2px;
+    bottom: -10px;
+    width: 15.5%;
+    height: 2.5px;
     background: #623c57;
 }
 .privacy_text h6{

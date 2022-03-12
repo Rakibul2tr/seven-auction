@@ -43,9 +43,8 @@
     border-radius: 8px;
     position: relative;
 }
-.car-img_bg::after{
+.top_belt_div {
     position: absolute;
-    content: '';
     top: 0;
     left: 0;
     width: 100%;
@@ -53,6 +52,18 @@
     background: #00A993;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+}
+.top_belt_div p {
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+.car-time i {
+    font-size: 15px;
+    margin-right: 5px;
 }
 .car-title_bid{
     font-size: 18px;

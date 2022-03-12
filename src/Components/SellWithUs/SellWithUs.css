@@ -1,8 +1,8 @@
 .sell_secion {
-    width: 60%;
+    width: 60% !important;
     margin: auto;
     min-height: 500px;
-    margin-top: 40px;
+    margin-top: 40px !important;
 }
 
 .sell_hidding h4 {
@@ -10,18 +10,18 @@
     font-weight: 700;
     position: relative;
     text-align: center;
-
-  }
+    font-size: 22px;
+}
   .sell_hidding h4::before {
     position: absolute;
     content: "";
-    left: 29%;
+    left: 27%;
     bottom: -4px;
-    width: 42%;
-    height: 4px;
+    width: 46%;
+    height: 2.5px;
     background: #623c57;
     text-align: center;
-  }
+}
   .sell_text p {
     padding: 35px;
     font-size: 15px;
@@ -32,7 +32,7 @@
     text-align: center;
 }
 .sell_btn button {
-    width: 150px;
+    width: 170px;
     padding: 6px;
     border-radius: 20px;
     font-size: 16px;
@@ -45,6 +45,9 @@
 .teck_min {
     text-align: center;
     margin-top: 10px;
+    font-style: italic;
+    font-weight: 500;
+    opacity: .8;
 }
 .teck_min span {
     font-size: 15px;

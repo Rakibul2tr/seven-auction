@@ -6,6 +6,8 @@ import Register from "../Register/Register";
 
 const Login = (props) => {
   const [loginChange, setloginChange] = useState("login");
+  const [usemobil,setusemobil] = useState('email');
+  const [opacity,setopacity] = useState('');
 
   return (
     <div>
@@ -15,7 +17,7 @@ const Login = (props) => {
         size="md"
         // aria-labelledby="contained-modal-title-vcenter"
         centered
-      >
+      className="login_modal">
         <div className="login_register_row">
           <button
             onClick={() => setloginChange("login")}
@@ -36,34 +38,57 @@ const Login = (props) => {
               <h2>Welcome Back</h2>
             </div>
             <form action="" className="login_form">
-              <div className="row px-5 py-2">
-                <label htmlFor="email">Email Address</label>
-                <div className="email_addrass">
-                  <input
-                    type="email"
-                    placeholder="ameer@gmail.com"
-                    name="email"
-                    id="email"
-                  />
-                  <i classname="far fa-envelope"></i>
+              {
+                usemobil==='mobil'?
+                <div className={opacity==='opacityNone'?'opacityNone':'field_row'}>
+                  <div className="row px-5 py-2 ">
+                    <label htmlFor="email">Phone number</label>
+                    <div className="email_addrass" onClick={()=>setopacity('opacityNone')}>
+                      <input
+                        type="tel"
+                        placeholder="Phone number"
+                        name="phone"
+                      />
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <p className="login_p">
+                      <Link to="/" onClick={()=>setusemobil('email')}>use Email</Link>
+                    </p>
+                  </div>
+                </div>:
+                <div className={opacity==='emailopacityNone'?'opacityNone':'field_row'}>
+                  <div className="row px-5 py-2">
+                    <label htmlFor="email">Email Address</label>
+                    <div className="email_addrass" onClick={()=>setopacity('emailopacityNone')}>
+                      <input
+                        type="email"
+                        placeholder="ameer@gmail.com"
+                        name="email"
+                        id="email"
+                      />
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <p className="login_p">
+                      <Link to="/" onClick={()=>setusemobil('mobil')}>use mobile</Link>
+                    </p>
+                  </div>
                 </div>
-                <p className="login_p">
-                  <Link to="/">use mobile</Link>
-                </p>
-              </div>
-              <div className="row px-5 py-2">
-                <label htmlFor="password">Password</label>
-                <div className="pasword">
-                  <input
-                    type="password"
-                    placeholder="Type Password"
-                    name="password"
-                  />
-                  <i classname="fas fa-lock"></i>
+              }
+              <div className={opacity==='passopacityNone'?'opacityNone':'field_row'}>
+                <div className="row px-5 py-2">
+                  <label htmlFor="password">Password</label>
+                  <div className="pasword" onClick={()=>setopacity('passopacityNone')}>
+                    <input
+                      type="password"
+                      placeholder="Type Password"
+                      name="password"
+                    />
+                    <i class="fa-solid fa-lock"></i>
+                  </div>
+                  <p className="login_p">
+                    <Link to="/">forgot your password ? </Link>
+                  </p>
                 </div>
-                <p className="login_p">
-                  <Link to="/">forgot your password ? </Link>
-                </p>
               </div>
               <div className="row px-5 py-2 text-center">
                 <button className="submit_btn">Login</button>

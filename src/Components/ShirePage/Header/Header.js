@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Form, FormControl, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logoImg from '../../../images/site_logo.png';
 import Login from '../../LoginPage/Login/Login';
 import './Header.css'
+import Mobilmenu from './Mobilmenu';
 
 const Header = () => {
     const [modalShow, setModalShow] = React.useState(false);
+    //mobile menu controler
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
       <div className='header_bg'>
-        <Container>
+        <div>
            <Row className='Nav_row'>
             <div className="col-md-7">
                 <div className="logo_search">
@@ -34,15 +41,16 @@ const Header = () => {
             </div>
             <div className="col-md-5">
                 <div className="menu_right">
-                    <Link to='/'>Auction</Link>
+                    <NavLink to='/' activeClassName='active'>Auctions</NavLink>
                     <Link to='/sell'>
-                        <button>Sell With Us</button>
+                        <button>Sell With US
+                        </button>
                     </Link>
-                    <Link to='/'>
+                    <Link to=''>
                        <button onClick={() => setModalShow(true)}>Login</button>
                     </Link>
-                    <Link to='/contact'>Support</Link>
-                    <Link to='/'>
+                    <NavLink to='/contact'activeClassName='menu_active'>Support</NavLink>
+                    <Link to=''>
                         <select>
                             <option>En</option>
                             <option>Dn</option>
@@ -51,21 +59,12 @@ const Header = () => {
                     </Link>
                 </div>
             </div>
-            {/* mobil device navbar */}
-            <div className="col-12 mobil_device">
-                <div className="menu_right">
-                    <Link to='/'>Auction</Link>
-                    <Link to='/'>
-                        <span>Sell With Us</span>
-                    </Link>
-                    <Link to='/'><i className="far fa-bell"></i></Link>
-                    <Link to='/'>
-                    <i className="fas fa-user-circle"></i>
-                    </Link>
-                    <Link to='/'>Support</Link>
-                    <Link to='/'>En</Link>
-                </div>
-            </div>
+           </Row>
+           <Row className='mobil_device'>
+               {/* mobil device navbar */}
+               <i class="fa-solid fa-bars" onClick={handleShow}></i>
+               
+             <Mobilmenu show={show}handleClose={handleClose}/>
            </Row>
            <Row>
                
@@ -75,7 +74,7 @@ const Header = () => {
               />
               
            </Row>
-        </Container>
+        </div>
       </div>
     );
 };

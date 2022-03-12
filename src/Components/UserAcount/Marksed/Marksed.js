@@ -60,7 +60,7 @@ const Marksed = () => {
         <Container style={{ background: "#F6F8FA" }}>
        <Row className="pb-4">
         <div className="my_marksed">
-          <h4>Marksed</h4>
+          <h4>Marked</h4>
         </div>
         <div className="mark_car_aria">
             <div className="row">
@@ -69,7 +69,7 @@ const Marksed = () => {
                     <div className="auction-car-item">
                         <div className="mark_car-img_bg" style={{ backgroundImage: `url(${car.imageSrc})` }}>
                             <div className="car-time-and-price d-flex">
-                                <div className="car-time">{car.timecount}</div>
+                                <div className="car-time"><i className="fa-solid fa-clock"></i>{car.timecount}</div>
                                 <div className="car-price">{car.price}</div>
                             </div>
                         </div>

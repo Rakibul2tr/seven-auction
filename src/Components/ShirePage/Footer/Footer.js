@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import footerLogo from "../../../images/site_logo.png";
 import "./Footer.css";
@@ -15,21 +15,21 @@ const Footer = () => {
               <img className="img-fluid" src={footerLogo} alt="" />
             </div>
             <p className="text-center">
-              <Link to="/">info@severauction.com</Link>
+              <Link to="/" className="email_info">info@sevenauction.com</Link>
             </p>
           </div>
         </div>
         <div className="col-md-3">
           <div className="footer_text">
             <div className="footer_heading">
-              <h2>auction</h2>
+              <h2>auctions</h2>
             </div>
             <div className="footer_menu">
               <li>
-                <Link to="/">live auction</Link>
+                <Link to="/">live auctions</Link>
               </li>
               <li>
-                <Link to="/">solid</Link>
+                <Link to="/">sold</Link>
               </li>
               <li>
                 <Link to="/account">My Account</Link>
@@ -84,6 +84,24 @@ const Footer = () => {
         </div>
       </Row>
     </Container>
+    <div className="footer_bottom">
+      <Container>
+        <Row>
+          <Col md={6}>
+            <p>all rights reserved, 2021</p>
+          </Col>
+          <Col md={6}>
+            <div className="social_icon">
+            <Link to='/'><i class="fa-brands fa-twitter"></i></Link>
+            <Link to='/'><i class="fa-brands fa-instagram"></i></Link>
+            <Link to='/'><i class="fa-brands fa-facebook-f"></i></Link>
+            <Link to='/'><i class="fa-brands fa-linkedin-in"></i></Link>
+            <Link to='/'><i class="fa-brands fa-youtube"></i></Link>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
     </div>
   );
 };

@@ -1,3 +1,11 @@
+.login_modal {
+  
+  background: #0a090977 !important;
+}
+.modal-content {
+  background-color: #EFEFEF !important;
+}
+
 .login_register_row {
   display: flex;
   justify-content: space-around;
@@ -14,16 +22,19 @@
   background: #623d57;
   color: #fff;
 }
-.email_addrass,
-.pasword,
-.first_name,
-.last_name,
-.phone {
+.field_row{
+  opacity: .4;
+}
+.opacityNone{
+  opacity:.9;
+}
+.email_addrass, .pasword, .first_name, .last_name, .phone {
   display: flex;
   align-items: center;
-  border: 1px solid #8c7185;
+  border: 1.5px solid #8c7185;
   padding: 7px;
   border-radius: 20px;
+  background: #FFFFFF;
 }
 
 .email_addrass input,
@@ -54,6 +65,9 @@
   color: #8c7185;
   text-decoration: none;
   text-transform: capitalize;
+}
+.login_p a:hover{
+  color: #8c7185;
 }
 .register_p {
   padding: 10px 20px;

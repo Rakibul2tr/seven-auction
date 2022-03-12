@@ -2,6 +2,7 @@
     background: #623C57;
     border-bottom: 1px solid #8E6B84;
     position: relative;
+    overflow-x: hidden;
 }
 .Nav_row {
     padding: 10px 0;
@@ -22,8 +23,8 @@
     align-items: center;
 }
 .logo {
-    width: 27%;
-    margin-right: 20px;
+    width: 25%;
+    margin: 0 20px;
 }
 .search_fild {
     width: 100%;
@@ -32,7 +33,7 @@
     background: #7E5472;
     border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 .search_fild input::placeholder{
     font-size: 13px;
@@ -51,10 +52,11 @@
       color: #fff;
       
   }
-.serch_icon i {
+  .serch_icon i {
     color: #fff;
     line-height: 36px;
     cursor: pointer;
+    opacity: .5;
 }
 
 .serch_icon {
@@ -65,6 +67,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-right: 5px;
 }
 .menu_right a {
     text-decoration: none;
@@ -77,12 +80,13 @@
     background: #7E5472;
     border-radius: 20px;
     width: 95px;
-    height: 30px;
+    height: 28px;
     border: 1px solid #7E5472;
     color: #fff;
-    line-height: 26px;
+    line-height: 23px;
     text-align: center;
     transition: .3s;
+    font-weight: 500;
 }
 .menu_right a button:hover{
     border: 1px solid #fff;
@@ -98,16 +102,62 @@
     border: none;
     color: #fff;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .menu_right a select option{
     color: #000;
 }
-
+.menu_right a.active{
+    
+    border-bottom: 2px solid #fff;
+    
+}
 
 .mobil_device{
-    display: none;
+    display: none !important;
 }
-@media (max-width:200px)and(min-width:768px) {
-    
+@media (max-width:768px) {
+    .Nav_row{
+        display: none !important;
+    }
+    .mobil_device{
+        display: block !important;
+    }
+    .mobil_device i {
+        font-size: 35px;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    .offcanvas {
+        background-color: #5D3F56 !important;
+        opacity: .9;
+    }
+   .offcanvas_logo {
+        width: 75%;
+        margin-top: 50px;
+        padding: 10px;
+    }
+    .offcanvas-header i {
+        font-size: 40px;
+        color: #fff;
+        padding: 10px;
+    }
+    .offcanvs_menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .offcanvs_menu a {
+        padding: 15px;
+        border: 1px solid #fff;
+        width: 150px;
+        margin: 5px;
+        border-radius: 30px;
+        text-align: center;
+    }
+    /* footer section */
+    .footer_row.row {
+        text-align: center;
+    }
 }
