@@ -39,6 +39,18 @@
     transform: rotate(45deg);
 }
 
+.about-info-icon:before {
+    position: absolute;
+    background-color: #623d57;
+    content: "";
+    width: 50px;
+    height: 50px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(45deg);
+    top: 10px;
+}
+
 .about-info-text {
     padding-left: 25px;
 }

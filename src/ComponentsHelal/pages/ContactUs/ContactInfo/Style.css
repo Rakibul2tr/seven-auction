@@ -19,6 +19,20 @@
     content: "";
     transform: rotate(316deg);
     left: 0;
+    top: -5px;
+}
+
+.info-icon:before {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #ffffff2b;
+    line-height: 50px;
+    position: absolute;
+    content: "";
+    transform: rotate(316deg);
+    left: 0;
+    top: 10px;
 }
 
 .info-icon {
@@ -31,7 +45,7 @@
 }
 
 .info-box {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     line-height: 29px;
 }
 
@@ -60,4 +74,8 @@
     bottom: -4px;
     left: 50%;
     margin-left: -40px;
+}
+
+.info-box p {
+    border-bottom: 2px solid #cccccc6e;
 }

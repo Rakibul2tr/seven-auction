@@ -37,7 +37,9 @@ const SingleCarAuction = () => {
                     <div className="car-gallery">
                         <Row>
                             <Col md={8}>
-                                <img src={carFeaturedImg} alt="Not found!" />
+                                <div className="car-large-img">
+                                    <img src={carFeaturedImg} className="w-100" alt="Not found!" />
+                                </div>
                             </Col>
                             <Col md={4}>
                                 <Row className=''>

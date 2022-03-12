@@ -41,3 +41,8 @@ h2.single-car-title {
     padding-bottom: 20px;
     border-bottom: 1px solid #cccccc5e;
 }
+
+.car-large-img {
+    width: 80%;
+    margin: auto;
+}
