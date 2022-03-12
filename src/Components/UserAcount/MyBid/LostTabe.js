@@ -11,8 +11,10 @@ const LostTabe = (props) => {
                       props.Livecars.map(car=>(<Col md={4} className="mb-5" key={car.imageSrc}>
                       <div className="auction-car-item">
                           <div className="car-img_bg" style={{ backgroundImage: `url(${car.imageSrc})` }}>
-                             <div className="top_belt_div">
-                                  <p>you are the last bidder</p>
+                          <div className={car.bidCount>=40?'top_belt_greenColor':'top_belt_redColor'}>
+                              <div className="top_belt_div">
+                                  <p>{car.bidCount>=40?<span>you are the last bidder</span>:'someone bid on your bid'}</p>
+                              </div>
                               </div>
                               <div className="car-time-and-price d-flex">
                                   <div className="car-time"><i className="fa-solid fa-clock"></i>{car.timecount}</div>

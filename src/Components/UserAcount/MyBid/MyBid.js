@@ -19,7 +19,7 @@ const MyBid = () => {
             countryFlag: countryFlag,
             location: "KSA, Riyadh",
             imageSrc: car1,
-            bidCount: 34,
+            bidCount: 45,
             timecount: "06:30:50",
             price: "149,000 S.R"
         },
@@ -41,7 +41,7 @@ const MyBid = () => {
             countryFlag: countryFlag,
             location: "KSA, Riyadh",
             imageSrc: car3,
-            bidCount: 36,
+            bidCount: 51,
             timecount: "06:30:50",
             price: "149,000 S.R"
         },

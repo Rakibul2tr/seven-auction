@@ -4,17 +4,17 @@ import CarHeader from '../CarHeader/CarHeader';
 
 import "./Style.css";
 
-import carFeaturedImg from "../../../../assets/images/car/car-3.png";
+import carFeaturedImg from "../../../../assets/images/car/single-car-3.png";
 
 // gallery images 
-import carGlimg1 from "../../../../assets/images/car/car-1.png";
-import carGlimg2 from "../../../../assets/images/car/car-2.png";
-import carGlimg4 from "../../../../assets/images/car/car-4.png";
-import carGlimg5 from "../../../../assets/images/car/car-5.png";
-import carGlimg6 from "../../../../assets/images/car/car-6.png";
-import carGlimg7 from "../../../../assets/images/car/car-7.png";
-import carGlimg8 from "../../../../assets/images/car/car-8.png";
-import carGlimg9 from "../../../../assets/images/car/car-9.png";
+import carGlimg1 from "../../../../assets/images/car/single-car-1.png";
+import carGlimg2 from "../../../../assets/images/car/single-car-2.png";
+import carGlimg4 from "../../../../assets/images/car/single-car-4.png";
+import carGlimg5 from "../../../../assets/images/car/single-car-5.png";
+import carGlimg6 from "../../../../assets/images/car/single-car-6.png";
+import carGlimg7 from "../../../../assets/images/car/single-car-7.png";
+import carGlimg8 from "../../../../assets/images/car/single-car-8.png";
+import carGlimg9 from "../../../../assets/images/car/single-car-9.png";
 
 const galleryImages = [
     { _id: 1, glSrc: carGlimg1 },
@@ -37,7 +37,9 @@ const SingleCarAuction = () => {
                     <div className="car-gallery">
                         <Row>
                             <Col md={8}>
-                                <img src={carFeaturedImg} alt="Not found!" />
+                                <div className="car-large-img">
+                                    <img src={carFeaturedImg} className="w-100" alt="Not found!" />
+                                </div>
                             </Col>
                             <Col md={4}>
                                 <Row className=''>

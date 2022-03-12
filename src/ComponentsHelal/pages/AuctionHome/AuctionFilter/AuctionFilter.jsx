@@ -7,6 +7,8 @@ import car2 from "../../../../assets/images/car/car-2.png";
 import car3 from "../../../../assets/images/car/car-3.png";
 import car4 from "../../../../assets/images/car/car-4.png";
 
+import brandIcon from "../../../../assets/images/icon/brand-icon.png";
+
 import countryFlag from "../../../../assets/images/saudi-flag.png";
 import { Link } from 'react-router-dom';
 
@@ -240,7 +242,10 @@ const AuctionFilter = () => {
                                                 <div className="auction-car-item">
                                                     <div className="car-img" style={{ backgroundImage: `url(${car.imageSrc})` }}>
                                                         <div className="car-time-and-price d-flex">
-                                                            <div className="car-time">{car.timecount}</div>
+                                                            <div className="car-time">
+                                                                <i class="fa-regular fa-clock"></i>
+                                                                {car.timecount}
+                                                            </div>
                                                             <div className="car-price">{car.price}</div>
                                                         </div>
                                                     </div>
@@ -255,7 +260,7 @@ const AuctionFilter = () => {
                                                     <p className="car-desc text-muted">{car.desc}</p>
                                                     <div className="car-brandLocation d-flex align-items-center">
                                                         <div className="car-brand text-muted">
-                                                            <i class="fa-brands fa-black-tie"></i> {car.brand}
+                                                            <img src={brandIcon} alt="Brand..." /> {car.brand}
                                                         </div>
                                                         <div className="car-location text-muted">
                                                             <img src={car.countryFlag} alt="Location..." /> {car.location}
@@ -285,7 +290,10 @@ const AuctionFilter = () => {
                                                 <div className="auction-car-item">
                                                     <div className="car-img" style={{ backgroundImage: `url(${car.imageSrc})` }}>
                                                         <div className="car-time-and-price d-flex">
-                                                            <div className="car-time">{car.timecount}</div>
+                                                            <div className="car-time">
+                                                                <i class="fa-regular fa-clock"></i>
+                                                                {car.timecount}
+                                                            </div>
                                                             <div className="car-price">{car.price}</div>
                                                         </div>
                                                     </div>
@@ -300,7 +308,7 @@ const AuctionFilter = () => {
                                                     <p className="car-desc text-muted">{car.desc}</p>
                                                     <div className="car-brandLocation d-flex align-items-center">
                                                         <div className="car-brand text-muted">
-                                                            <i class="fa-brands fa-black-tie"></i> {car.brand}
+                                                            <img src={brandIcon} alt="Brand..." /> {car.brand}
                                                         </div>
                                                         <div className="car-location text-muted">
                                                             <img src={car.countryFlag} alt="Location..." /> {car.location}

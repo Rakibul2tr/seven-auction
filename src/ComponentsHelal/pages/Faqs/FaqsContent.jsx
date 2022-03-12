@@ -9,15 +9,8 @@ const FaqsContent = () => {
                 <Container>
                     <h2 className="faq-title mb-4">FAQs</h2>
 
-                    <div className="faq-qoute-bloc mb-5">
-                        <h3 className='mb-3'>How seven auction handle payments?</h3>
-                        <blockquote>
-                            The dolor sit amet consectetur adipisicing elit. Dolore reprehenderit fuga, ipsum, deserunt molestiae odit sapiente alias ullam dignissimos, dolores sed qui incidunt exercitationem optio culpa. Eligendi quidem omnis inventore? Temporibus ipsam autem quisquam id pariatur omnis cupiditate neque ex at. Autem praesentium consectetur aliquid ullam nesciunt, ipsa quas debitis quia facilis vel nobis hic suscipit quam molestiae. Assumenda, fugiat.
-                        </blockquote>
-                    </div>
-
                     <div className="seven-auction-faqs">
-                        <Accordion defaultActiveKey={['0']} alwaysOpen>
+                        <Accordion>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>What is seven auction?</Accordion.Header>
                                 <Accordion.Body>

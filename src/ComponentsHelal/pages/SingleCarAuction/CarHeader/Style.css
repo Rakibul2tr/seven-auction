@@ -1,9 +1,11 @@
 .header-info-box h5 {
     font-weight: 700;
+    margin: 0;
 }
 
 .header-info-box span {
     font-weight: 500;
+    opacity: 0.6;
 }
 
 .header-info-box {
@@ -30,6 +32,6 @@
 }
 
 .car-header {
-    border-bottom: 2px solid #623d57;
+    border-bottom: 2px solid #623d572b;
     padding: 20px;
 }

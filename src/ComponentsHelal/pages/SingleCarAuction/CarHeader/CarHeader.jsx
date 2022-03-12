@@ -5,8 +5,8 @@ import "./Style.css";
 const CarHeader = () => {
     return (
         <>
-            <div className="car-header">
-                <Container>
+            <Container>
+                <div className="car-header">
                     <Row className='align-items-center'>
                         <Col md={6}>
                             <div className="car-header-left">
@@ -34,8 +34,8 @@ const CarHeader = () => {
                             </div>
                         </Col>
                     </Row>
-                </Container>
-            </div>
+                </div>
+            </Container>
         </>
     )
 }

@@ -43,7 +43,7 @@ const Header = () => {
                 <div className="menu_right">
                     <NavLink to='/' activeClassName='active'>Auctions</NavLink>
                     <Link to='/sell'>
-                        <button>Sell With US
+                        <button>Sell with us
                         </button>
                     </Link>
                     <Link to=''>

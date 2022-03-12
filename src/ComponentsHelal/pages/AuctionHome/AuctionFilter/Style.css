@@ -5,16 +5,24 @@
     width: 100%;
 }
 
+.auction-search-form input:focus {
+    outline: none;
+}
+
 .auction-search-form {
     position: relative;
 }
 
 .auction-placeholer {
     position: absolute;
-    top: 0;
+    top: 4px;
     right: 18px;
-    font-size: 28px;
-    color: #ddd;
+    font-size: 23px;
+    color: #dddddd82;
+}
+
+.car-time i {
+    padding-right: 5px;
 }
 
 .auction-filter-btns button {
@@ -34,6 +42,7 @@
     margin-right: 18px;
     font-weight: 700;
     color: #b6b4b4;
+    text-transform: uppercase;
 }
 
 .auction-cars .nav-tabs {
@@ -45,6 +54,7 @@
     border-color: #dee2e6;
     background: #623d57;
     color: #fff;
+    opacity: .8;
 }
 
 .car-img {
@@ -54,7 +64,6 @@
     background-position: center center;
     border-radius: 8px;
     position: relative;
-    margin-bottom: 20px;
 }
 
 .car-time-and-price {
@@ -85,8 +94,18 @@
 }
 
 .car-location img {
-    width: 20px;
+    width: 15px;
     border-radius: 20px;
+}
+
+.car-brand img {
+    width: 15px;
+    opacity: 0.5;
+}
+
+.car-brandLocation {
+    font-size: 15px;
+    font-weight: 500;
 }
 
 p.car-desc {
@@ -103,7 +122,9 @@ p.car-desc {
 .car-bid {
     background: #dddddd94;
     border-radius: 20px;
-    padding: 7px 16px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .car-shareMark button {
@@ -134,4 +155,12 @@ p.car-desc {
 
 .btn-primary:disabled {
     background-color: #623d57 !important;
+}
+
+.car-shareMark button {
+    padding: 5px;
+}
+
+.car-shareMark .btn-link:hover {
+    color: #623d57;
 }
