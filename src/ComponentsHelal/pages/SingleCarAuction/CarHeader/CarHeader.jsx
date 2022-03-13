@@ -10,7 +10,7 @@ const CarHeader = () => {
                     <Row className='align-items-center'>
                         <Col md={6}>
                             <div className="car-header-left">
-                                <div className="car-header-info-boxes d-flex">
+                                <div className="car-header-info-boxes text-center d-flex">
                                     <div className="header-info-box">
                                         <h5>20,000 S.R</h5>
                                         <span className='text-uppercase text-muted'>Current Bid</span>
