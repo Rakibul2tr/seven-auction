@@ -18,6 +18,7 @@
 }
 .footer_heading h2 {
   font-size: 22px;
+  font-family: 'Montserrat';
 }
 .email_info{
   text-transform: lowercase;
@@ -37,6 +38,7 @@ p > a {
   opacity: 0.8;
   font-weight: 400;
   transition: .3s;
+  font-family: 'Montserrat';
 }
 .footer_menu li a:hover,
 p > a:hover {
@@ -55,6 +57,7 @@ p > a:hover {
   font-size: 14px;
   margin: 0;
   padding: 10px 0;
+  font-family: 'Montserrat';
 }
 .social_icon a {
   padding: 0 10px;

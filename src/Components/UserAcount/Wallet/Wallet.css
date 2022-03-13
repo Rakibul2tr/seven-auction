@@ -7,6 +7,7 @@
   text-transform: capitalize;
   font-weight: 700;
   position: relative;
+  font-family: 'Montserrat';
 }
 .my_wallet h4::before,
 .my_transaction h4::before {
@@ -29,6 +30,7 @@
   text-transform: capitalize;
   color: #fff;
   margin-left: 24px;
+  font-family: 'Montserrat';
 }
 .balanc_amount {
   width: 250px;
@@ -43,6 +45,7 @@
   color: #fff;
   font-weight: 700;
   font-size: 22px;
+  font-family: 'Montserrat';
 }
 .widrow_and_add_btn {
   width: 40%;
@@ -55,9 +58,11 @@
   background: none;
   border: 1px solid #fff;
   padding: 3px;
+  font-size: 15px;
   color: #fff;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: 'Montserrat';
 }
 .widrow_and_add_btn button:nth-child(1){
   margin-right: 15px;
@@ -83,6 +88,7 @@
   margin-right: 5px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  font-family: 'Montserrat';
 }
 .transaction_item_number span {
   color: #E53E71;
@@ -101,6 +107,7 @@
   margin-left: 5px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  font-family: 'Montserrat';
 }
 .transaction_text p {
   margin: 0;
@@ -108,6 +115,7 @@
   font-size: 14px;
   font-weight: 600;
   opacity: 0.6;
+  font-family: 'Montserrat';
 }
 .transaction_time {
   margin-right: 15px;

@@ -5,6 +5,7 @@
     text-transform: capitalize;
     font-weight: 700;
     position: relative;
+    font-family: 'Montserrat';
   }
   .my_marksed h4::before {
     position: absolute;
@@ -38,6 +39,7 @@
     padding: 2px 9px;
     font-size: 13px;
     font-weight: 600;
+    font-family: 'Montserrat';
 }
 .car-bid_btn:hover{
     background-color:#b892ac;
@@ -46,6 +48,7 @@
 .car-share_Mark button {
     color: #623d57;
     font-size: 16px;
+    font-family: 'Montserrat';
 }
 .car-share_Mark button:hover{
     color: #623d57;
@@ -58,15 +61,18 @@ p.car-descrip {
     font-size: 14px;
     margin: 0;
     margin-bottom: 2px;
+    font-family: 'Montserrat';
 }
 .car-brand_smal {
     margin-right: 25px;
     font-size: 14px;
     font-weight: 600;
+    font-family: 'Montserrat';
 }
 .car-location_smal{
     font-size: 14px;
     font-weight: 600;
+    font-family: 'Montserrat';
 }
 .car-location_smal img {
     width: 18px;

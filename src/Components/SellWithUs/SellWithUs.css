@@ -11,6 +11,7 @@
     position: relative;
     text-align: center;
     font-size: 22px;
+    font-family: 'Montserrat';
 }
   .sell_hidding h4::before {
     position: absolute;
@@ -27,6 +28,7 @@
     font-size: 15px;
     letter-spacing: 1px;
     font-weight: 400;
+    font-family: 'Montserrat';
 }
 .sell_btn {
     text-align: center;
@@ -41,6 +43,7 @@
     background: #623C57;
     color: #fff;
     border: 1px solid #fff;
+    font-family: 'Montserrat';
 }
 .teck_min {
     text-align: center;

@@ -72,14 +72,15 @@
 .menu_right a {
     text-decoration: none;
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     text-transform: capitalize;
+    font-family: 'Montserrat';
 }
 .menu_right a button {
     background: #7E5472;
     border-radius: 20px;
-    width: 100px;
+    width: 110px;
     height: 28px;
     border: 1px solid #7E5472;
     color: #fff;
@@ -87,6 +88,8 @@
     text-align: center;
     transition: .3s;
     font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat';
 }
 .menu_right a button:hover{
     border: 1px solid #fff;

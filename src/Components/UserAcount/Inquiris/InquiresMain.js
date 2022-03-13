@@ -51,7 +51,7 @@ const InquiresMain = () => {
 
     const filterClosed=Tickets.filter(item=>{return item.status==='closed'})
     const filterPrograss=Tickets.filter(item=>{return item.status==='In Progress'})
-    const filterRejact=Tickets.filter(item=>{return item.status==='rejact'})
+    const filterRejact=Tickets.filter(item=>{return item.status==='rejected'})
     
 
     const [menuChange,setmenuChange]=useState('all')

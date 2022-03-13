@@ -11,12 +11,18 @@
   justify-content: space-around;
   align-items: center;
 }
+.welcom_text h2 {
+  font-size: 28px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
 .login_register_row button {
   border: none;
   padding: 8px;
   width: 100%;
   font-size: 25px;
   font-weight: 700;
+  font-family: 'Montserrat';
 }
 .Loginactive {
   background: #623d57;
@@ -59,12 +65,14 @@
   text-align: end;
   margin-bottom: 0px;
   margin-top: 5px;
+  font-family: 'Montserrat';
 }
 .login_p a {
   text-align: end;
   color: #8c7185;
   text-decoration: none;
   text-transform: capitalize;
+  font-family: 'Montserrat';
 }
 .login_p a:hover{
   color: #8c7185;
@@ -75,11 +83,13 @@
   font-size: 14px;
   font-weight: 500;
   color: #999;
+  font-family: 'Montserrat';
 }
 .register_p a {
   text-decoration: none;
   color: #623d57;
   font-weight: 600;
+  font-family: 'Montserrat';
 }
 .register_p a:hover {
   color: #623d57;
@@ -93,12 +103,14 @@
   border-radius: 20px;
   border: none;
   padding: 5px;
+  font-family: 'Montserrat';
 }
 .register_form label,
 .login_form label {
   margin: 5px 0;
   font-size: 15px;
   font-weight: 600;
+  font-family: 'Montserrat';
 }
 .register_form,
 .login_form {

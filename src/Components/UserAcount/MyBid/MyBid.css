@@ -18,6 +18,7 @@
     font-size: 18px;
     text-transform: capitalize;
     font-weight: 600;
+    font-family: 'Montserrat';
 }
 .bid_menu button:nth-child(2){
     border-left:1px solid #7E5472 !important;
@@ -69,6 +70,7 @@
     font-weight: 500;
     line-height: 30px;
     text-transform: capitalize;
+    font-family: 'Montserrat';
 }
 .car-time i {
     font-size: 15px;
@@ -77,6 +79,7 @@
 .car-title_bid{
     font-size: 18px;
     font-weight: 700;
+    font-family: 'Montserrat';
 }
 .car-bid_btn {
     background: #dddddd94;
@@ -84,6 +87,7 @@
     padding: 2px 9px;
     font-size: 13px;
     font-weight: 600;
+    font-family: 'Montserrat';
 }
 .car-bid_btn:hover{
     background-color:#b892ac;
@@ -92,6 +96,7 @@
 .car-share_Mark button {
     color: #623d57;
     font-size: 16px;
+    font-family: 'Montserrat';
 }
 .car-share_Mark button:hover{
     color: #623d57;
@@ -104,11 +109,13 @@ p.car-descrip {
     font-size: 14px;
     margin: 0;
     margin-bottom: 2px;
+    font-family: 'Montserrat';
 }
 .car-brand_smal {
     margin-right: 25px;
     font-size: 14px;
     font-weight: 600;
+    font-family: 'Montserrat';
 }
 .car-location_smal{
     font-size: 14px;

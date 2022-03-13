@@ -5,6 +5,7 @@
     text-transform: capitalize;
     font-weight: 700;
     position: relative;
+    font-family: 'Montserrat';
   }
   .my_inquires h4::before{
     position: absolute;
@@ -36,6 +37,7 @@
     margin-right: 5%;
     border-radius: 25px;
     border: 1px solid #E4E5E8;
+    font-family: 'Montserrat';
 }
 .new_tecket {
     position: relative;
@@ -52,6 +54,7 @@
     font-size: 14px;
     font-weight: 700;
     padding: 10px 0;
+    font-family: 'Montserrat';
 }
 .inqiresactive{
     background: #7E5472 !important;
@@ -75,17 +78,19 @@
     text-transform: capitalize;
     font-size: 13px;
     opacity: .8;
+    font-family: 'Montserrat';
 }
 .tocken_no h6 span{
     font-weight: 700;
     color: #623c57;
     font-size: 16px;
-    
+    font-family: 'Montserrat';
 }
 .massege_div p {
     font-size: 14px;
     width: 100%;
     opacity: .8;
+    font-family: 'Montserrat';
 }
 .status_div {
     display: flex;
@@ -95,6 +100,7 @@
 .status_div span,.massege_div h6{
     font-weight: 600;
     opacity: .8;
+    font-family: 'Montserrat';
 }
 
 .status_div button {
@@ -106,6 +112,7 @@
     color: #fff;
     font-size: 13px;
     font-weight: 600;
+    font-family: 'Montserrat';
 }
 .greenLight{
     background: #00CCAD;

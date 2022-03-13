@@ -6,6 +6,7 @@
   text-transform: capitalize;
   font-weight: 700;
   position: relative;
+  font-family: 'Montserrat';
 }
 .my_account h4::before,
 .password_change h4::before {
@@ -59,6 +60,7 @@
   font-size: 15px;
   font-weight: 600;
   text-transform: capitalize;
+  font-family: 'Montserrat';
 }
 .update_btn {
   text-align: center;
@@ -73,6 +75,7 @@
   background: #623c57;
   color: #fff;
   transition: 0.3s;
+  font-family: 'Montserrat';
 }
 .update_btn button:hover {
   background: #8d6482;
