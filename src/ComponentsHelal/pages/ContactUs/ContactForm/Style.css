@@ -2,6 +2,7 @@
     margin: 0 5px 0 0;
     height: 40px;
     position: relative;
+    font-family: 'Montserrat';
 }
 
 .contact-type-btn label,
@@ -11,6 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    font-family: 'Montserrat';
 }
 
 .contact-type-btn input[type="radio"] {
@@ -29,12 +31,14 @@
     font-weight: 500;
     width: 150px;
     border-radius: 20px;
+    font-family: 'Montserrat';
 }
 
 .contact-type-btn label {
     cursor: pointer;
     z-index: 90;
     line-height: 1.8em;
+    font-family: 'Montserrat';
 }
 
 .contact-form textarea {
@@ -51,6 +55,7 @@
     text-transform: uppercase;
     font-weight: 500;
     border-radius: 50px;
+    font-family: 'Montserrat';
 }
 
 .contact-form .contact-submit-btn:hover {

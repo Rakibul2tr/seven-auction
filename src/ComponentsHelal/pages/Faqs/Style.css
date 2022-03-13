@@ -2,6 +2,7 @@
     font-size: 24px;
     font-weight: 700;
     position: relative;
+    font-family: 'Montserrat';
 }
 
 .faq-title:after {
@@ -17,18 +18,21 @@
 .faq-qoute-bloc h3 {
     font-size: 18px;
     color: #623d57;
+    font-family: 'Montserrat';
 }
 
 .faq-qoute-bloc blockquote {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 12px;
     border-left: 4px solid #623d57;
+    font-family: 'Montserrat';
 }
 
 .seven-auction-faqs .accordion-button {
     color: #623d57;
     font-weight: 700;
     padding-left: 0;
+    font-family: 'Montserrat';
 }
 
 .accordion-item {

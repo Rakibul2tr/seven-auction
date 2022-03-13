@@ -5,17 +5,21 @@ img {
 h2.single-car-title {
     font-size: 25px;
     font-weight: 700;
+    padding: 23px 0;
+    font-family: 'Montserrat';
 }
 
 .car-detail h3 {
     font-size: 20px;
     text-transform: uppercase;
+    font-family: 'Montserrat';
 }
 
 .car-detail p {
     font-size: 17px;
     color: #9f8e8e;
     line-height: 1.7;
+    font-family: 'Montserrat';
 }
 
 .car-overview-boxe i {
@@ -34,6 +38,7 @@ h2.single-car-title {
     font-weight: 500;
     color: #969595;
     padding-left: 10px;
+    font-family: 'Montserrat';
 }
 
 .car-overview-boxe {
@@ -43,6 +48,35 @@ h2.single-car-title {
 }
 
 .car-large-img {
-    width: 80%;
-    margin: auto;
+    width: 100%;
+}
+
+.car-gl-img img {
+    cursor: pointer;
+    width: 100%;
+}
+
+.car-gl-images .col-md-6 {
+    padding: 5px;
+    margin-bottom: 0 !important;
+}
+
+.car-gallery .col-md-8 {
+    padding-right: 5px;
+}
+
+.single-car-body {
+    background: #cccccc1f;
+}
+
+.single-car-desc {
+    background: #fff;
+}
+
+.single-car-overview {
+    background-color: #fff;
+}
+
+.car-header .single-car-markshare:hover {
+    color: #623d57;
 }

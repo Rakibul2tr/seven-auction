@@ -30,6 +30,7 @@
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    font-family: 'Montserrat';
 }
 
 .auction-filter-btns button:hover {
@@ -43,6 +44,7 @@
     font-weight: 700;
     color: #b6b4b4;
     text-transform: uppercase;
+    font-family: 'Montserrat';
 }
 
 .auction-cars .nav-tabs {
@@ -78,6 +80,7 @@
     background-color: #fff;
     font-weight: 600;
     color: #623d57;
+    font-family: 'Montserrat';
 }
 
 .car-price {
@@ -91,6 +94,7 @@
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
+    font-family: 'Montserrat';
 }
 
 .car-location img {
@@ -112,6 +116,7 @@ p.car-desc {
     font-weight: 400;
     line-height: 1.2;
     padding: 12px 0;
+    font-family: 'Montserrat';
 }
 
 .car-brand {
@@ -130,6 +135,7 @@ p.car-desc {
 .car-shareMark button {
     color: #623d57;
     font-size: 20px;
+    font-family: 'Montserrat';
 }
 
 .auction-car-item {

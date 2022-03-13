@@ -1,11 +1,13 @@
 .header-info-box h5 {
     font-weight: 700;
     margin: 0;
+    font-family: 'Montserrat';
 }
 
 .header-info-box span {
     font-weight: 500;
     opacity: 0.6;
+    font-family: 'Montserrat';
 }
 
 .header-info-box {
@@ -25,6 +27,7 @@
     font-weight: 600;
     padding: 9px 50px;
     border-radius: 50px;
+    font-family: 'Montserrat';
 }
 
 .car-header .single-bid-btn:hover {
