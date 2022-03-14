@@ -78,4 +78,11 @@ p.car-descrip {
     width: 18px;
     border-radius: 20px;
 }
-
+@media (max-width:768px){
+    .my_marksed h4 {
+        text-align: center;
+    }
+    .my_marksed h4::before {
+        left: 44%;
+    }
+}

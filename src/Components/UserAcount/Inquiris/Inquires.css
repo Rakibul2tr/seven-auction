@@ -123,3 +123,27 @@
 .redColor{
     background: #E53E71;
 }
+
+@media (max-width:768px){
+    .my_inquires h4 {
+        text-align: center;
+    }
+    .my_inquires h4::before {
+        left: 44%;
+    }
+    .inquires_nav {
+        flex-direction: column-reverse;
+    }
+    .inquires_menu {
+        width: 100%;
+    }
+    .inquires_menu button {
+        width: 25%;
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 1%;
+    }
+    .status_div button {
+        width: 60%;
+    }
+}

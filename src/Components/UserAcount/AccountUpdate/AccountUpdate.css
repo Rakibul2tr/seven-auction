@@ -80,3 +80,15 @@
 .update_btn button:hover {
   background: #8d6482;
 }
+@media (max-width:768px){
+  .my_account h4,
+.password_change h4 {
+  text-align: center;
+}
+.my_account h4::before,
+.password_change h4::before {
+  left: 44%;
+}
+
+
+}

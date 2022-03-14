@@ -122,3 +122,34 @@
   font-size: 11px;
   opacity: 0.5;
 }
+@media (max-width:768px){
+  .my_wallet h4, .my_transaction h4 {
+  text-align: center;
+}
+.my_wallet h4::before, .my_transaction h4::before  {
+  left: 44%;
+}
+.transaction_item {
+  width: 100%;
+}
+.transaction_item_number {
+  width: 39%;
+  text-align: start;
+  margin-right: 0px;
+  
+}
+.transaction_item_number span{
+  font-size: 11px !important;
+}
+.transaction_text p {
+  margin: 0;
+  margin-left: 0px;
+  font-size: 11px;
+  font-weight: 400;
+}
+.widrow_and_add_btn {
+  width: 100%;
+  margin-left: 20px;
+}
+
+}

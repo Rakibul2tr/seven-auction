@@ -117,4 +117,17 @@ p.car-descrip {
     width: 18px;
     border-radius: 20px;
 }
-
+@media (max-width:768px){
+    .my_auction h4, .password_change h4 {
+        text-align: center;
+    }
+    .my_auction h4::before {
+        left: 45%;
+    }
+    .My_auction_menu {
+        width: 100%;
+    }
+    .My_auction_menu button {
+        font-size: 13px;
+    }
+}

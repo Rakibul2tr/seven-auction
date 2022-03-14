@@ -129,3 +129,12 @@ p.car-descrip {
 .won_bg::after{
     background: #B2375D;
 }
+@media (max-width:768px){
+
+    .bid_menu {
+        width: 100%;
+    }
+    .bid_menu button {
+        font-size: 13px;
+    }
+}

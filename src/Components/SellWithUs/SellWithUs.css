@@ -60,3 +60,12 @@
 .teck_min span i{
     margin-right: 5px;
 }
+
+@media (max-width:768px){
+.sell_text p {
+    padding: 10px;
+}
+.sell_secion {
+    width: 73% !important;
+}
+}

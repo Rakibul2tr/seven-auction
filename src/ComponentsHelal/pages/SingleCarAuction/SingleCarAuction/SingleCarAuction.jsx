@@ -64,7 +64,7 @@ const SingleCarAuction = () => {
                         <div className="car-detail">
                             <h2 className='single-car-title text-uppercase'>1989 land rover 90 3.5 V8 - Factory soft top</h2>
                             <Row>
-                                <Col md={8} className="">
+                                <Col md={8} className="pe-0">
                                     <div className="single-car-desc shadow-sm p-4 rounded" style={{ height: '100%' }}>
                                         <h3 className='fw-bolder mb-3'>Description</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam inventore tempore ullam explicabo quidem, necessitatibus ad quisquam, animi atque minima iste quibusdam odit, sunt sapiente voluptatum pariatur quam eum impedit.</p>
