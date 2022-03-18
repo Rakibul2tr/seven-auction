@@ -28,7 +28,7 @@ function App() {
 
       <Route exact path="/faqs" element={<><Header/> <Faqs/> <Footer/></>}></Route>
 
-      <Route exact path="/singlecar" element={<><Header/> <SingleCar/> <Footer/></>}></Route>
+      <Route exact path="/singlecar/:id" element={<><Header/> <SingleCar/> <Footer/></>}></Route>
 
       <Route exact path="/privacy" element={<><Header/> <Privacy/> <Footer/></>}></Route>
 

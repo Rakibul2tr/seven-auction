@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 import CarHeader from '../CarHeader/CarHeader';
 
@@ -13,6 +14,8 @@ import carGlimg5 from "../../../../assets/images/car/single-car-5.png";
 import carGlimg6 from "../../../../assets/images/car/single-car-6.png";
 import carGlimg7 from "../../../../assets/images/car/single-car-7.png";
 import carGlimg8 from "../../../../assets/images/car/single-car-8.png";
+import UseHoocks from '../../../../UseHoocks/UseHoocks';
+
 
 const galleryImages = [
     { glSrc: carFeaturedImg },
@@ -26,6 +29,12 @@ const galleryImages = [
 ];
 
 const SingleCarAuction = () => {
+
+    let { id } = useParams();
+
+    const {Livecars}=UseHoocks();
+    let filetedata=Livecars.filter(car=>{return car._id==id})
+    
 
     const [glIndex, setGlIndex] = useState(0);
 

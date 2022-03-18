@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { Container, Form, FormControl, Row } from 'react-bootstrap';
+import {  Form, FormControl, Row } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import logoImg from '../../../images/site_logo.png';
+import UseContext from '../../../UseHoocks/UseContext';
 import Login from '../../LoginPage/Login/Login';
 import './Header.css'
 import Mobilmenu from './Mobilmenu';
 
 const Header = () => {
+    const {user}=UseContext();
+    // console.log(user.email);
     const [modalShow, setModalShow] = React.useState(false);
     //mobile menu controler
     const [show, setShow] = useState(false);
@@ -41,15 +44,23 @@ const Header = () => {
             </div>
             <div className="col-md-5">
                 <div className="menu_right">
-                    <NavLink to='/' activeClassName='active'>Auctions</NavLink>
+                    <NavLink to='/' activeclassname='active'>Auctions</NavLink>
                     <Link to='/sell'>
                         <button>Sell with us
                         </button>
                     </Link>
-                    <Link to=''>
+                    {/* <Link to=''>
+                       <button onClick={() => setModalShow(true)}>Login</button>
+                    </Link> */}
+                    {
+                        user?.email?<><Link to=''><i className="far fa-bell"></i></Link>
+                        <Link to='/account'>
+                        <i className="fas fa-user-circle"></i>
+                        </Link></>:<Link to=''>
                        <button onClick={() => setModalShow(true)}>Login</button>
                     </Link>
-                    <NavLink to='/contact'activeClassName='menu_active'>Support</NavLink>
+                    }
+                    <NavLink to='/contact'activeclassname='menu_active'>Support</NavLink>
                     <Link to=''>
                         <select>
                             <option>En</option>
@@ -62,7 +73,7 @@ const Header = () => {
            </Row>
            <Row className='mobil_device'>
                {/* mobil device navbar */}
-               <i class="fa-solid fa-bars" onClick={handleShow}></i>
+               <i className="fa-solid fa-bars" onClick={handleShow}></i>
                
              <Mobilmenu show={show}handleClose={handleClose}/>
            </Row>

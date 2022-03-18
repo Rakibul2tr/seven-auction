@@ -1,61 +1,13 @@
 import React from 'react';
 import './Marksed.css';
-import car1 from "../../../assets/images/car/car-1.png";
-import car2 from "../../../assets/images/car/car-2.png";
-import car3 from "../../../assets/images/car/car-3.png";
-import car4 from "../../../assets/images/car/car-4.png";
-import countryFlag from "../../../assets/images/saudi-flag.png";
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Marksed = () => {
-    const cars = [
-        {
-            title: "2008 Ferrari 430 scuderia",
-            desc: "Lorem Ipsum is simply dummy text of the",
-            brand: "LHD",
-            countryFlag: countryFlag,
-            location: "KSA, Riyadh",
-            imageSrc: car1,
-            bidCount: 34,
-            timecount: "06:30:50",
-            price: "149,000 S.R"
-        },
-        {
-            title: "2008 Ferrari 430 scuderia",
-            desc: "Lorem Ipsum is simply dummy text of ladfyu sdfh",
-            brand: "LHD",
-            countryFlag: countryFlag,
-            location: "KSA, Riyadh",
-            imageSrc: car2,
-            bidCount: 34,
-            timecount: "06:30:50",
-            price: "149,000 S.R"
-        },
-        {
-            title: "2008 Ferrari 430 scuderia",
-            desc: "Lorem Ipsum is simply dummy text of the printing ladfyu sdfh",
-            brand: "LHD",
-            countryFlag: countryFlag,
-            location: "KSA, Riyadh",
-            imageSrc: car3,
-            bidCount: 34,
-            timecount: "06:30:50",
-            price: "149,000 S.R"
-        },
-        {
-            title: "2008 Ferrari 430 scuderia",
-            desc: "Lorem Ipsum is simply dummy text of the printing",
-            brand: "LHD",
-            countryFlag: countryFlag,
-            location: "KSA, Riyadh",
-            imageSrc: car4,
-            bidCount: 34,
-            timecount: "06:30:50",
-            price: "149,000 S.R"
-        }
-        
-    ];
+       const marks= localStorage.getItem('Auction')
+       const marksdata=JSON.parse(marks)
+       console.log(marksdata?.length);
+
     return (
         <Container style={{ background: "#F6F8FA" }}>
        <Row className="pb-4">
@@ -65,7 +17,13 @@ const Marksed = () => {
         <div className="mark_car_aria">
             <div className="row">
                 {
-                    cars.map(car=>(<Col md={4} className="mb-5" key={car.imageSrc}>
+                    marksdata?.length===undefined?
+                    <>
+                    <h1>You Are NOt Marked Any Car.</h1>
+                    </> :
+                    <>
+                    {
+                    marksdata.map(car=>(<Col md={4} className="mb-5" key={car._id}>
                     <div className="auction-car-item">
                         <div className="mark_car-img_bg" style={{ backgroundImage: `url(${car.imageSrc})` }}>
                             <div className="car-time-and-price d-flex">
@@ -92,6 +50,8 @@ const Marksed = () => {
                         </div>
                     </div>
                 </Col>))  
+                }
+                    </>
                 }
             </div>
         </div>

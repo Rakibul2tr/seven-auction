@@ -25,7 +25,7 @@
     padding-right: 5px;
 }
 
-.auction-filter-btns button {
+.auction-filter-btns button,.auction-filter-btns a {
     color: #623d57;
     font-size: 18px;
     font-weight: 500;
@@ -33,7 +33,7 @@
     font-family: 'Montserrat';
 }
 
-.auction-filter-btns button:hover {
+.auction-filter-btns button:hover,.auction-filter-btns a:hover {
     color: #623d57;
 }
 

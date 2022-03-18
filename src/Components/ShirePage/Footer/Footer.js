@@ -2,9 +2,32 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import footerLogo from "../../../images/site_logo.png";
+import UseContext from "../../../UseHoocks/UseContext";
 import "./Footer.css";
 
 const Footer = () => {
+
+  const {user,setUser,logOutHendl}=UseContext();
+  // const token=localStorage.getItem('token')
+  // const bearerToken=`Bearer ${token}`
+
+  // const logOutHendl=()=>{
+  //   fetch(`https://seven-auction.herokuapp.com/api/user/logout`,{
+  //     method:'DELETE',
+  //     headers:{
+  //       Accept:'application/json',
+  //       'Content-Type':'application/json',
+  //       authorization:bearerToken,
+  //     },
+  //   })
+  //   .then(res=>res.json())
+  //   .then(data=>{
+  //     setUser('')
+  //     alert(data.message)
+  //     // localStorage.removeItem("token");
+  //     window.location.reload();
+  //   })
+  // }
   return (
     <div className="footer_bg">
     <Container>
@@ -32,7 +55,7 @@ const Footer = () => {
                 <Link to="/">sold</Link>
               </li>
               <li>
-                <Link to="/account">My Account</Link>
+                <Link to="" onClick={logOutHendl}>LogOut</Link>
               </li>
               <li>
                 <Link to="/dashboard">Admin Dashboard</Link>
@@ -92,11 +115,11 @@ const Footer = () => {
           </Col>
           <Col md={6}>
             <div className="social_icon">
-            <Link to='/'><i class="fa-brands fa-twitter"></i></Link>
-            <Link to='/'><i class="fa-brands fa-instagram"></i></Link>
-            <Link to='/'><i class="fa-brands fa-facebook-f"></i></Link>
-            <Link to='/'><i class="fa-brands fa-linkedin-in"></i></Link>
-            <Link to='/'><i class="fa-brands fa-youtube"></i></Link>
+            <Link to='/'><i className="fa-brands fa-twitter"></i></Link>
+            <Link to='/'><i className="fa-brands fa-instagram"></i></Link>
+            <Link to='/'><i className="fa-brands fa-facebook-f"></i></Link>
+            <Link to='/'><i className="fa-brands fa-linkedin-in"></i></Link>
+            <Link to='/'><i className="fa-brands fa-youtube"></i></Link>
             </div>
           </Col>
         </Row>

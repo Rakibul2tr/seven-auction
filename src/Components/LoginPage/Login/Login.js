@@ -1,13 +1,40 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import "../LoginPage.css";
 import Register from "../Register/Register";
+
+
 
 const Login = (props) => {
   const [loginChange, setloginChange] = useState("login");
   const [usemobil,setusemobil] = useState('email');
   const [opacity,setopacity] = useState('');
+  
+  const { register, handleSubmit, } = useForm();
+  const onSubmit = data => {
+    fetch(`https://seven-auction.herokuapp.com/api/user/login`,{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(data)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      if(data.jwtToken&&data.loggedUser){
+      localStorage.setItem('token',data.jwtToken)
+
+      localStorage.setItem('User',JSON.stringify(data.loggedUser))
+        window.location.reload();
+      }else{
+        console.log(data);
+      }
+    })
+  }
+
+
 
   return (
     <div>
@@ -37,7 +64,7 @@ const Login = (props) => {
             <div className="welcom_text p-3 ps-5">
               <h2>Welcome Back</h2>
             </div>
-            <form action="" className="login_form">
+            <form onSubmit={handleSubmit(onSubmit)} className="login_form">
               {
                 usemobil==='mobil'?
                 <div className={opacity==='opacityNone'?'opacityNone':'field_row'}>
@@ -47,14 +74,15 @@ const Login = (props) => {
                       <input
                         type="tel"
                         placeholder="Phone number"
-                        name="phone"
+                        {...register("emailOrPhone", { required: true })}
                       />
-                      <i class="fa-solid fa-envelope"></i>
+                      <i className="fa-solid fa-envelope"></i>
                     </div>
                     <p className="login_p">
                       <Link to="/" onClick={()=>setusemobil('email')}>use Email</Link>
                     </p>
                   </div>
+                  
                 </div>:
                 <div className={opacity==='emailopacityNone'?'opacityNone':'field_row'}>
                   <div className="row px-5 py-2">
@@ -63,15 +91,16 @@ const Login = (props) => {
                       <input
                         type="email"
                         placeholder="ameer@gmail.com"
-                        name="email"
+                        {...register("emailOrPhone", { required: true })}
                         id="email"
                       />
-                      <i class="fa-solid fa-envelope"></i>
+                      <i className="fa-solid fa-envelope"></i>
                     </div>
                     <p className="login_p">
                       <Link to="/" onClick={()=>setusemobil('mobil')}>use mobile</Link>
                     </p>
                   </div>
+                 
                 </div>
               }
               <div className={opacity==='passopacityNone'?'opacityNone':'field_row'}>
@@ -81,14 +110,15 @@ const Login = (props) => {
                     <input
                       type="password"
                       placeholder="Type Password"
-                      name="password"
+                      {...register("password", { required: true })}
                     />
-                    <i class="fa-solid fa-lock"></i>
+                    <i className="fa-solid fa-lock"></i>
                   </div>
                   <p className="login_p">
                     <Link to="/">forgot your password ? </Link>
                   </p>
                 </div>
+                {/* <p className='text-center'>{User?.message? <span className='fw-bold text-success'>{User?.message}</span>:<span className='text-danger'>{User?.issue?.password}</span>}</p> */}
               </div>
               <div className="row px-5 py-2 text-center">
                 <button className="submit_btn">Login</button>

@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 
 const Livecars = [
     {
+        _id:1,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -25,6 +26,7 @@ const Livecars = [
         price: "149,000 S.R"
     },
     {
+        _id:2,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -36,6 +38,7 @@ const Livecars = [
         price: "149,000 S.R"
     },
     {
+        _id:3,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -47,6 +50,7 @@ const Livecars = [
         price: "149,000 S.R"
     },
     {
+        _id:4,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -58,6 +62,7 @@ const Livecars = [
         price: "149,000 S.R"
     },
     {
+        _id:5,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -69,6 +74,7 @@ const Livecars = [
         price: "149,000 S.R"
     },
     {
+        _id:6,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -80,6 +86,7 @@ const Livecars = [
         price: "149,000 S.R"
     },
     {
+        _id:7,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -91,6 +98,7 @@ const Livecars = [
         price: "149,000 S.R"
     },
     {
+        _id:8,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -105,6 +113,7 @@ const Livecars = [
 
 const Soldcars = [
     {
+        _id:1,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -116,6 +125,7 @@ const Soldcars = [
         price: "149,000 S.R"
     },
     {
+        _id:2,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -127,6 +137,7 @@ const Soldcars = [
         price: "149,000 S.R"
     },
     {
+        _id:3,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -138,6 +149,7 @@ const Soldcars = [
         price: "149,000 S.R"
     },
     {
+        _id:4,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -149,6 +161,7 @@ const Soldcars = [
         price: "149,000 S.R"
     },
     {
+        _id:5,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -160,6 +173,7 @@ const Soldcars = [
         price: "149,000 S.R"
     },
     {
+        _id:6,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -171,6 +185,7 @@ const Soldcars = [
         price: "149,000 S.R"
     },
     {
+        _id:7,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -182,6 +197,7 @@ const Soldcars = [
         price: "149,000 S.R"
     },
     {
+        _id:8,
         title: "2008 Ferrari 430 scuderia",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
         brand: "LHD",
@@ -210,6 +226,26 @@ const AuctionFilter = () => {
     }, [isLoading]);
 
     const handleClick = () => setLoading(true);
+
+    // mark state 
+    const getValue=()=>{
+        const localValue = JSON.parse(localStorage.getItem('Auction'));
+        if(localValue !== null){
+         return localValue
+        } else {
+        return []
+        }
+    }
+    let [mark,setmark]=useState(getValue())
+    const markHndal=(car)=>{
+        const newdata = [...mark,car]
+        setmark(newdata);
+    }
+    
+    localStorage.setItem('Auction',JSON.stringify(mark))
+    console.log(mark);
+    
+
     return (
         <>
             <Container className='py-5'>
@@ -219,14 +255,14 @@ const AuctionFilter = () => {
                             <div className="auction-search-form">
                                 <input type="text" />
                                 <div className="auction-placeholer">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i className="fa-solid fa-magnifying-glass"></i>
                                 </div>
                             </div>
                         </Col>
                         <Col md={6} className="text-end">
                             <div className="auction-filter-btns">
                                 <Button variant='link'><i className="fa-solid fa-bars-staggered"></i> Filters</Button>
-                                <Button variant='link'><i className="fa-solid fa-bookmark"></i> Marks</Button>
+                                <Button variant='link'as={Link} to='/account'><i className="fa-solid fa-bookmark"></i> Marks</Button>
                             </div>
                         </Col>
                     </Row>
@@ -238,12 +274,12 @@ const AuctionFilter = () => {
                                 <Row>
                                     {
                                         Livecars.map(car => (
-                                            <Col md={3} className="mb-5" key={car.title}>
+                                            <Col md={3} className="mb-5" key={car._id}>
                                                 <div className="auction-car-item">
                                                     <div className="car-img" style={{ backgroundImage: `url(${car.imageSrc})` }}>
                                                         <div className="car-time-and-price d-flex">
                                                             <div className="car-time">
-                                                                <i class="fa-regular fa-clock"></i>
+                                                                <i className="fa-regular fa-clock"></i>
                                                                 {car.timecount}
                                                             </div>
                                                             <div className="car-price">{car.price}</div>
@@ -253,10 +289,10 @@ const AuctionFilter = () => {
                                                         <div className="car-bid text-muted">{car.bidCount} Bids</div>
                                                         <div className="car-shareMark">
                                                             <Button variant='link'><i className="fa-solid fa-share-nodes"></i></Button>
-                                                            <Button variant='link'><i className="fa-solid fa-bookmark"></i></Button>
+                                                            <Button variant='link' onClick={()=>markHndal(car)}><i className="fa-solid fa-bookmark"></i></Button>
                                                         </div>
                                                     </div>
-                                                    <Link to="/singlecar" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
+                                                    <Link to={`/singlecar/${car._id}`} className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
                                                     <p className="car-desc text-muted">{car.desc}</p>
                                                     <div className="car-brandLocation d-flex align-items-center">
                                                         <div className="car-brand text-muted">
@@ -286,12 +322,12 @@ const AuctionFilter = () => {
                                 <Row>
                                     {
                                         Soldcars.map(car => (
-                                            <Col md={3} className="mb-5" key={car.title}>
+                                            <Col md={3} className="mb-5" key={car._id}>
                                                 <div className="auction-car-item">
                                                     <div className="car-img" style={{ backgroundImage: `url(${car.imageSrc})` }}>
                                                         <div className="car-time-and-price d-flex">
                                                             <div className="car-time">
-                                                                <i class="fa-regular fa-clock"></i>
+                                                                <i className="fa-regular fa-clock"></i>
                                                                 {car.timecount}
                                                             </div>
                                                             <div className="car-price">{car.price}</div>
@@ -301,7 +337,7 @@ const AuctionFilter = () => {
                                                         <div className="car-bid text-muted">{car.bidCount} Bids</div>
                                                         <div className="car-shareMark">
                                                             <Button variant='link'><i className="fa-solid fa-share-nodes"></i></Button>
-                                                            <Button variant='link'><i className="fa-solid fa-bookmark"></i></Button>
+                                                            <Button variant='link' onClick={()=>markHndal(car)}><i className="fa-solid fa-bookmark"></i></Button>
                                                         </div>
                                                     </div>
                                                     <Link to="/singlecar" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
