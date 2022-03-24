@@ -3,6 +3,13 @@ import { Container, Row } from "react-bootstrap";
 import "./AccountUpdate.css";
 
 const AccountUpdate = () => {
+  
+  // const {getAccountData}=UseContext();
+  fetch(`https://seven-auction.herokuapp.com/api/user/account-data`)
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+
+
   return (
     <Container>
       <Row className="pb-5">

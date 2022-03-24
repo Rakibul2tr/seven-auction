@@ -7,7 +7,8 @@ const Register = () => {
     const [success,setsuccess] = useState('');
     const [error,seterror] = useState({});
 
-    const { register, handleSubmit, } = useForm();
+    const { register, handleSubmit, formState: { errors }} = useForm();
+    
     const onSubmit = data => {
         console.log(data);
         fetch(`https://seven-auction.herokuapp.com/api/user/register`,{
@@ -19,6 +20,7 @@ const Register = () => {
         })
         .then(res=>res.json())
         .then(data=>{
+            console.log(data);
            if(data.message){
             setsuccess(data.message)
             seterror('')
@@ -73,12 +75,12 @@ const Register = () => {
                     <div className="phone">
                         <input type="tel" 
                         placeholder='Phone Number'
-                        {...register("phone", { required: true })}  
+                        {...register("phone", { required: true,pattern:/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i })}  
                          />
                         <i className="fas fa-phone-alt"></i>
                     </div>
                 </div>
-                <p className='text-center text-danger fs-6'>{''}</p>
+                {errors.phone && <p className='text-center text-danger fs-6'>Please check the number</p>}
             </div>
 
                 {/* email address field */}
@@ -88,12 +90,12 @@ const Register = () => {
                     <div className="email_addrass">
                         <input type="email"
                          placeholder='ameer@gmail.com'
-                         {...register("email", { required: true })}  
+                         {...register("email", { required: true,pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/})}  
                           />
                         <i className="far fa-envelope"></i>
                     </div>
                 </div>
-                <p className='text-center text-danger fs-6'>{error?<span>{error.email}</span>:null}</p>
+                {errors.email && <p className='text-center text-danger fs-6'>Please check the Email</p>}
             </div>
             {/* password field */}
              <div className={opacity==='passopacityNone'?'opacityNone':'field_row'}>
@@ -102,11 +104,11 @@ const Register = () => {
                     <div className="pasword">
                         <input type="password"
                          placeholder='Type Password' 
-                         {...register("password", { required: true }) } 
+                         {...register("password", { required: true, pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/ }) } 
                          />
                         <i className="fas fa-lock"></i>
                     </div>
-                    {/* {errors.password && <Error>{errors.password.message}</Error>} */}
+                    {errors.password && <p className='text-center text-danger '>Please give at list 8 character uppercase symbole nember</p>}
                 </div>
              </div>
                 <p className='text-center'>{success?<span className='fw-bold text-success'>{success}</span>:<span className='text-danger'>{error.password}</span>} </p>

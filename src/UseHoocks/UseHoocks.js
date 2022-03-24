@@ -117,12 +117,7 @@ const UseHoocks=()=>{
 
 
   const token=localStorage.getItem('token')
-  // var decoded = jwt_decode(token);
-  // let User=localStorage.getItem('User')
-  // let a=JSON.parse(User)
-  //   console.log(a);
   
-//   const token=localStorage.getItem('token')
   const bearerToken=`Bearer ${token}`
 
   const logOutHendl=()=>{
@@ -143,9 +138,15 @@ const UseHoocks=()=>{
     })
   }
 
+  const getAccountData=()=>{
+    fetch(`https://seven-auction.herokuapp.com/api/user/account-data`)
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+  }
+
     return {
         Livecars,
-        user,setUser,logOutHendl
+        user,setUser,logOutHendl,getAccountData
     }
 }
 

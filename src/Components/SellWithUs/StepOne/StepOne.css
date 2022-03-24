@@ -1,0 +1,154 @@
+.upload {
+    padding: 10px;
+  }
+  .upload h4 {
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+  }
+  .upload h4::before {
+    position: absolute;
+    content: "";
+    left: 1%;
+    bottom: -4px;
+    width: 9%;
+    height: 2px;
+    background: #623c57;
+  }
+  .upload_item{
+      text-align: center;
+      width: 100%;
+  }
+  .border_1 {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    z-index: 1;
+}
+.border_1::after{
+    position: absolute;
+    content: "";
+    top: -8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #623c57;
+    border-radius: 20px;
+    z-index: -1;
+}
+.border_1::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #623c57;
+    border-radius: 20px;
+    z-index: -1;
+}
+.border_1 h3 {
+    padding: 20px;
+    color: #7E5472;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+}
+.border_1 .auction_hidding::before {
+    position: absolute;
+    bottom: 15px;
+    left: 17%;
+    width: 65%;
+    content: "";
+    height: 1px;
+    background: #7E5472;
+}
+.bick_car {
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    height: 25%;
+    align-items: center;
+}
+.bicks {
+    width: 50%;
+    border-radius: 15px;
+    background: #7E5472;
+    height: 100%;
+    line-height: 100px;
+    cursor: pointer;
+    margin-right: -12px;
+}
+.cars {
+    width: 50%;
+    border-radius: 15px;
+    background: #7E5472;
+    height: 100%;
+    line-height: 100px;
+    cursor: pointer;
+    margin-left: -12px;
+}
+.bgChang{
+    background: #623c57;
+    z-index: 10;
+}
+
+.bicks i,.cars i {
+    font-size: 70px;
+    line-height: 119px;
+    color: #fff;
+}
+
+
+/* input fileld */
+
+.input_fild {
+    border: 1px solid #7E5472;
+    padding: 5px;
+    width: 75%;
+    margin: auto;
+    border-radius: 25px;
+    background: #fff;
+}
+
+.input_fild input {
+    width: 75%;
+    border: none;
+    background: none;
+    outline: none;
+}
+.input_fild input::placeholder{
+    font-size: 13px;
+    opacity: .7;
+}
+.input_fild i{
+    margin-left: 15px;
+    opacity: .7;
+}
+.icon_img{
+    width: 15px;
+}
+
+
+button.next_btn {
+    color: #fff;
+    width: 100px;
+    display: flex;
+    position: relative;
+    left: 67%;
+    top: 60px;
+    background: #623C57;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    padding: 4px;
+    justify-content: center;
+}
+button.next_btn i {
+    line-height: 25px;
+    margin-left: 15px;
+}
