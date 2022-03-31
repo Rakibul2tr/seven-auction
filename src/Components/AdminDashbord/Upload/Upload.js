@@ -1,39 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Upload.css'
 import { Col, Container, Row } from "react-bootstrap";
 import iconImg from '../../../assets/images/icon/graterthen.png'
+import StepOne from './StepOne/StepOne';
+import StepTow from '../../SellWithUs/StepTow/StepTow';
+import StepTree from '../../SellWithUs/StepTree/StepTree';
+import StepFour from '../../SellWithUs/StepFour/StepFour';
+import StepFive from '../../SellWithUs/StepFive/StepFive';
+import StepSix from '../../SellWithUs/StepSix/StepSix';
+import StepSeven from '../../SellWithUs/StepSeven/StepSeven';
+import StepEight from '../../SellWithUs/StepEight/StepEight';
+import StepNine from '../../SellWithUs/StepNine/StepNine';
+import Submit from '../../SellWithUs/SubmitStep/Submit';
 
 const Upload = () => {
+  const [Steps,setSteps]=useState('stepOne')
     return (
         <Container style={{ background: "#F6F8FA" }}>
         <Row className="p-4">
           <div className="upload">
             <h4>upload</h4>
           </div>
-          <Row className="pt-5">
-           <Col md={12}>
-            <div className="upload_item">
-                <div className="border_1">
-                    <h3>what do you want to auction?</h3>
-                    <div className="bick_car d-flex">
-                        <div className="bick"><i class="fa-solid fa-motorcycle"></i></div>
-                        <div className="car"><i class="fa-solid fa-car"></i></div>
-                    </div>
-                    <h3>whats the name of your bike?</h3>
-                    <form>
-                      <div className="input_fild">
-                        <input type="text" placeholder='Enter your Bick Name'/>
-                        <i class="fa-solid fa-motorcycle"></i>
-                      </div>
-                      <button className='next_btn'>
-                        next
-                        <i class="fa-solid fa-angles-right"></i>
-                      </button>
-                    </form>
-                </div>
-            </div>
-            </Col>
-          </Row>
+          {
+                   Steps==='stepOne'&& <StepOne setSteps={setSteps}/>
+                }
+                {
+                   Steps==='stepTow'&& <StepTow setSteps={setSteps}/>
+                }
+                {
+                   Steps==='stepTree'&& <StepTree setSteps={setSteps}/>
+                }
+                {
+                   Steps==='stepFour'&& <StepFour setSteps={setSteps}/>
+                }
+                {
+                   Steps==='stepFive'&& <StepFive setSteps={setSteps}/>
+                }
+                {
+                   Steps==='stepSix'&& <StepSix setSteps={setSteps}/>
+                }
+                {
+                   Steps==='stepSeven'&& <StepSeven setSteps={setSteps}/>
+                }
+                {
+                   Steps==='stepEight'&& <StepEight setSteps={setSteps}/>
+                }
+                {
+                   Steps==='StepNine'&& <StepNine setSteps={setSteps}/>
+                }
+                {
+                   Steps==='submit'&& <Submit setSteps={setSteps}/>
+                }
+          
         </Row>
       </Container>
     );

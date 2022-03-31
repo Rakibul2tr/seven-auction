@@ -32,6 +32,7 @@ const Register = () => {
            }
         })
       }
+      console.log(error);
     return (
         <div>
            <div className="welcom_text p-3 ps-5">
@@ -50,7 +51,7 @@ const Register = () => {
                         <i className="fas fa-user-circle"></i>
                     </div>
                 </div>
-                <p className='text-center text-danger fs-6'>{''}</p>
+                { error.first && <p className='text-center text-danger fs-6'>{error.first}</p>}
             </div>
 
                 {/* last name field */}
@@ -65,7 +66,7 @@ const Register = () => {
                         <i className="fas fa-user-circle"></i>
                     </div>
                 </div>
-                <p className='text-center text-danger fs-6'>{''}</p>
+                { error.last && <p className='text-center text-danger fs-6'>{error.last}</p>}
             </div>
 
                 {/* phone number field */}
@@ -80,7 +81,7 @@ const Register = () => {
                         <i className="fas fa-phone-alt"></i>
                     </div>
                 </div>
-                {errors.phone && <p className='text-center text-danger fs-6'>Please check the number</p>}
+                { error.phone && <p className='text-center text-danger fs-6'>{error.phone}</p>}
             </div>
 
                 {/* email address field */}
@@ -95,7 +96,7 @@ const Register = () => {
                         <i className="far fa-envelope"></i>
                     </div>
                 </div>
-                {errors.email && <p className='text-center text-danger fs-6'>Please check the Email</p>}
+                {error.email && <p className='text-center text-danger fs-6'>{error.email}Please check the Email</p>}
             </div>
             {/* password field */}
              <div className={opacity==='passopacityNone'?'opacityNone':'field_row'}>
@@ -108,7 +109,7 @@ const Register = () => {
                          />
                         <i className="fas fa-lock"></i>
                     </div>
-                    {errors.password && <p className='text-center text-danger '>Please give at list 8 character uppercase symbole nember</p>}
+                    {error.password && <p className='text-center text-danger '>{error.password}Please give at list 8 character uppercase symbole nember</p>}
                 </div>
              </div>
                 <p className='text-center'>{success?<span className='fw-bold text-success'>{success}</span>:<span className='text-danger'>{error.password}</span>} </p>

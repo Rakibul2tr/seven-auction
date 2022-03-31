@@ -138,15 +138,17 @@ const UseHoocks=()=>{
     })
   }
 
-  const getAccountData=()=>{
-    fetch(`https://seven-auction.herokuapp.com/api/user/account-data`)
-    .then(res=>res.json())
-    .then(data=>console.log(data))
-  }
+  // const getAccountData=()=>{
+  //   fetch(`https://seven-auction.herokuapp.com/api/user/account-data`)
+  //   .then(res=>res.json())
+  //   .then(data=>console.log(data))
+  // }
+  
 
     return {
         Livecars,
-        user,setUser,logOutHendl,getAccountData
+        user,setUser,logOutHendl,bearerToken
+        // getAccountData
     }
 }
 

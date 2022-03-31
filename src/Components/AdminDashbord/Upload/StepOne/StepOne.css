@@ -56,56 +56,88 @@
     font-size: 24px;
     position: relative;
 }
-.border_1 .auction_hidding_step3::before {
+.border_1 .auction_hidding::before {
     position: absolute;
     bottom: 15px;
-    left: 41%;
-    width: 18%;
+    left: 17%;
+    width: 65%;
     content: "";
-    height: 2px;
+    height: 1px;
     background: #7E5472;
 }
-
-
-/* color picker fileld */
-.color_picker {
-    width: 90%;
+.bick_car {
+    width: 60%;
+    justify-content: center;
     margin: auto;
-    position: relative;
-    text-align: center;
-    color: #7E5472;
-    font-weight: 600;
-    top: 10px;
+    height: 25%;
+    align-items: center;
 }
-.color_fild{
-    margin-top: 50px;
+.bicks {
+    width: 50%;
+    border-radius: 15px;
+    background: #7E5472;
+    height: 100%;
+    line-height: 100px;
+    cursor: pointer;
+    margin-right: -12px;
 }
-.color_div{
-    margin-left: 15px;
-    border: 1px solid #7E5472;
-    min-width: 150px;
-    
+.cars {
+    width: 50%;
+    border-radius: 15px;
+    background: #7E5472;
+    height: 100%;
+    line-height: 100px;
+    cursor: pointer;
+    margin-left: -12px;
+}
+.bgChang{
+    background: #623c57;
+    z-index: 10;
 }
 
-.dable_btn_Step3 {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    top: 130px;
-}
-.dable_btn_Step3 .prev_btn{
-    left: 0%;
-}
-.dable_btn_Step3 .prev_btn i{
-    line-height: 27px;
-    margin-right: 7px;
-}
-.dable_btn_Step3 button.next_btn, .dable_btn_Step3 .prev_btn {
+.bicks i,.cars i {
+    font-size: 70px;
+    line-height: 119px;
     color: #fff;
-    width: 105px;
+}
+
+
+/* input fileld */
+
+.input_fild {
+    border: 1px solid #7E5472;
+    padding: 5px;
+    width: 75%;
+    margin: auto;
+    border-radius: 25px;
+    background: #fff;
+}
+
+.input_fild input {
+    width: 75%;
+    border: none;
+    background: none;
+    outline: none;
+}
+.input_fild input::placeholder{
+    font-size: 13px;
+    opacity: .7;
+}
+.input_fild i{
+    margin-left: 15px;
+    opacity: .7;
+}
+.icon_img{
+    width: 15px;
+}
+
+
+button.next_btn {
+    color: #fff;
+    width: 100px;
     display: flex;
     position: relative;
-    left: 0% !important;
+    left: 67%;
     top: 60px;
     background: #623C57;
     text-transform: uppercase;
@@ -113,11 +145,10 @@
     font-weight: 600;
     border-radius: 25px;
     border: none;
-    padding: 6px;
+    padding: 4px;
     justify-content: center;
-    line-height: 28px;
 }
 button.next_btn i {
-    line-height: 29px;
+    line-height: 25px;
     margin-left: 15px;
 }

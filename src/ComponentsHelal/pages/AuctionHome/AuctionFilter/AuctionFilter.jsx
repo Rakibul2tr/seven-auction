@@ -212,6 +212,10 @@ const Soldcars = [
 
 const AuctionFilter = () => {
 
+    const [LiveAuction,setLiveAuction]=useState([])
+    const [SoldAuction,setSoldAuction]=useState([])
+    
+    
     function simulateNetworkRequest() {
         return new Promise((resolve) => setTimeout(resolve, 2000));
     }
@@ -223,7 +227,16 @@ const AuctionFilter = () => {
                 setLoading(false);
             });
         }
+        fetch(`https://seven-auction.herokuapp.com/api/auction-feed`)
+        .then(res=>res.json())
+        .then(data=>setLiveAuction(data))
+
+
+        fetch(`https://seven-auction.herokuapp.com/api/auction-feed?state=sold`)
+        .then(res=>res.json())
+        .then(data=>setSoldAuction(data))
     }, [isLoading]);
+    
 
     const handleClick = () => setLoading(true);
 
@@ -243,7 +256,7 @@ const AuctionFilter = () => {
     }
     
     localStorage.setItem('Auction',JSON.stringify(mark))
-    console.log(mark);
+    // console.log(mark);
     
 
     return (
@@ -269,7 +282,7 @@ const AuctionFilter = () => {
                 </div>
                 <div className="auction-cars">
                     <Tabs defaultActiveKey="live" id="uncontrolled-tab-example" className="mb-3">
-                        <Tab eventKey="live" title="Live (150)">
+                        <Tab eventKey="live" title={`Live (${LiveAuction.liveAuctionsCount})`}>
                             <div className="auction-car-lisl">
                                 <Row>
                                     {
@@ -317,10 +330,44 @@ const AuctionFilter = () => {
                                 </div>
                             </div>
                         </Tab>
-                        <Tab eventKey="sold" title="Sold (3,250)">
+                        <Tab eventKey="sold" title={`Live (${LiveAuction.soldAuctionsCount})`}>
                             <div className="auction-car-lisl">
                                 <Row>
                                     {
+                                    //    LiveAuction.fetchAuctions.length >0?
+                                    //    LiveAuction.fetchAuctions.map(car => (
+                                    //         <Col md={3} className="mb-5" key={car._id}>
+                                    //             <div className="auction-car-item">
+                                    //                 <div className="car-img" style={{ backgroundImage: `url(${car.imageSrc})` }}>
+                                    //                     <div className="car-time-and-price d-flex">
+                                    //                         <div className="car-time">
+                                    //                             <i className="fa-regular fa-clock"></i>
+                                    //                             {car.timecount}
+                                    //                         </div>
+                                    //                         <div className="car-price">{car.price}</div>
+                                    //                     </div>
+                                    //                 </div>
+                                    //                 <div className="car-bid-shareMark d-flex align-items-center justify-content-between">
+                                    //                     <div className="car-bid text-muted">{car.bidCount} Bids</div>
+                                    //                     <div className="car-shareMark">
+                                    //                         <Button variant='link'><i className="fa-solid fa-share-nodes"></i></Button>
+                                    //                         <Button variant='link' onClick={()=>markHndal(car)}><i className="fa-solid fa-bookmark"></i></Button>
+                                    //                     </div>
+                                    //                 </div>
+                                    //                 <Link to="/singlecar" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
+                                    //                 <p className="car-desc text-muted">{car.desc}</p>
+                                    //                 <div className="car-brandLocation d-flex align-items-center">
+                                    //                     <div className="car-brand text-muted">
+                                    //                         <img src={brandIcon} alt="Brand..." /> {car.brand}
+                                    //                     </div>
+                                    //                     <div className="car-location text-muted">
+                                    //                         <img src={car.countryFlag} alt="Location..." /> {car.location}
+                                    //                     </div>
+                                    //                 </div>
+                                    //             </div>
+                                    //         </Col>
+                                    //     ))
+                                    //     :
                                         Soldcars.map(car => (
                                             <Col md={3} className="mb-5" key={car._id}>
                                                 <div className="auction-car-item">

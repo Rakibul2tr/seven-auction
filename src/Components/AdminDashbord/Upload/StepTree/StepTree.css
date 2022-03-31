@@ -67,25 +67,40 @@
 }
 
 
-/* color picker fileld */
-.color_picker {
-    width: 90%;
-    margin: auto;
-    position: relative;
-    text-align: center;
-    color: #7E5472;
-    font-weight: 600;
-    top: 10px;
-}
-.color_fild{
-    margin-top: 50px;
-}
-.color_div{
-    margin-left: 15px;
+/* input fileld */
+
+.input_fild {
     border: 1px solid #7E5472;
-    min-width: 150px;
+    width: 75%;
+    margin: auto;
+    border-radius: 25px;
+    background: #fff;
     
 }
+.location_fild{
+    position: relative;
+    top: 65px;
+    padding: 10px;
+}
+.input_fild input {
+    width: 75%;
+    border: none;
+    background: none;
+    outline: none;
+}
+.input_fild input::placeholder{
+    font-size: 13px;
+    opacity: .7;
+}
+.location_fild i {
+    margin-left: 40px;
+    opacity: .6;
+    font-size: 20px;
+}
+.icon_img{
+    width: 15px;
+}
+
 
 .dable_btn_Step3 {
     display: flex;
@@ -95,6 +110,9 @@
 }
 .dable_btn_Step3 .prev_btn{
     left: 0%;
+    background: #fff !important;
+    border: 2px solid #623C57 !important;
+    color: rgba(0, 0, 0, 0.795) !important;
 }
 .dable_btn_Step3 .prev_btn i{
     line-height: 27px;
@@ -102,7 +120,7 @@
 }
 .dable_btn_Step3 button.next_btn, .dable_btn_Step3 .prev_btn {
     color: #fff;
-    width: 105px;
+    width: 115px;
     display: flex;
     position: relative;
     left: 0% !important;
@@ -115,9 +133,8 @@
     border: none;
     padding: 6px;
     justify-content: center;
-    line-height: 28px;
 }
 button.next_btn i {
-    line-height: 29px;
+    line-height: 25px;
     margin-left: 15px;
 }

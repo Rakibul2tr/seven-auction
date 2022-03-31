@@ -56,53 +56,65 @@
     font-size: 24px;
     position: relative;
 }
-.border_1 .auction_hidding_step3::before {
+.border_1 .auction_hidding_step6::before {
     position: absolute;
     bottom: 15px;
-    left: 41%;
-    width: 18%;
+    left: 35%;
+    width: 30%;
     content: "";
     height: 2px;
     background: #7E5472;
 }
-
-
-/* color picker fileld */
-.color_picker {
-    width: 90%;
-    margin: auto;
-    position: relative;
+/* hiddin and image */
+.car_title {
     text-align: center;
-    color: #7E5472;
-    font-weight: 600;
-    top: 10px;
+    padding: 0 0 0 20px;
 }
-.color_fild{
-    margin-top: 50px;
+.car_title h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
 }
-.color_div{
-    margin-left: 15px;
+.car_image {
+    width: 110px;
+    margin: auto;
+}
+/* engine fileld */
+.engine_inform {
+    width: 65%;
+    margin: auto;
     border: 1px solid #7E5472;
-    min-width: 150px;
-    
+    border-radius: 10px;
+    padding:5px;
+    position: relative;
+    top: 50px;
+    background: #F3F3F3;
 }
 
-.dable_btn_Step3 {
+.engine_inform textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 5px 0 0 10px;
+    background: #F3F3F3;
+}
+.dable_btn_Step6 {
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 130px;
+    top: 35px;
 }
-.dable_btn_Step3 .prev_btn{
+.dable_btn_Step6 .prev_btn{
     left: 0%;
 }
-.dable_btn_Step3 .prev_btn i{
+.dable_btn_Step6 .prev_btn i{
     line-height: 27px;
     margin-right: 7px;
 }
-.dable_btn_Step3 button.next_btn, .dable_btn_Step3 .prev_btn {
+.dable_btn_Step6 button.next_btn, .dable_btn_Step6 .prev_btn {
     color: #fff;
-    width: 105px;
+    width: 115px;
     display: flex;
     position: relative;
     left: 0% !important;

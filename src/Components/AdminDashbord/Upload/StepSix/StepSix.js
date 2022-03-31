@@ -47,7 +47,7 @@ const StepSix = (props) => {
                         </div>
                         <div className="col-md-6">
                           <div className="car_image">
-                            <img className='img-fluid' src={carImage} alt="" />
+                            <img className='img-fluid' src={storData[0]} alt="" />
                           </div>
                         </div>
                       </div>

@@ -4,6 +4,7 @@ import './SellWithUs.css'
 import StepEight from './StepEight/StepEight';
 import StepFive from './StepFive/StepFive';
 import StepFour from './StepFour/StepFour';
+import StepNine from './StepNine/StepNine';
 import StepOne from './StepOne/StepOne';
 import StepSeven from './StepSeven/StepSeven';
 import StepSix from './StepSix/StepSix';
@@ -59,6 +60,9 @@ const SellWithUs = () => {
                 }
                 {
                    Steps==='stepEight'&& <StepEight setSteps={setSteps}/>
+                }
+                {
+                   Steps==='StepNine'&& <StepNine setSteps={setSteps}/>
                 }
                 {
                    Steps==='submit'&& <Submit setSteps={setSteps}/>

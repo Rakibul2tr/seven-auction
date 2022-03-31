@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import "./Notification.css";
 
 const Notification = () => {
+  const [notifications,setNotifications]=useState([])
+    // fetch(`https://seven-auction.herokuapp.com/api/user/notifications`)
+    // .then(res=>res.json())
+    // .then(data=>setNotifications(data))
+
+
   const notification=[
     {
       title:'Ahmed bid your car',
@@ -28,7 +34,8 @@ const Notification = () => {
         </div>
         <div className="notific_body">
           {
-            notification.map(item=>(<div className="notific_item" key={item.time}>
+            notifications.length>0?
+            notifications.map(item=>(<div className="notific_item" key={item._id}>
             <div className="notific_icon_and_text">
               <div className="notific_icon">
                 <i className={item.icon}></i>
@@ -45,14 +52,27 @@ const Notification = () => {
                 <span>{item.time} min</span>
               </div>
             </div>
-          </div> ))
+          </div> )):
+           notification.map(item=>(<div className="notific_item" key={item.time}>
+           <div className="notific_icon_and_text">
+             <div className="notific_icon">
+               <i className={item.icon}></i>
+             </div>
+             <div className="notific_text">
+               <p>{item.title}</p>
+             </div>
+           </div>
+           <div className="notific_time">
+             <div className="bullet_icon">
+               <i className="fas fa-circle"></i>
+             </div>
+             <div className="time">
+               <span>{item.time} min</span>
+             </div>
+           </div>
+         </div> ))
           }
           
-
-
-
-         
-
         </div>
       </Row>
     </Container>

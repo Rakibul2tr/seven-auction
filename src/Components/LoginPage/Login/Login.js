@@ -3,6 +3,7 @@ import { Modal } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import "../LoginPage.css";
+import Verifiyd from "../LoginVerifiy/Verifiyd";
 import Register from "../Register/Register";
 
 
@@ -11,6 +12,7 @@ const Login = (props) => {
   const [loginChange, setloginChange] = useState("login");
   const [usemobil,setusemobil] = useState('email');
   const [opacity,setopacity] = useState('');
+  const [show, setShow] = useState(false);
   
   const { register, handleSubmit, } = useForm();
   const onSubmit = data => {
@@ -23,17 +25,28 @@ const Login = (props) => {
     })
     .then(res=>res.json())
     .then(data=>{
+      console.log(data);
       if(data.jwtToken&&data.loggedUser){
       localStorage.setItem('token',data.jwtToken)
 
       localStorage.setItem('User',JSON.stringify(data.loggedUser))
+        
+      }if(!data.loggedUser.emailVerified){
+        setShow(true)
+        
+      }
+      if(data.loggedUser.emailVerified){
+        
         window.location.reload();
-      }else{
+      }
+      
+      else{
         console.log(data);
       }
+      
     })
   }
-
+  
 
 
   return (
@@ -128,6 +141,9 @@ const Login = (props) => {
         )}
         {loginChange === "register" && <Register />}
       </Modal>
+      {
+       show&& <Verifiyd show={show}setShow={setShow}/>
+      }
     </div>
   );
 };

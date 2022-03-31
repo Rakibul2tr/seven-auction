@@ -11,6 +11,12 @@ import LiveAuctionTabe from './LiveAuctionTabe';
 import LostTabe from './LostTabe';
 
 const MyBid = () => {
+
+    const [bidedAuctions,setbidedAuctions]=useState([])
+    fetch(`https://seven-auction.herokuapp.com/api/user/my-bids`)
+    .then(res=>res.json())
+    .then(data=>setbidedAuctions(data))
+    
     const Livecars = [
         {
             title: "2008 Ferrari 430 scuderia",
@@ -82,13 +88,13 @@ const MyBid = () => {
                 >lost</button>
             </div>
             {
-                menuChange==='live'&&<LiveAuctionTabe Livecars={Livecars} />
+                menuChange==='live'&&<LiveAuctionTabe Livecars={Livecars}bidedAuctions={bidedAuctions} />
             }
             {
-               menuChange==='won'&&<WonTabe Livecars={Livecars} /> 
+               menuChange==='won'&&<WonTabe Livecars={Livecars}bidedAuctions={bidedAuctions} /> 
             }
             {
-               menuChange==='lost'&&<LostTabe Livecars={Livecars} /> 
+               menuChange==='lost'&&<LostTabe Livecars={Livecars}bidedAuctions={bidedAuctions} /> 
             }
         </div>
       </Row>
