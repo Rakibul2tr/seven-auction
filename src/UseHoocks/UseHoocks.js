@@ -108,17 +108,24 @@ const UseHoocks=()=>{
         },
     ];
     const [user,setUser]=useState('')
+    const [admin,setAdmin]=useState('')
     
   useEffect(()=>{
     let getUser=localStorage.getItem('User')
     let userData=JSON.parse(getUser)
     setUser(userData);
+
+    let getAdmin=localStorage.getItem('admin')
+    let adminData=JSON.parse(getAdmin)
+    setAdmin(adminData);
   },[])
 
 
   const token=localStorage.getItem('token')
+  const Admintoken=localStorage.getItem('Admintoken')
   
   const bearerToken=`Bearer ${token}`
+  const AdminbearerToken=`Bearer ${Admintoken}`
 
   const logOutHendl=()=>{
     fetch(`https://seven-auction.herokuapp.com/api/user/logout`,{
@@ -147,7 +154,7 @@ const UseHoocks=()=>{
 
     return {
         Livecars,
-        user,setUser,logOutHendl,bearerToken
+       admin, user,setUser,logOutHendl,bearerToken,AdminbearerToken
         // getAccountData
     }
 }

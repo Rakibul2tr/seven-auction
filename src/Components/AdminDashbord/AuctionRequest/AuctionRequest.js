@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./AuctionReques.css";
 import { Container, Row} from "react-bootstrap";
 import RequestClosedData from './RequstClosedData';
 import RequestProgress from './RequestProgress';
 import RequestReject from './RequestReject';
 import RequestAllData from './RequestAllData';
+import UseHoocks from '../../../UseHoocks/UseHoocks';
 
 const AuctionRequest = () => {
+  const {AdminbearerToken}=UseHoocks()
+  useEffect(()=>{
+    fetch(`https://seven-auction.herokuapp.com/api/admin/auctions-requests`,{
+      method:'GET',
+      headers:{
+        Accept:'application/json',
+        'Content-Type':'application/json',
+        authorization:AdminbearerToken,
+      },
+      
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data);
+    })
+  },[])
     const tickets=[
         {name:'totla tickets',number:2541},
         {name:'confirms',number:83241},

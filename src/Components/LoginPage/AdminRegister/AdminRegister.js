@@ -3,13 +3,12 @@ import { Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import loginlogo from '../../../assets/images/icon/adminLogo.png'
-import "./AdminLogin.css"
+import "./AdminRegister.css"
 
-const AdminLogin = () => {
+const AdminRegister = () => {
     const { register, handleSubmit, } = useForm();
   const onSubmit = data => {
-    console.log(data);
-    fetch(`https://seven-auction.herokuapp.com/api/admin/login`,{
+    fetch(`https://seven-auction.herokuapp.com/api/admin/register`,{
       method:'POST',
       headers:{
         'Content-Type':'application/json'
@@ -18,26 +17,42 @@ const AdminLogin = () => {
     })
     .then(res=>res.json())
     .then(data=>{
-      if(data.jwtToken&&data.loggedAdmin){
-      localStorage.setItem('Admintoken',data.jwtToken)
-
-      localStorage.setItem('admin',JSON.stringify(data.loggedAdmin))
-      window.location.href = "/"
-      }
-      
+        if(data.adminId){
+            alert('please login now')
+        }
     })
   }
     return (
         <div className='admin_section'>
             <Container>
                 <Row>
-                    <div className="admin_login_border">
+                    <div className="admin_register_border">
                         <div className="login_aria">
                             <div className="loginLogo w-25">
                                 <img src={loginlogo} alt="" className="img-fluid" />
                             </div>
                             <div className="loginForm">
                                 <form onSubmit={handleSubmit(onSubmit)}>
+                                <div className="row py-2" >
+                                    <label htmlFor="first_name">First Name</label>
+                                    <div className="first_name">
+                                        <input type="text"
+                                        placeholder='ameer' 
+                                        {...register("firstName", { required: true })} 
+                                        />
+                                        <i className="fas fa-user-circle"></i>
+                                    </div>
+                                </div>
+                                <div className="row py-2">
+                                    <label htmlFor="last_name">Last Name</label>
+                                    <div className="last_name">
+                                        <input type="text" 
+                                        placeholder='hosen'
+                                        {...register("lastName", { required: true })}
+                                        />
+                                        <i className="fas fa-user-circle"></i>
+                                    </div>
+                                </div>
                                 <div className="row py-2">
                                     <label htmlFor="email">Email</label>
                                     <div className="email_addrass">
@@ -65,10 +80,10 @@ const AdminLogin = () => {
                                 </div>
                                  <div className="row py-2 mt-5">
                                     <div className="login_button">
-                                        <button>login</button>
+                                        <button>Register</button>
                                     </div>
                                 </div>
-                                <Link to='/adminregister'className='login_link_text'>Please Register Now</Link>
+                                <Link to='/admin'className='login_link_text'>Please Login Now</Link>
                                 </form>
                             </div>
                         </div>
@@ -79,4 +94,4 @@ const AdminLogin = () => {
     );
 };
 
-export default AdminLogin;
+export default AdminRegister;

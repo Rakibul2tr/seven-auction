@@ -31,11 +31,11 @@ const Login = (props) => {
 
       localStorage.setItem('User',JSON.stringify(data.loggedUser))
         
-      }if(!data.loggedUser.emailVerified){
+      }if(!data.loggedUser?.emailVerified){
         setShow(true)
         
       }
-      if(data.loggedUser.emailVerified){
+      if(data?.loggedUser?.emailVerified){
         
         window.location.reload();
       }

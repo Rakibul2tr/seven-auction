@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import Review from './Review/Review';
 import './SellWithUs.css'
 import StepEight from './StepEight/StepEight';
 import StepFive from './StepFive/StepFive';
@@ -66,6 +67,9 @@ const SellWithUs = () => {
                 }
                 {
                    Steps==='submit'&& <Submit setSteps={setSteps}/>
+                }
+                {
+                   Steps==='review'&& <Review setSteps={setSteps}/>
                 }
                 
             </Container>

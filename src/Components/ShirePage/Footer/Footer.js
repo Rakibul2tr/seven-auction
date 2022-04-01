@@ -7,27 +7,8 @@ import "./Footer.css";
 
 const Footer = () => {
 
-  const {user,setUser,logOutHendl}=UseContext();
-  // const token=localStorage.getItem('token')
-  // const bearerToken=`Bearer ${token}`
-
-  // const logOutHendl=()=>{
-  //   fetch(`https://seven-auction.herokuapp.com/api/user/logout`,{
-  //     method:'DELETE',
-  //     headers:{
-  //       Accept:'application/json',
-  //       'Content-Type':'application/json',
-  //       authorization:bearerToken,
-  //     },
-  //   })
-  //   .then(res=>res.json())
-  //   .then(data=>{
-  //     setUser('')
-  //     alert(data.message)
-  //     // localStorage.removeItem("token");
-  //     window.location.reload();
-  //   })
-  // }
+  const {user,setUser,logOutHendl,admin}=UseContext();
+  
   return (
     <div className="footer_bg">
     <Container>
@@ -57,9 +38,12 @@ const Footer = () => {
               <li>
                 <Link to="" onClick={logOutHendl}>LogOut</Link>
               </li>
-              <li>
+              {
+                admin&&<li>
                 <Link to="/dashboard">Admin Dashboard</Link>
               </li>
+              }
+              
               <li>
                 <Link to="/admin">Admin login</Link>
               </li>

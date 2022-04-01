@@ -20,10 +20,11 @@ const StepTow = (props) => {
   function uploadSingleFile(e) {
     setFile([...file, URL.createObjectURL(e.target.files[0])]);
   }
-
+ console.log(file);
   function upload(e) {
     e.preventDefault();
-  const prevdata= Object.assign({}, ...StepTow,file)
+  const prevdata= Object.assign({},...StepTow,{file})
+  console.log(prevdata);
     const stepTowdata=JSON.stringify(prevdata)
     localStorage.setItem('StepTow',stepTowdata)
 
@@ -62,6 +63,7 @@ const StepTow = (props) => {
                         <div className="form-group">
                             <input
                             type="file"
+                            accept="image/*"
                             multiple 
                             disabled={file.length === 8}
                             className="form-control"

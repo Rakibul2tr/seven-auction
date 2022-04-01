@@ -21,9 +21,6 @@ const StepFour = (props) => {
   const onSubmit = data => {
     data.color=colorName
     const prevdata= Object.assign({}, ...storData,data)
-    
-    
-    console.log(prevdata);
    
     const setLocalStor=JSON.stringify(prevdata)
     localStorage.setItem('StepFour',setLocalStor)
@@ -35,7 +32,6 @@ const StepFour = (props) => {
     setColor(e.target.value)
   }
   const colorName = GetColorName(color)
-  console.log(colorName);
     return (
         <Container>
           <Row className="py-5">

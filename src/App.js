@@ -2,6 +2,7 @@ import {  Routes, Route } from "react-router-dom";
 import "./App.css";
 import DashboardMain from "./Components/AdminDashbord/DashboardMain";
 import AdminLogin from "./Components/LoginPage/AdminLogin/AdminLogin";
+import AdminRegister from "./Components/LoginPage/AdminRegister/AdminRegister";
 import NotFound from "./Components/NotFoundpage/NotFound";
 import Privacy from "./Components/PrivecyPage/Privacy";
 import SellWithUs from "./Components/SellWithUs/SellWithUs";
@@ -39,6 +40,7 @@ function App() {
       <Route exact path="/dashboard" element={<> <DashboardMain/> </>}></Route>
 
       <Route exact path="/admin" element={<> <AdminLogin/> </>}></Route>
+      <Route exact path="/adminregister" element={<> <AdminRegister/> </>}></Route>
 
       <Route exact path="*" element={<><Header/> <NotFound/> <Footer/></>}></Route>
     </Routes>

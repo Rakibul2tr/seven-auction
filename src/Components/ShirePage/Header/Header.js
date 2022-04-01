@@ -8,8 +8,7 @@ import './Header.css'
 import Mobilmenu from './Mobilmenu';
 
 const Header = () => {
-    const {user}=UseContext();
-    // console.log(user.email);
+    const {user,admin}=UseContext();
     const [modalShow, setModalShow] = React.useState(false);
     //mobile menu controler
     const [show, setShow] = useState(false);
@@ -53,8 +52,8 @@ const Header = () => {
                        <button onClick={() => setModalShow(true)}>Login</button>
                     </Link> */}
                     {
-                        user?.email?<><Link to=''><i className="far fa-bell"></i></Link>
-                        <Link to='/account'>
+                        user?.email || admin?.email?<><Link to=''><i className="far fa-bell"></i></Link>
+                        <Link to={user?.email?'/account':'/dashboard'}>
                         <i className="fas fa-user-circle"></i>
                         </Link></>:<Link to=''>
                        <button onClick={() => setModalShow(true)}>Login</button>

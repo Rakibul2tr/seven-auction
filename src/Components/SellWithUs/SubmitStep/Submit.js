@@ -15,9 +15,9 @@ const getValue=()=>{
 const Submit = (props) => {
 
   const [rhdBtn,setRhdBtn]=useState('RHD')
-  console.log(rhdBtn);
+
   const [menual,setMenual]=useState('Manual')
-  console.log(menual);
+  
   const { register, handleSubmit } = useForm();
 
   const [storData,setstorData]=useState([getValue()])
@@ -25,9 +25,12 @@ const Submit = (props) => {
     data.traffic=rhdBtn
     data.mode=menual
     const prevdata= Object.assign({}, ...storData,data)
-    console.log(prevdata);
 
-    // props.setSteps('')
+    const setLocalStor=JSON.stringify(prevdata)
+    localStorage.setItem('Review',setLocalStor)
+    props.setSteps('review')
+    
+    props.setSteps('review')
     localStorage.removeItem("StepSeven");
   };
  
@@ -65,7 +68,7 @@ const Submit = (props) => {
                       Previous
                       </button>
                       <button className='next_btn'>
-                        Submit
+                        Review
                         <i className="fa-solid fa-angles-right"></i>
                       </button>
                       </div>
