@@ -144,6 +144,24 @@ const UseHoocks=()=>{
       window.location.reload();
     })
   }
+  // admin logout data
+  const AdminlogOutHendl=()=>{
+    fetch(`https://seven-auction.herokuapp.com/api/admin/logout`,{
+      method:'DELETE',
+      headers:{
+        Accept:'application/json',
+        'Content-Type':'application/json',
+        authorization:AdminbearerToken,
+      },
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      setAdmin('')
+      alert(data.message)
+      localStorage.removeItem("Admintoken");
+      window.location.reload();
+    })
+  }
 
   // const getAccountData=()=>{
   //   fetch(`https://seven-auction.herokuapp.com/api/user/account-data`)
@@ -154,7 +172,7 @@ const UseHoocks=()=>{
 
     return {
         Livecars,
-       admin, user,setUser,logOutHendl,bearerToken,AdminbearerToken
+       admin, user,setUser,logOutHendl,bearerToken,AdminbearerToken,AdminlogOutHendl
         // getAccountData
     }
 }

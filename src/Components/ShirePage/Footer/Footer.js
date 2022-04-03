@@ -7,7 +7,7 @@ import "./Footer.css";
 
 const Footer = () => {
 
-  const {user,setUser,logOutHendl,admin}=UseContext();
+  const {user,setUser,logOutHendl,admin, AdminlogOutHendl}=UseContext();
   
   return (
     <div className="footer_bg">
@@ -35,9 +35,14 @@ const Footer = () => {
               <li>
                 <Link to="/">sold</Link>
               </li>
-              <li>
+              {
+                admin? <li>
+                <Link to="" onClick={AdminlogOutHendl}>LogOut Admin</Link>
+              </li>:<li>
                 <Link to="" onClick={logOutHendl}>LogOut</Link>
               </li>
+              }
+              
               {
                 admin&&<li>
                 <Link to="/dashboard">Admin Dashboard</Link>

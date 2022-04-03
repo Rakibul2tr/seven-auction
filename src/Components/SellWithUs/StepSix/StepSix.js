@@ -17,7 +17,7 @@ const StepSix = (props) => {
   const { register, handleSubmit } = useForm();
 
   const [storData,setstorData]=useState([getValue()])
-  console.log(storData[0]);
+  console.log(storData[0].file);
 
   const onSubmit = data => {
     const prevdata= Object.assign({}, ...storData,data)
@@ -48,6 +48,9 @@ const StepSix = (props) => {
                         <div className="col-md-6">
                           <div className="car_image">
                             <img className='img-fluid' src={carImage} alt="" />
+                            {
+                              storData[0].file.map(a=>(console.log(a)))
+                            }
                           </div>
                         </div>
                       </div>

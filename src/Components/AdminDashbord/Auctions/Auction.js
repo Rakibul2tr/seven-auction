@@ -1,19 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Auction.css";
 import { Container, Row} from "react-bootstrap";
 import AuctionSold from './AuctionSold';
 import Auctionlive from './Auctionlive';
 import AuctionUnsold from './AuctionUnsold';
 import AuctionAllData from './AuctionAllData';
+import UseHoocks from '../../../UseHoocks/UseHoocks';
 
 const Auction = () => {
-    const tickets=[
-        {name:'totla',number:2541},
-        {name:'sold',number:83241},
-        {name:'unsold',number:3241},
-        {name:'live',number:241},
-    ]
+  const {AdminbearerToken}=UseHoocks()
 
+  const [auctionList,setAuctionList]=useState();
+  useEffect(()=>{
+    fetch(`https://seven-auction.herokuapp.com/api/admin/auctions`,{
+      method:'GET',
+      headers:{
+        Accept:'application/json',
+        'Content-Type':'application/json',
+        authorization:AdminbearerToken,
+      },
+      
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      setAuctionList(data);
+    })
+  },[])
+ 
+  console.log(auctionList);
     const tabeldatas=[
         {id:1,date:'10/2/1997',status:'live',customer:'rakibul',vehile:'farrari 250 ago',type:'car'},
 
@@ -43,13 +57,28 @@ const Auction = () => {
           </div>
           <Row className="pt-3">
              <div className="top_auction_section">
-                {
+                {/* {
                     tickets.map(item=>(<div className="auction_item" key={item.name}>
                     <p>{item.name}</p>
                     <h6 className={item.name==='sold'?'lighgreen':'commonColor'&&item.name==='unsold'?'wornigcolor':'commonColor'&&item.name==='live'?'rejeactColor':'commonColor'}>{item.number}</h6>
                 </div>))
-                }
-               
+                } */}
+               <div className="auction_item" >
+                    <p>totla</p>
+                    <h6 className='commonColor'>{auctionList?.totalAuctionsCount}</h6>
+                </div>
+                <div className="auction_item" >
+                    <p>sold</p>
+                    <h6 className='lighgreen'>{auctionList?.soldAuctionsCount}</h6>
+                </div>
+                <div className="auction_item" >
+                    <p>unsold</p>
+                    <h6 className='wornigcolor'>{auctionList?.unsoldAuctionsCount}</h6>
+                </div>
+                <div className="auction_item" >
+                    <p>live</p>
+                    <h6 className='rejeactColor'>{auctionList?.liveAuctionsCount}</h6>
+                </div>
             </div>
           </Row>
           <Row>

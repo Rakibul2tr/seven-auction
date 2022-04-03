@@ -20,6 +20,18 @@ const TableAllData = (props) => {
             <tbody className='table_body'>
                 
                 {
+                   props.ticket?.tickets>0 ?props.ticket.tickets.map(item=>(<tr className='table_body_row'key={item._id}>
+                   <td>{item.id}</td>
+                   <td>{item.date}</td>
+                   <td><div  className={item.status==='closed'?'bglighgreen':'bgProgress'&&item.status==='rejected'?'bgRejeact':'bgProgress'}
+                   
+                   >{item.status}</div></td>
+                   <td>{item.customer}</td>
+                   <td>{item.email}</td>
+                   <td>{item.messege}</td>
+                   <td><button>show</button><button>status</button></td>
+                   </tr>))
+                    :
                     props.tabeldatas.map(item=>(<tr className='table_body_row'key={item.id}>
                     <td>{item.id}</td>
                     <td>{item.date}</td>

@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Tickets.css"
 import { Container, Row} from "react-bootstrap";
 import TableAllData from './TableAllData';
 import TabelClosedData from './TabelClosedData';
 import TabelProgress from './TabelProgress';
 import TableReject from './TableReject';
+import UseHoocks from '../../../UseHoocks/UseHoocks';
 
 const Tickets = () => {
-    const tickets=[
-        {name:'totla tickets',number:2541},
-        {name:'closed',number:83241},
-        {name:'in progress',number:3241},
-        {name:'rejeacted',number:241},
-    ]
+  const {AdminbearerToken}=UseHoocks()
+
+  const [ticket,setTicket]=useState();
+  useEffect(()=>{
+    fetch(`https://seven-auction.herokuapp.com/api/admin/tickets`,{
+      method:'GET',
+      headers:{
+        Accept:'application/json',
+        'Content-Type':'application/json',
+        authorization:AdminbearerToken,
+      },
+      
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      setTicket(data);
+    })
+  },[])
+  console.log(ticket);
 
     const tabeldatas=[
         {id:1,date:'10/2/1997',status:'in progress',customer:'rakibul',email:'rakibul@gmail.com',messege:'fur dhfud dhfd'},
@@ -40,13 +54,22 @@ const Tickets = () => {
           </div>
           <Row className="pt-3">
              <div className="top_ticket">
-                {
-                    tickets.map(item=>(<div className="ticket_item" key={item.name}>
-                    <p>{item.name}</p>
-                    <h6 className={item.name==='closed'?'lighgreen':'commonColor'&&item.name==='in progress'?'wornigcolor':'commonColor'&&item.name==='rejeacted'?'rejeactColor':'commonColor'}>{item.number}</h6>
-                </div>))
-                }
-               
+                <div className="ticket_item" >
+                    <p>totla tickets</p>
+                    <h6 className='commonColor'>{ticket?.totalTickets}</h6>
+                </div>
+                <div className="ticket_item" >
+                    <p>closed</p>
+                    <h6 className='lighgreen'>{ticket?.closedTickets}</h6>
+                </div>
+                <div className="ticket_item" >
+                    <p>in progress</p>
+                    <h6 className='wornigcolor'>{ticket?.inprogressTickets}</h6>
+                </div>
+                <div className="ticket_item" >
+                    <p>rejeacted</p>
+                    <h6 className='rejeactColor'>{ticket?.rejectedTickets}</h6>
+                </div>
             </div>
           </Row>
           <Row>
@@ -76,7 +99,7 @@ const Tickets = () => {
         </Row>
         <Row className='pb-5'>
           <div className="table_section">
-            {menuChange==='all'&&<TableAllData tabeldatas={tabeldatas}/> }
+            {menuChange==='all'&&<TableAllData tabeldatas={tabeldatas}ticket={ticket}/> }
             {menuChange==='closed'&&<TabelClosedData filterClosed={filterClosed}/>}
             {menuChange==='progress'&&<TabelProgress filterPrograss={filterPrograss}/>}
             {menuChange==='rejacted'&&<TableReject filterRejact={filterRejact}/>}

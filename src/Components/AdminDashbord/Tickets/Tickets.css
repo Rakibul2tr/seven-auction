@@ -25,9 +25,9 @@
     background: #fff;
     margin-right: 25px;
 }
-.ticket_item p{
+.ticket_item p {
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: capitalize;
 }
