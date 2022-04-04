@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './StepSix.css'
 import { Col, Container, Row } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
-import carImage from '../../../assets/images/car/car-1.png'
+import carImage from '../../../../assets/images/car/car-1.png'
 
 const getValue=()=>{
   const localValue = JSON.parse(localStorage.getItem('StepFive'));
@@ -47,7 +47,7 @@ const StepSix = (props) => {
                         </div>
                         <div className="col-md-6">
                           <div className="car_image">
-                            <img className='img-fluid' src={storData[0]} alt="" />
+                            <img className='img-fluid' src={carImage} alt="" />
                           </div>
                         </div>
                       </div>

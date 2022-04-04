@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './Upload.css'
 import { Col, Container, Row } from "react-bootstrap";
-import iconImg from '../../../assets/images/icon/graterthen.png'
+// import iconImg from '../../../assets/images/icon/graterthen.png'
 import StepOne from './StepOne/StepOne';
-import StepTow from '../../SellWithUs/StepTow/StepTow';
-import StepTree from '../../SellWithUs/StepTree/StepTree';
-import StepFour from '../../SellWithUs/StepFour/StepFour';
-import StepFive from '../../SellWithUs/StepFive/StepFive';
-import StepSix from '../../SellWithUs/StepSix/StepSix';
-import StepSeven from '../../SellWithUs/StepSeven/StepSeven';
-import StepEight from '../../SellWithUs/StepEight/StepEight';
-import StepNine from '../../SellWithUs/StepNine/StepNine';
-import Submit from '../../SellWithUs/SubmitStep/Submit';
+import StepTow from './StepTow/StepTow';
+import StepTree from './StepTree/StepTree';
+import StepFour from './StepFour/StepFour';
+import StepFive from './StepFive/StepFive';
+import StepSix from './StepSix/StepSix';
+import StepSeven from './StepSeven/StepSeven';
+import StepEight from './StepEight/StepEight';
+import StepNine from './StepNine/StepNine';
+import Submit from './SubmitStep/Submit';
 
 const Upload = () => {
   const [Steps,setSteps]=useState('stepOne')

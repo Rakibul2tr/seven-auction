@@ -19,7 +19,9 @@ const Review = (props) => {
     const file= URL.revokeObjectURL(review[0].file);
 
     console.log(file);
-    
+    const gelary=[
+        imgDiv,imgDiv,imgDiv,imgDiv
+    ]
     
     return (
         <>
@@ -35,6 +37,13 @@ const Review = (props) => {
                                         </div>
                                     </Col>))
                                 } */}
+                                {
+                                    gelary.map(item=>(<Col xs={6}>
+                                        <div className="image_div_review">
+                                            <img src={item} alt="gelary" />
+                                        </div>
+                                    </Col>))
+                                }
                                 
                             </Row>
                         </div>
@@ -95,7 +104,7 @@ const Review = (props) => {
                 </Row>
                 <Row className='py-5'>
                 <div className="dable_btn_Step_review">
-                      <button className='prev_btn'onClick={()=>props.setSteps('stepEight')}>
+                      <button className='prev_btn'onClick={()=>props.setSteps('submit')}>
                       <i className="fa-solid fa-angles-left"></i>
                       Previous
                       </button>

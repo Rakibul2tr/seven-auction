@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Review from './Review/Review';
 import './SellWithUs.css'
-import StepEight from './StepEight/StepEight';
-import StepFive from './StepFive/StepFive';
-import StepFour from './StepFour/StepFour';
-import StepNine from './StepNine/StepNine';
-import StepOne from './StepOne/StepOne';
-import StepSeven from './StepSeven/StepSeven';
-import StepSix from './StepSix/StepSix';
-import StepTow from './StepTow/StepTow';
-import StepTree from './StepTree/StepTree';
-import Submit from './SubmitStep/Submit';
+import StepEight from './StepEightKelomiter/StepEight';
+import StepFive from './StepFiveEngine/StepFive';
+import StepFour from './StepFourColor/StepFour';
+import StepNine from './StepNineAmount/StepNine';
+import StepOne from './StepOneType/StepOne';
+import StepSeven from './StepSevenDescription/StepSeven';
+import StepSix from './StepSixDetails/StepSix';
+import StepTow from './StepTowImage/StepTow';
+import StepTree from './StepTreeLocation/StepTree';
+import Submit from './SubmitStepRhd/Submit';
 
 const SellWithUs = () => {
     const [Steps,setSteps]=useState('start')
