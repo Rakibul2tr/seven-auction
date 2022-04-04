@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
 
 const getValue=()=>{
-  const localValue = JSON.parse(localStorage.getItem('StepEight'));
+  const localValue = JSON.parse(localStorage.getItem('StepNine'));
   if(localValue !== null){
    return localValue
   } else {
@@ -21,6 +21,7 @@ const Submit = (props) => {
   const { register, handleSubmit } = useForm();
 
   const [storData,setstorData]=useState([getValue()])
+  console.log(storData);
   const onSubmit = data => {
     data.traffic=rhdBtn
     data.mode=menual
@@ -30,7 +31,6 @@ const Submit = (props) => {
     localStorage.setItem('Review',setLocalStor)
     props.setSteps('review')
     
-    props.setSteps('review')
     localStorage.removeItem("StepSeven");
   };
  
@@ -48,22 +48,22 @@ const Submit = (props) => {
                         <div className='d-flex justify-content-around w-75 mx-auto'>
                           <span className='sirial_number'>1</span>
 
-                        <button className={rhdBtn==='RHD'?'rhd_btn btnActive':'rhd_btn'}onClick={()=>setRhdBtn('RHD')}>RHD</button>
+                        <span className={rhdBtn==='RHD'?'rhd_btn btnActive':'rhd_btn'}onClick={()=>setRhdBtn('RHD')}>RHD</span>
 
-                        <button className={rhdBtn==='LHD'?'lhd_btn btnActive':'lhd_btn'}onClick={()=>setRhdBtn('LHD')}>LHD</button>
+                        <span className={rhdBtn==='LHD'?'lhd_btn btnActive':'lhd_btn'}onClick={()=>setRhdBtn('LHD')}>LHD</span>
                         </div>
                         
 
                         <p className='d-flex justify-content-around w-75 mx-auto pt-3'>
                         <span className='sirial_number'>2</span>
-                        <button className={menual==='Manual'?'rhd_btn btnActive':'rhd_btn'} onClick={()=>setMenual('Manual')}>Manual</button>
-                        <button className={menual==='Automatic'?'lhd_btn btnActive':'lhd_btn'} onClick={()=>setMenual('Automatic')}>Automatic</button></p>
+                        <span className={menual==='Manual'?'rhd_btn btnActive':'rhd_btn'} onClick={()=>setMenual('Manual')}>Manual</span>
+                        <span className={menual==='Automatic'?'lhd_btn btnActive':'lhd_btn'} onClick={()=>setMenual('Automatic')}>Automatic</span></p>
 
 
                       </div>
 
                       <div className="dable_btn_Step_submit">
-                      <button className='prev_btn'onClick={()=>props.setSteps('stepEight')}>
+                      <button className='prev_btn'onClick={()=>props.setSteps('StepNine')}>
                       <i className="fa-solid fa-angles-left"></i>
                       Previous
                       </button>

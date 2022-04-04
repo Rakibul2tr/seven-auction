@@ -159,16 +159,10 @@ const UseHoocks=()=>{
       setAdmin('')
       alert(data.message)
       localStorage.removeItem("Admintoken");
+      localStorage.removeItem("admin");
       window.location.reload();
     })
   }
-
-  // const getAccountData=()=>{
-  //   fetch(`https://seven-auction.herokuapp.com/api/user/account-data`)
-  //   .then(res=>res.json())
-  //   .then(data=>console.log(data))
-  // }
-  
 
     return {
         Livecars,

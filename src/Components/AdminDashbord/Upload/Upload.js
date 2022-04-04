@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './Upload.css'
 import { Col, Container, Row } from "react-bootstrap";
-// import iconImg from '../../../assets/images/icon/graterthen.png'
-import StepOne from './StepOne/StepOne';
-import StepTow from './StepTow/StepTow';
-import StepTree from './StepTree/StepTree';
-import StepFour from './StepFour/StepFour';
-import StepFive from './StepFive/StepFive';
-import StepSix from './StepSix/StepSix';
-import StepSeven from './StepSeven/StepSeven';
-import StepEight from './StepEight/StepEight';
-import StepNine from './StepNine/StepNine';
-import Submit from './SubmitStep/Submit';
+import StepOne from './StepOneType/StepOne';
+import StepTow from './StepTowImage/StepTow';
+import StepTree from './StepTreeLocation/StepTree';
+import StepFour from './StepFourColor/StepFour';
+import StepFive from './StepFiveEngine/StepFive';
+import StepSix from './StepSixDetails/StepSix';
+import StepSeven from './StepSevenDescription/StepSeven';
+import StepEight from './StepEightKelomiter/StepEight';
+import StepNine from './StepNineAmount/StepNine';
+import Submit from './SubmitStepRhd/Submit';
+import Review from './Review/Review';
 
 const Upload = () => {
   const [Steps,setSteps]=useState('stepOne')
@@ -51,6 +51,9 @@ const Upload = () => {
                 {
                    Steps==='submit'&& <Submit setSteps={setSteps}/>
                 }
+               {
+                   Steps==='review'&& <Review setSteps={setSteps}/>
+               }
           
         </Row>
       </Container>

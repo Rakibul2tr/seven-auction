@@ -20,10 +20,12 @@ const StepTow = (props) => {
   function uploadSingleFile(e) {
     setFile([...file, URL.createObjectURL(e.target.files[0])]);
   }
+ console.log(file);
 
   function upload(e) {
     e.preventDefault();
-  const prevdata= Object.assign({}, ...StepTow,file)
+  const prevdata= Object.assign({},...StepTow,{file})
+  console.log(prevdata);
     const stepTowdata=JSON.stringify(prevdata)
     localStorage.setItem('StepTow',stepTowdata)
 
@@ -46,11 +48,11 @@ const StepTow = (props) => {
                     <h3 className='auction_hiddingStep2'>Vehicle Image Upload</h3>
                     <form >
                       <div className="row cars_aria">
-                      <div className="form-group preview">
+                      <div className="form-group preview row">
                         {file.length > 0 &&
                         file.map((item, index) => {
                             return (
-                            <div key={item} className='uploadImg_div'>
+                            <div key={item} className='uploadImg_div col-md-3'>
                                 <img src={item} alt="" />
                                 <button className='deletBtn' type="button" onClick={() => deleteFile(index)}>
                                 x
@@ -59,11 +61,12 @@ const StepTow = (props) => {
                             );
                         })}
                     </div>
-                        <div className="form-group">
+                        <div className="form-group image_input">
                             <input
                             type="file"
+                            accept="image/*"
                             multiple 
-                            disabled={file.length === 8}
+                            disabled={file.length === 12}
                             className="form-control"
                             onChange={uploadSingleFile}
                             />

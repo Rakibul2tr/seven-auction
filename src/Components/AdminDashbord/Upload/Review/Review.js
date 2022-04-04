@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import imgDiv from '../../../assets/images/car/car-1.png'
-import UseHoocks from '../../../UseHoocks/UseHoocks';
+import UseHoocks from '../../../../UseHoocks/UseHoocks';
 import './Review.css'
 
 

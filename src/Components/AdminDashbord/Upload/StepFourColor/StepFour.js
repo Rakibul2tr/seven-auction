@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import './StepNine.css'
+import './StepFour.css'
 import { Col, Container, Row } from "react-bootstrap";
+import { GetColorName } from 'hex-color-to-color-name';
 import { useForm } from 'react-hook-form';
 
 const getValue=()=>{
-  const localValue = JSON.parse(localStorage.getItem('StepSeven'));
+  const localValue = JSON.parse(localStorage.getItem('StepTree'));
   if(localValue !== null){
    return localValue
   } else {
@@ -12,43 +13,42 @@ const getValue=()=>{
   }
 }
 
-const StepNine = (props) => {
+const StepFour = (props) => {
+  const [color, setColor] = useState('#3cd6bf');
   const { register, handleSubmit } = useForm();
+  
   const [storData,setstorData]=useState([getValue()])
   const onSubmit = data => {
+    data.color=colorName
     const prevdata= Object.assign({}, ...storData,data)
-    console.log(prevdata);
    
     const setLocalStor=JSON.stringify(prevdata)
-    localStorage.setItem('StepNine',setLocalStor)
-    props.setSteps('submit')
-    localStorage.removeItem("StepSeven");
+    localStorage.setItem('StepFour',setLocalStor)
+
+    props.setSteps('stepFive')
+    localStorage.removeItem("StepTow");
   };
- 
+  const onChangeColor=(e)=>{
+    setColor(e.target.value)
+  }
+  const colorName = GetColorName(color)
     return (
         <Container>
-         {/* step eight Traveled Kilometers */}
           <Row className="py-5">
            <Col md={12}>
             <div className="upload_item">
                 <div className="border_1">
-                    <h3 className='auction_hidding_step9'>Vehicle Amount</h3>
+                    <h3 className='auction_hidding_step3'>Vehicle Color</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                      <div className="input_fild Amount_fild">
-                        <input type="text"
-                        {...register("minimumAmount")} 
-                        placeholder='Minimum Amount $'/>
+                     <div className="color_picker">
+                     <span className='fw-bold'>Color Select</span>
+                     </div>
+                      <div className="color_fild d-flex justify-content-center">
+                        <input type="color" {...register("color")}  onChange={onChangeColor} />
+                        <div className="color_div"><span>{colorName}</span></div>
                       </div>
-
-                      <div className="input_fild Amount_fild mt-3">
-                        <input type="text"
-                        {...register("expectationAmount")} 
-                        placeholder='Expectation Amount $'/>
-                      </div>
-
-
-                      <div className="dable_btn_Step9">
-                      <button className='prev_btn'onClick={()=>props.setSteps('stepSeven')}>
+                      <div className="dable_btn_Step3">
+                      <button className='prev_btn'onClick={()=>props.setSteps('stepTree')}>
                       <i className="fa-solid fa-angles-left"></i>
                       Previous
                       </button>
@@ -66,4 +66,4 @@ const StepNine = (props) => {
     );
 };
 
-export default StepNine;
+export default StepFour;

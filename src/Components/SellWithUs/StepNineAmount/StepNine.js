@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
 
 const getValue=()=>{
-  const localValue = JSON.parse(localStorage.getItem('StepSeven'));
+  const localValue = JSON.parse(localStorage.getItem('StepEight'));
   if(localValue !== null){
    return localValue
   } else {
@@ -15,7 +15,9 @@ const getValue=()=>{
 const StepNine = (props) => {
   const { register, handleSubmit } = useForm();
   const [storData,setstorData]=useState([getValue()])
+
   const onSubmit = data => {
+    console.log(data);
     const prevdata= Object.assign({}, ...storData,data)
     console.log(prevdata);
    
@@ -23,7 +25,7 @@ const StepNine = (props) => {
     localStorage.setItem('StepNine',setLocalStor)
     props.setSteps('submit')
     localStorage.removeItem("StepSeven");
-  };
+  }
  
     return (
         <Container>
@@ -48,7 +50,7 @@ const StepNine = (props) => {
 
 
                       <div className="dable_btn_Step9">
-                      <button className='prev_btn'onClick={()=>props.setSteps('stepSeven')}>
+                      <button className='prev_btn'onClick={()=>props.setSteps('stepEight')}>
                       <i className="fa-solid fa-angles-left"></i>
                       Previous
                       </button>

@@ -1,0 +1,107 @@
+
+.image_div_review {
+    margin-bottom: 15px;
+}
+.content {
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+.content h4 {
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: monospace;
+    margin-bottom: 20px;
+}
+
+.current_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price h6,.day_time h6,.bid h6{
+    text-align: center;
+}
+.price span,.day_time span,.bid span{
+    font-size: 14px;
+    color: #999;
+}
+.car_over_view {
+    padding-left: 20px;
+}
+.car_over_view h4 {
+    color: #623D57;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 35px !important;
+}
+.review_car-overview-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 40px;
+}
+.review_car-overview-boxe i {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background: #623C57;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 13px;
+}
+
+.review_descripton {
+    padding: 20px 30px 30px 15px;
+}
+.review_descripton h4 {
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.review_descripton p {
+    font-size: 18px;
+    line-height: 28px;
+    font-family: popins;
+}
+
+
+.dable_btn_Step_review {
+    display: flex;
+    justify-content: space-around;
+}
+.dable_btn_Step_review .prev_btn{
+    left: 0%;
+    background: #fff !important;
+    border: 2px solid #623C57 !important;
+    color: rgba(0, 0, 0, 0.795) !important;
+}
+.dable_btn_Step_review .prev_btn i{
+    line-height: 27px;
+    margin-right: 7px;
+}
+.dable_btn_Step_review button.next_btn, .dable_btn_Step_review .prev_btn {
+    color: #fff;
+    width: 115px;
+    display: flex;
+    position: relative;
+    left: 0% !important;
+    top: 0px !important;
+    background: #623C57;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    padding: 6px;
+    justify-content: center;
+    line-height: 27px;
+}
+button.next_btn i {
+    line-height: 29px;
+    margin-left: 15px;
+}

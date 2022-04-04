@@ -18,7 +18,6 @@ const StepTree = (props) => {
     const [storData,setstorData]=useState([getValue()])
   const onSubmit = data => {
     const prevdata= Object.assign({}, ...storData,data)
-    console.log(prevdata);
    
     const setLocalStor=JSON.stringify(prevdata)
     localStorage.setItem('StepTree',setLocalStor)

@@ -56,63 +56,84 @@
     font-size: 24px;
     position: relative;
 }
-.border_1 .auction_hidding_step_submit::before {
+.border_1 .auction_hiddingStep2::before {
     position: absolute;
     bottom: 15px;
-    left: 17%;
-    width: 65%;
+    left: 27%;
+    width: 47%;
     content: "";
     height: 2px;
     background: #7E5472;
 }
 
-
-/* input fileld */
-span.sirial_number {
+/* upload image  */
+.form-group.preview {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0;
+}
+.image_input{
+    text-align: center;
+}
+.form-control[type=file] {
+    position: relative;
+    left: 40%;
+}
+#app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ .uploadImg_div img {
+    width: 100px;
+    padding:10px;
+    min-height: 50px;
+  }
+button.deletBtn {
+    position: absolute;
+    border: none;
     width: 30px;
-    border: 1px solid #7E5472;
-    height: 30px;
-    border-radius: 50px;
-    line-height: 28px;
+    height: 10px;
+    line-height: 22px;
+    font-size: 15px;
+    background: none;
+    margin-left: -22px;
+}
+.form-control[type=file] {
+    overflow: hidden;
+    width: 82px;
+    font-size: 11px;
 }
 
-button.rhd_btn {
-    width: 110px;
-    padding: 4px;
-    border-radius: 20px;
-    border: 1px solid #7E5472;
-    font-size: 15px;
-    font-weight: 500;
+
+.cars_aria {
+    padding: 5px 20px 0 20px;
+    width: 100%;
+    margin: 0 !important;
 }
-.lhd_btn{
-    width: 110px;
-    padding: 4px;
-    border-radius: 20px;
-    border: 1px solid #7E5472;
-    font-size: 15px;
-    font-weight: 500;
+.car_item {
+    margin-bottom: 20px;
 }
-.btnActive{
-    background: #7E5472;
-    color: #fff;
-}
-.dable_btn_Step_submit {
+.dable_btn{
     display: flex;
     justify-content: space-around;
-    position: relative;
-    top: 50px;
 }
-.dable_btn_Step_submit .prev_btn{
-    left: 0%;
+.prev_btn {
+    left: 0% !important;
     background: #fff !important;
     border: 2px solid #623C57 !important;
     color: rgba(0, 0, 0, 0.795) !important;
 }
-.dable_btn_Step_submit .prev_btn i{
+.prev_btn i {
     line-height: 27px;
     margin-right: 7px;
 }
-.dable_btn_Step_submit button.next_btn, .dable_btn_Step_submit .prev_btn {
+.dable_btn button.next_btn, .prev_btn {
     color: #fff;
     width: 115px;
     display: flex;
@@ -127,9 +148,21 @@ button.rhd_btn {
     border: none;
     padding: 6px;
     justify-content: center;
-    line-height: 27px;
+    line-height: 28px;
 }
 button.next_btn i {
     line-height: 29px;
     margin-left: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+

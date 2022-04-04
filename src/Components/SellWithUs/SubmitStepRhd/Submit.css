@@ -76,7 +76,7 @@ span.sirial_number {
     line-height: 28px;
 }
 
-button.rhd_btn {
+.rhd_btn {
     width: 110px;
     padding: 4px;
     border-radius: 20px;
