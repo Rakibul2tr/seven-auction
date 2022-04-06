@@ -9,7 +9,7 @@ const AboutUSContent = () => {
         <>
             <div className="aboutus-cont-sec py-5">
                 <Container>
-                    <h2 class="about-title mb-4">About us</h2>
+                    <h2 className="about-title mb-4">About us</h2>
 
                     <Row>
                         <Col md={6} className="mb-4">
@@ -20,7 +20,7 @@ const AboutUSContent = () => {
                                 <div className="about-info-boxes mt-5">
                                     <div className="about-info-boxe d-flex align-items-center">
                                         <div className="about-info-icon">
-                                            <i class="fa-solid fa-phone"></i>
+                                            <i className="fa-solid fa-phone"></i>
                                         </div>
                                         <div className="about-info-text">
                                             <span>+900 345 2392</span>
@@ -28,7 +28,7 @@ const AboutUSContent = () => {
                                     </div>
                                     <div className="about-info-boxe d-flex align-items-center">
                                         <div className="about-info-icon">
-                                            <i class="fa-solid fa-envelope"></i>
+                                            <i className="fa-solid fa-envelope"></i>
                                         </div>
                                         <div className="about-info-text">
                                             <span>info@sevenauction.com</span>
@@ -36,7 +36,7 @@ const AboutUSContent = () => {
                                     </div>
                                     <div className="about-info-boxe d-flex align-items-center">
                                         <div className="about-info-icon">
-                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i className="fa-solid fa-location-dot"></i>
                                         </div>
                                         <div className="about-info-text">
                                             <span>Dhaka, Mohammadpur - 1207</span>
@@ -44,21 +44,21 @@ const AboutUSContent = () => {
                                     </div>
                                 </div>
 
-                                <div class="contact-social about-social pt-5">
+                                <div className="contact-social about-social pt-5">
                                     <a href="/">
-                                        <i class="fa-brands fa-facebook-f"></i>
+                                        <i className="fa-brands fa-facebook-f"></i>
                                     </a>
                                     <a href="/">
-                                        <i class="fa-brands fa-twitter"></i>
+                                        <i className="fa-brands fa-twitter"></i>
                                     </a>
                                     <a href="/">
-                                        <i class="fa-brands fa-instagram"></i>
+                                        <i className="fa-brands fa-instagram"></i>
                                     </a>
                                     <a href="/">
-                                        <i class="fa-brands fa-linkedin-in"></i>
+                                        <i className="fa-brands fa-linkedin-in"></i>
                                     </a>
                                     <a href="/">
-                                        <i class="fa-brands fa-youtube"></i>
+                                        <i className="fa-brands fa-youtube"></i>
                                     </a>
                                 </div>
 

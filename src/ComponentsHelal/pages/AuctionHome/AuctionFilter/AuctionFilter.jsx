@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Row, Tab, Tabs } from 'react-bootstrap';
+import { Button, Col, Container, Row, Spinner, Tab, Tabs } from 'react-bootstrap';
 import './Style.css';
 
 import car1 from "../../../../assets/images/car/car-1.png";
@@ -11,6 +11,10 @@ import brandIcon from "../../../../assets/images/icon/brand-icon.png";
 
 import countryFlag from "../../../../assets/images/saudi-flag.png";
 import { Link } from 'react-router-dom';
+
+import Countdown from "react-countdown";
+import UseHoocks from './../../../../UseHoocks/UseHoocks';
+
 
 const Livecars = [
     {
@@ -211,9 +215,11 @@ const Soldcars = [
 ];
 
 const AuctionFilter = () => {
+    const { bearerToken } = UseHoocks();
 
     const [LiveAuction,setLiveAuction]=useState([])
     const [SoldAuction,setSoldAuction]=useState([])
+    
     
     
     function simulateNetworkRequest() {
@@ -227,14 +233,21 @@ const AuctionFilter = () => {
                 setLoading(false);
             });
         }
-        fetch(`https://seven-auction.herokuapp.com/api/auction-feed`)
+        fetch(`https://seven-auction.herokuapp.com/api/auction-feed?state=unsold`,{
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              authorization: bearerToken,
+            },
+          })
         .then(res=>res.json())
-        .then(data=>setLiveAuction(data))
+        .then(data=>setLiveAuction(data?.fetchAuctions))
 
 
         fetch(`https://seven-auction.herokuapp.com/api/auction-feed?state=sold`)
         .then(res=>res.json())
-        .then(data=>setSoldAuction(data))
+        .then(data=>setSoldAuction(data?.fetchAuctions))
     }, [isLoading]);
     
 
@@ -257,6 +270,34 @@ const AuctionFilter = () => {
     
     localStorage.setItem('Auction',JSON.stringify(mark))
     // console.log(mark);
+
+    const timeFun = (start,end) =>{
+        // console.log(start,end);
+        // const getStart = new Date(start);
+        // const startTime = Math.floor(getStart.getTime() / 1000);
+        // const getEnd = new Date(end);
+        // const endTime = Math.floor(getEnd.getTime() / 1000);
+
+        // console.log(endTime - startTime);
+        // const time = endTime - startTime;
+
+        // const min = Math.floor(time / 60);
+		// const retailSeconds = Math.floor(time % 60);
+		// const hour = Math.floor(min / 60);
+		// const retailMins = Math.floor(min % 60);
+
+		// 				if (hour < 1) {
+		// 					var resendCodeAfter = `${retailMins} minutes: ${retailSeconds} seconds`;
+		// 					if (retailMins < 1) {
+		// 						resendCodeAfter = `${retailSeconds} seconds`;
+		// 					}
+		// 				} else {
+		// 					resendCodeAfter = `${hour} hours: ${retailMins} minutes: ${retailSeconds} seconds`;
+        //                 }
+
+        // return time;
+    }
+    
     
 
     return (
@@ -264,6 +305,7 @@ const AuctionFilter = () => {
             <Container className='py-5'>
                 <div className="auction-filter-form py-4">
                     <Row>
+                    
                         <Col md={6}>
                             <div className="auction-search-form">
                                 <input type="text" />
@@ -282,34 +324,49 @@ const AuctionFilter = () => {
                 </div>
                 <div className="auction-cars">
                     <Tabs defaultActiveKey="live" id="uncontrolled-tab-example" className="mb-3">
-                        <Tab eventKey="live" title={`Live (${LiveAuction.liveAuctionsCount})`}>
+                        <Tab eventKey="live" title={`Live (${LiveAuction.length})`}>
                             <div className="auction-car-lisl">
                                 <Row>
+                                {LiveAuction.length === 0 && (
+                                <Spinner
+                                    style={{ margin: "0 auto" }}
+                                    animation="border"
+                                    variant="dark"
+                                />
+                                )}
+                                {SoldAuction.length === 0 && (
+                                <Spinner
+                                    style={{ margin: "0 auto" }}
+                                    animation="border"
+                                    variant="dark"
+                                />
+                                )}
                                     {
-                                        Livecars.map(car => (
+                                        LiveAuction.map(car => (
                                             <Col md={3} className="mb-5" key={car._id}>
                                                 <div className="auction-car-item">
-                                                    <div className="car-img" style={{ backgroundImage: `url(${car.imageSrc})` }}>
+                                                    <div className="car-img" style={{ backgroundImage: `url(${car.images})` }}>
                                                         <div className="car-time-and-price d-flex">
                                                             <div className="car-time">
                                                                 <i className="fa-regular fa-clock"></i>
-                                                                {car.timecount}
+                                                                <Countdown date={car.liveEnd}/>
+                                                                {/* {timeFun(car.liveStart,car.liveEnd)} */}
                                                             </div>
-                                                            <div className="car-price">{car.price}</div>
+                                                            <div className="car-price">{car.currentBid}</div>
                                                         </div>
                                                     </div>
                                                     <div className="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                                        <div className="car-bid text-muted">{car.bidCount} Bids</div>
+                                                        <div className="car-bid text-muted">{car.numberOfBids} Bids</div>
                                                         <div className="car-shareMark">
                                                             <Button variant='link'><i className="fa-solid fa-share-nodes"></i></Button>
                                                             <Button variant='link' onClick={()=>markHndal(car)}><i className="fa-solid fa-bookmark"></i></Button>
                                                         </div>
                                                     </div>
-                                                    <Link to={`/singlecar/${car._id}`} className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
-                                                    <p className="car-desc text-muted">{car.desc}</p>
+                                                    <Link to={`/singlecar/${car._id}`} className="car-title-link"><h2 className="car-title pt-3">{car.name}</h2></Link>
+                                                    <p className="car-desc text-muted">{car.description}</p>
                                                     <div className="car-brandLocation d-flex align-items-center">
                                                         <div className="car-brand text-muted">
-                                                            <img src={brandIcon} alt="Brand..." /> {car.brand}
+                                                            <img src={brandIcon} alt="Brand..." /> {car.traffic}
                                                         </div>
                                                         <div className="car-location text-muted">
                                                             <img src={car.countryFlag} alt="Location..." /> {car.location}
@@ -330,7 +387,8 @@ const AuctionFilter = () => {
                                 </div>
                             </div>
                         </Tab>
-                        <Tab eventKey="sold" title={`Live (${LiveAuction.soldAuctionsCount})`}>
+                        
+                        <Tab eventKey="sold" title={`Slod (${SoldAuction.length})`}>
                             <div className="auction-car-lisl">
                                 <Row>
                                     {
@@ -368,37 +426,34 @@ const AuctionFilter = () => {
                                     //         </Col>
                                     //     ))
                                     //     :
-                                        Soldcars.map(car => (
-                                            <Col md={3} className="mb-5" key={car._id}>
-                                                <div className="auction-car-item">
-                                                    <div className="car-img" style={{ backgroundImage: `url(${car.imageSrc})` }}>
-                                                        <div className="car-time-and-price d-flex">
-                                                            <div className="car-time">
-                                                                <i className="fa-regular fa-clock"></i>
-                                                                {car.timecount}
-                                                            </div>
-                                                            <div className="car-price">{car.price}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="car-bid-shareMark d-flex align-items-center justify-content-between">
-                                                        <div className="car-bid text-muted">{car.bidCount} Bids</div>
-                                                        <div className="car-shareMark">
-                                                            <Button variant='link'><i className="fa-solid fa-share-nodes"></i></Button>
-                                                            <Button variant='link' onClick={()=>markHndal(car)}><i className="fa-solid fa-bookmark"></i></Button>
-                                                        </div>
-                                                    </div>
-                                                    <Link to="/singlecar" className="car-title-link"><h2 className="car-title pt-3">{car.title}</h2></Link>
-                                                    <p className="car-desc text-muted">{car.desc}</p>
-                                                    <div className="car-brandLocation d-flex align-items-center">
-                                                        <div className="car-brand text-muted">
-                                                            <img src={brandIcon} alt="Brand..." /> {car.brand}
-                                                        </div>
-                                                        <div className="car-location text-muted">
-                                                            <img src={car.countryFlag} alt="Location..." /> {car.location}
-                                                        </div>
-                                                    </div>
+                                    SoldAuction.map(car => (
+                                        <Col md={3} className="mb-5" key={car._id}>
+                                        <div className="auction-car-item">
+                                            <div className="car-img" style={{ backgroundImage: `url(${car.images})` }}>
+                                                <div className="car-time-and-price d-flex">
+                                                    
+                                                    <div className="car-price">{car.currentBid}</div>
                                                 </div>
-                                            </Col>
+                                            </div>
+                                            <div className="car-bid-shareMark d-flex align-items-center justify-content-between">
+                                                <div className="car-bid text-muted">{car.numberOfBids} Bids</div>
+                                                <div className="car-shareMark">
+                                                    <Button variant='link'><i className="fa-solid fa-share-nodes"></i></Button>
+                                                    <Button variant='link' onClick={()=>markHndal(car)}><i className="fa-solid fa-bookmark"></i></Button>
+                                                </div>
+                                            </div>
+                                            <Link to={`/singlecar/${car._id}`} className="car-title-link"><h2 className="car-title pt-3">{car.name}</h2></Link>
+                                            <p className="car-desc text-muted">{car.description}</p>
+                                            <div className="car-brandLocation d-flex align-items-center">
+                                                <div className="car-brand text-muted">
+                                                    <img src={brandIcon} alt="Brand..." /> {car.brand}
+                                                </div>
+                                                <div className="car-location text-muted">
+                                                    <img src={car.countryFlag} alt="Location..." /> {car.location}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
                                         ))
                                     }
                                 </Row>
