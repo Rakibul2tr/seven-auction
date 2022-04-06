@@ -106,7 +106,7 @@
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 130px;
+    top: 70px !important;
 }
 .dable_btn_Step3 .prev_btn{
     left: 0%;
@@ -117,6 +117,10 @@
 .dable_btn_Step3 .prev_btn i{
     line-height: 27px;
     margin-right: 7px;
+}
+.dateStart{
+    text-transform: capitalize;
+    color:#999;
 }
 .dable_btn_Step3 button.next_btn, .dable_btn_Step3 .prev_btn {
     color: #fff;

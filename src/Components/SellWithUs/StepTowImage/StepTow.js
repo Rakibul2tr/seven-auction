@@ -17,14 +17,26 @@ const StepTow = (props) => {
 
   
   const [file, setFile] = useState([]);
+
+
+  const [gellary,setGellary]=useState('')
+
   function uploadSingleFile(e) {
-    setFile([...file, URL.createObjectURL(e.target.files[0])]);
+    setGellary(e.target.files[0])
+    // setFile([...file, URL.createObjectURL(e.target.files[0])]);
   }
- console.log(file);
+ console.log(gellary);
+ const data = new FormData();
+ data.append("images", gellary);
+ data.append("upload_preset", "donor-photo-uploads");
+//  data.append("cloud_name", "dydja7ouv");
+
+
+  console.log(data);
 
   function upload(e) {
     e.preventDefault();
-  const prevdata= Object.assign({},...StepTow,{file})
+  const prevdata= Object.assign({},...StepTow,{data})
   console.log(prevdata);
     const stepTowdata=JSON.stringify(prevdata)
     localStorage.setItem('StepTow',stepTowdata)
@@ -32,6 +44,7 @@ const StepTow = (props) => {
     props.setSteps('stepTree')
     
   }
+  
 
   function deleteFile(e) {
     

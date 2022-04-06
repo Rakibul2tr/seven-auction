@@ -13,7 +13,7 @@ const getValue=()=>{
     }
   }
 const Review = (props) => {
-    const {bearerToken}=UseHoocks()
+    const {AdminbearerToken}=UseHoocks()
     // console.log(bearerToken);
     const [review,setReview]=useState([getValue()])
     const [error,setError]=useState()
@@ -22,12 +22,12 @@ const Review = (props) => {
     const fiels=(review[0]?.file);
 
     const dataSubmit =()=>{
-        fetch(`https://seven-auction.herokuapp.com/api/user/auctions-upload`,{
+        fetch(`https://seven-auction.herokuapp.com/api/admin/auctions-upload`,{
             method:'POST',
             headers:{
               Accept:'application/json',
               'Content-Type':'application/json',
-              authorization:bearerToken,
+              authorization:AdminbearerToken,
             },
             body:JSON.stringify(review)
           })
