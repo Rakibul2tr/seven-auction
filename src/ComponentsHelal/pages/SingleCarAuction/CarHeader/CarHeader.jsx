@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import "./Style.css";
 
-const CarHeader = () => {
+const CarHeader = ({currentBid,numberOfBids}) => {
     return (
         <>
             <Container>
@@ -12,7 +12,7 @@ const CarHeader = () => {
                             <div className="car-header-left">
                                 <div className="car-header-info-boxes text-center d-flex">
                                     <div className="header-info-box">
-                                        <h5>20,000 S.R</h5>
+                                        <h5>{currentBid} S.R</h5>
                                         <span className='text-uppercase text-muted'>Current Bid</span>
                                     </div>
                                     <div className="header-info-box">
@@ -20,7 +20,7 @@ const CarHeader = () => {
                                         <span className='text-muted'>02/02/2022 10:05: PM</span>
                                     </div>
                                     <div className="header-info-box">
-                                        <h5>225</h5>
+                                        <h5>{numberOfBids}</h5>
                                         <span className='text-uppercase text-muted'>Bids</span>
                                     </div>
                                 </div>
@@ -28,8 +28,8 @@ const CarHeader = () => {
                         </Col>
                         <Col md={6}>
                             <div className="car-header-right text-md-end">
-                                <Button className="single-car-markshare me-4" variant='link'><i class="fa-regular fa-bookmark"></i></Button>
-                                <Button className="single-car-markshare me-4" variant='link'><i class="fa-solid fa-share-nodes"></i></Button>
+                                <Button className="single-car-markshare me-4" variant='link'><i className="fa-regular fa-bookmark"></i></Button>
+                                <Button className="single-car-markshare me-4" variant='link'><i className="fa-solid fa-share-nodes"></i></Button>
                                 <Button className="single-bid-btn text-uppercase" variant='link'>Bid</Button>
                             </div>
                         </Col>
