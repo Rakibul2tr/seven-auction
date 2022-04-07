@@ -1,9 +1,11 @@
 .admin_menu_body {
-    background: #623c57;
-    padding-top: 20px;
-    height: 100%;
-    min-height: 100vh;
-  }
+  background: #623c57;
+  padding-top: 20px;
+  height: 100%;
+  min-height: 100vh;
+  position: fixed;
+  width: 22%;
+}
   .admin_logo {
     width: 65%;
     margin: auto;
@@ -23,6 +25,11 @@
     line-height: 26px;
     cursor: pointer;
     margin: 20px 0;
+  }
+  .admin_menu_link li a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
   }
   .liActive {
     background: #7e5472;

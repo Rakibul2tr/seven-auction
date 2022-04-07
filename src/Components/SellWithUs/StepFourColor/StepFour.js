@@ -47,6 +47,11 @@ const StepFour = (props) => {
                         <input type="color" {...register("color")}  onChange={onChangeColor} />
                         <div className="color_div"><span>{colorName}</span></div>
                       </div>
+                      <div className="input_fild location_fild">
+                        <input type="text"
+                        {...register("nextBidDistance")} 
+                        placeholder='Next Bid Distance'/>
+                      </div>
                       <div className="dable_btn_Step3">
                       <button className='prev_btn'onClick={()=>props.setSteps('stepTree')}>
                       <i className="fa-solid fa-angles-left"></i>

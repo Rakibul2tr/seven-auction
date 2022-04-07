@@ -19,10 +19,11 @@ const Review = (props) => {
     const [review,setReview]=useState([getValue()])
     const [error,setError]=useState()
 
-    console.log(review);
+    console.log(review[0]);
     const fiels=(review[0]?.file);
 
     const dataSubmit =()=>{
+        console.log(review);
         fetch(`https://seven-auction.herokuapp.com/api/user/auctions-upload`,{
             method:'POST',
             headers:{
@@ -30,12 +31,12 @@ const Review = (props) => {
               'Content-Type':'application/json',
               authorization:bearerToken,
             },
-            body:JSON.stringify(review)
+            body:JSON.stringify(review[0])
           })
           .then(res=>res.json())
           .then(data=>{
             console.log(data);
-            setError(data)
+            // setError(data)
             
           })
    }

@@ -34,6 +34,7 @@ const StepTree = (props) => {
                 <div className="border_1">
                     <h3 className='auction_hidding_step3'>Location</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
+
                       <div className="input_fild location_fild">
                         <input type="text"
                         {...register("location")} 
@@ -41,7 +42,22 @@ const StepTree = (props) => {
                         <i className="fa-solid fa-location-dot"></i>
                       </div>
 
+                      
+                      
+                      <div className="input_fild location_fild mt-4">
+                        <input type="date"
+                        {...register("liveStart")} 
+                        placeholder='Select your live Start date'/>
+                      </div>
 
+                      <h6 className='dateStart'>Select your live Start date</h6>
+                      <div className="input_fild location_fild">
+                        <input type="date"
+                        {...register("liveEnd")} 
+                        placeholder='Select your live End date'/>
+                      </div>
+
+                      <h6 className='dateStart'>Select your live End date</h6>
                       <div className="dable_btn_Step3">
                       <button className='prev_btn'onClick={()=>props.setSteps('stepTow')}>
                       <i className="fa-solid fa-angles-left"></i>

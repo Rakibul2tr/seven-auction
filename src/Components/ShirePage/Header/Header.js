@@ -53,7 +53,7 @@ const Header = () => {
                     </Link> */}
                     {
                         user?.email || admin?.email?<><Link to=''><i className="far fa-bell"></i></Link>
-                        <Link to={user?.email?'/account':'/dashboard'}>
+                        <Link to={user?.email?'/userDashboard':'/dashboard'}>
                         <i className="fas fa-user-circle"></i>
                         </Link></>:<Link to=''>
                        <button onClick={() => setModalShow(true)}>Login</button>
